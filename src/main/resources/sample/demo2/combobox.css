@@ -1,0 +1,17 @@
+/* Thiết lập ComboBox */
+select {
+    background-color: #EEE9DA;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Thiết lập TextField */
+input[type="text"] {
+    background-color: #EEE9DA;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}

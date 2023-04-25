@@ -1,0 +1,54 @@
+.date-picker {
+    -fx-background-color: #EEE9DA;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: #93BFCF;
+    -fx-background-insets: 0;
+    -fx-padding: 0.25em;
+}
+
+.date-picker .arrow-button:hover {
+    -fx-background-color: #BDCDD6;
+}
+
+.date-picker .arrow {
+    -fx-background-color: #6096B4;
+}
+
+.date-picker .month-year-pane {
+    -fx-background-color: #BDCDD6;
+}
+
+.date-picker .month-year-label {
+    -fx-text-fill: #6096B4;
+}
+
+.date-picker .day-cell {
+    -fx-background-color: #BDCDD6;
+    -fx-text-fill: #6096B4;
+}
+
+.date-picker .today {
+    -fx-background-color: #6096B4;
+    -fx-text-fill: white;
+}
+
+.date-picker .highlighted-date {
+    -fx-background-color: #93BFCF;
+    -fx-text-fill: white;
+}
+
+.date-picker .selected {
+    -fx-background-color: #5BC0F8;
+    -fx-text-fill: white;
+}
+
+.date-picker .disabled {
+    -fx-opacity: 0.5;
+}
+
+
+.date-picker > .text-field {
+    -fx-background-color: #EEE9DA;
+}

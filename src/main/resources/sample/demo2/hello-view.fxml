@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1000.0" styleClass="root" stylesheets="@object.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.demo2.HelloController">
+   <children>
+      <Pane layoutX="347.0" layoutY="-11.0" prefHeight="59.0" prefWidth="653.0" style="-fx-background-color: #BDCDD6;" stylesheets="@object.css" />
+      <TableView editable="true" layoutX="347.0" layoutY="47.0" prefHeight="613.0" prefWidth="653.0" stylesheets="@object.css">
+        <columns>
+          <TableColumn prefWidth="139.0" text="Room Name" />
+            <TableColumn prefWidth="78.0" text="Price" />
+            <TableColumn prefWidth="76.0" text="Beds" />
+            <TableColumn prefWidth="149.0" text="Description" />
+            <TableColumn prefWidth="155.0" text="Services provided" />
+            <TableColumn prefWidth="62.0" text="Rating" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <Label layoutX="626.0" layoutY="1.0" text="Rooms">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Separator layoutX="347.0" layoutY="47.0" prefHeight="3.0" prefWidth="653.0" stylesheets="@object.css" />
+      <ImageView fitHeight="691.0" fitWidth="354.0" layoutX="-6.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../assets/hogwarts1.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="338.0" layoutY="1.0" orientation="VERTICAL" prefHeight="660.0" prefWidth="22.0" stylesheets="@object.css" />
+   </children>
+</AnchorPane>

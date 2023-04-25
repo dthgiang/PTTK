@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'AnimalesFantastic';
+    url('sample/demo/AnimalesFantastic.ttf');
+}
+
+.custom-font {
+    -fx-font-family: 'AnimalesFantastic';
+}

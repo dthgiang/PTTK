@@ -1,0 +1,117 @@
+/* Định nghĩa màu cho các phần tử */
+.root {
+    -fx-background-color: #EEE9DA;
+}
+
+/* Định nghĩa màu cho nút */
+.button {
+    -fx-background-color: #6096B4;
+    -fx-text-fill: white;
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+}
+
+/* Định nghĩa màu cho text field */
+.text-field {
+    -fx-background-color: #BDCDD6;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
+
+/* Định nghĩa màu cho label */
+.label {
+    -fx-text-fill: #6096B4;
+    -fx-font-weight: bold;
+}
+
+/* Định nghĩa màu cho table view */
+.table-view {
+    -fx-background-color: #EEE9DA;
+    -fx-table-cell-border-color: transparent;
+}
+
+/* Định nghĩa màu cho table column */
+.table-column {
+    -fx-text-fill: #6096B4;
+    -fx-font-weight: bold;
+}
+
+/* Định nghĩa màu cho cell trong table view */
+.table-cell {
+    -fx-background-color: #BDCDD6;
+}
+
+/* Định nghĩa màu cho tooltip */
+.tooltip {
+    -fx-background-color: #93BFCF;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+/* Định nghĩa màu cho progress bar */
+.progress-bar {
+    -fx-background-color: #6096B4;
+    -fx-accent: #93BFCF;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 10px;
+    -fx-padding: 0.0em;
+}
+
+/* Định nghĩa màu cho combo box */
+.combo-box {
+    -fx-background-color: #EEE9DA;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
+
+.combo-box .text-field {
+    -fx-background-color: #EEE9DA;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.text-field {
+    -fx-background-color: #EEE9DA;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.panel {
+    -fx-background-color: linear-gradient(to bottom right, rgb(96,150,180), rgb(238,233,218));
+}
+
+.menu-button {
+    -fx-background-color: #6096B4;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
+
+.menu-button .label {
+    -fx-text-fill: white;
+}
+
+.menu-button .arrow {
+    -fx-background-color: white;
+}
+
+.menu-item {
+    -fx-background-color: #93BFCF;
+    -fx-text-fill: #FFFFFF;
+}
+
+.menu-item:focused {
+    -fx-background-color: #BDCDD6;
+}
+
+.menu-item:hover {
+    -fx-background-color: #EEE9DA;
+}
+
+
+
+
+
+
+
+
