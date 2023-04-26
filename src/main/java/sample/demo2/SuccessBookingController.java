@@ -2,7 +2,7 @@ package sample.demo2;
 
 
 
-
+import javafx.scene.Scene;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -50,21 +50,28 @@ import javafx.scene.layout.VBox;
 
 
 
-public class HelloController  implements Initializable {
+public class SuccessBookingController implements Initializable {
 
     //***********Table Column Variables*****************//
     @FXML
-    private TableView<RoomType> roomTable;
+    private TableView<FormDP> FormDPTable;
     @FXML
-    private TableColumn<RoomType, String> columnID;
+    private TableColumn<FormDP, String> columnMaphieu;
     @FXML
-    private TableColumn<RoomType, String> columnName;
+    private TableColumn<FormDP, String> columnTrangthai;
     @FXML
-    private TableColumn<RoomType, String> columnPrice;
+    private TableColumn<FormDP, String> columnDkvc;
     @FXML
-    private TableColumn<RoomType, String> columnDes;
+    private TableColumn<FormDP, String> columnYcdb;
     @FXML
-    private TableColumn<RoomType, String> columnRating;
+    private TableColumn<FormDP, String> columnNgaylap;
+    @FXML
+    private TableColumn<FormDP, String> columnMadaily;
+    @FXML
+    private TableColumn<FormDP, String> columnMakhachhang;
+    @FXML
+    private TableColumn<FormDP, String> columnNhanvienxuly;
+
     @FXML private void goSignOut(ActionEvent event) throws IOException {
 
         Alert alert = new Alert(AlertType.CONFIRMATION);
@@ -91,17 +98,21 @@ public class HelloController  implements Initializable {
         });
     }
 
-
     private void setCellTable() {
 
-        columnID.setCellValueFactory(new PropertyValueFactory<>("id"));
-        columnName.setCellValueFactory(new PropertyValueFactory<>("name"));
-        columnPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
-        columnDes.setCellValueFactory(new PropertyValueFactory<>("des"));
-        columnRating.setCellValueFactory(new PropertyValueFactory<>("rating"));
+        columnMaphieu.setCellValueFactory(new PropertyValueFactory<>("maphieu"));
+        columnTrangthai.setCellValueFactory(new PropertyValueFactory<>("trangthai"));
+        columnDkvc.setCellValueFactory(new PropertyValueFactory<>("dkvanchuyenhanhly"));
+        columnYcdb.setCellValueFactory(new PropertyValueFactory<>("yeucaudacbiet"));
+        columnNgaylap.setCellValueFactory(new PropertyValueFactory<>("ngaylap"));
+        columnMadaily.setCellValueFactory(new PropertyValueFactory<>("madaily"));
+        columnMakhachhang.setCellValueFactory(new PropertyValueFactory<>("makhachhang"));
+        columnNhanvienxuly.setCellValueFactory(new PropertyValueFactory<>("nhanvienxuly"));
+
+
     }
-    private ObservableList<RoomType> loadData() {
-        ObservableList<RoomType> data = FXCollections.observableArrayList();
+    private ObservableList<FormDP> loadData() {
+        ObservableList<FormDP> data = FXCollections.observableArrayList();
 
         try {
             // Register the Oracle JDBC driver
@@ -117,18 +128,20 @@ public class HelloController  implements Initializable {
             Statement statement = connection.createStatement();
 
             // Execute the query and get the result set
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM LoaiPhong");
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM phieudatphong");
 
             // Loop through the result set and add the data to the tableview
             while (resultSet.next()) {
-                String id = resultSet.getString("ID");
-                String name = resultSet.getString("Ten");
-                String price = resultSet.getString("Gia");
-                String Rating = resultSet.getString("Rating");
-                String Des = resultSet.getString("MoTa");
-                data.add(new RoomType(id, name, price, Rating, Des));
+                String maPhieu = resultSet.getString("MaPhieu");
+                String trangThai = resultSet.getString("TrangThai");
+                String dkVanChuyenHanhLy = resultSet.getString("DKVanChuyenHanhLy");
+                String yeuCauDacBiet = resultSet.getString("YeuCauDacBiet");
+                String ngayLap = resultSet.getString("NgayLap");
+                String maDaiLy = resultSet.getString("MaDaiLy");
+                String maKhachHang = resultSet.getString("MaKhachHang");
+                String nhanVienXuLy = resultSet.getString("NhanVienXuLy");
 
-
+                data.add(new FormDP(maPhieu, trangThai, dkVanChuyenHanhLy, yeuCauDacBiet, ngayLap, maDaiLy, maKhachHang, nhanVienXuLy));
 
             }
 
@@ -149,12 +162,10 @@ public class HelloController  implements Initializable {
     }
 
 
-    @Override public void initialize(URL location, ResourceBundle resources) {
-        roomTable.setItems(loadData());
-        roomTable.getColumns().addAll(columnID, columnName, columnPrice, columnDes, columnRating);
+    @Override public void initialize(URL url, ResourceBundle rb) {
+        FormDPTable.setItems(loadData());
+        FormDPTable.getColumns().addAll(columnMaphieu, columnTrangthai, columnDkvc, columnYcdb, columnNgaylap, columnMadaily, columnMakhachhang, columnNhanvienxuly);
         setCellTable();
-
-
     };
 }
 
