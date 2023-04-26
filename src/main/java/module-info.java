@@ -5,4 +5,7 @@ module sample.demo2 {
 
     opens sample.demo2 to javafx.fxml;
     exports sample.demo2;
+
+    requires java.sql;
+
 }

@@ -119,7 +119,7 @@
          </image>
       </ImageView>
       <Separator layoutX="346.0" orientation="VERTICAL" prefHeight="706.0" prefWidth="16.0" />
-      <Button layoutX="75.0" layoutY="637.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="94.0" text="Home">
+      <Button fx:id="btnHome" layoutX="75.0" layoutY="637.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="94.0" text="Home">
          <font>
             <Font name="System Bold" size="20.0" />
          </font></Button>
