@@ -4,7 +4,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.scene.text.Font;import java.io.IOException;
+import javafx.scene.text.Font;
+import java.io.IOException;
 
 public class HelloApplication extends Application {
     @Override
@@ -20,7 +21,6 @@ public class HelloApplication extends Application {
         //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("BookRoom.fxml"));
         //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 422, 749);
-
 
         stage.setTitle("Booking");
         stage.setScene(scene);

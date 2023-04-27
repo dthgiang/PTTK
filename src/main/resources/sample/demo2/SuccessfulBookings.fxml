@@ -13,32 +13,18 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="660.0" prefWidth="1000.0" stylesheets="@object.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.demo2.HelloController">
+<AnchorPane prefHeight="660.0" prefWidth="1000.0" stylesheets="@object.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.demo2.SuccessBookingController">
    <children>
       <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="671.0" prefWidth="1392.0" stylesheets="@object.css">
          <children>
             <Pane layoutX="369.0" prefHeight="129.0" prefWidth="1031.0" style="-fx-background-color: #BDCDD6;">
                <children>
-                  <Label layoutX="371.0" layoutY="14.0" prefHeight="40.0" prefWidth="351.0" text="Successful Booking Forms">
+                  <Label layoutX="371.0" layoutY="14.0" prefHeight="40.0" prefWidth="351.0" text="Successful Forms">
                      <font>
                         <Font size="28.0" />
                      </font>
                   </Label>
-                  <Button layoutX="87.0" layoutY="77.0" mnemonicParsing="false" text="Accept">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="155.0" layoutY="77.0" mnemonicParsing="false" text="Reject">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="14.0" layoutY="77.0" mnemonicParsing="false" text="Refresh">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Button>
+
                </children>
             </Pane>
             <ImageView fitHeight="660.0" fitWidth="445.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
@@ -48,7 +34,7 @@
             </ImageView>
             <Separator layoutX="367.0" orientation="VERTICAL" prefHeight="660.0" prefWidth="0.0" />
             <Separator layoutX="368.0" layoutY="60.0" prefHeight="5.0" prefWidth="1031.0" />
-            <Button layoutX="137.0" layoutY="469.0" mnemonicParsing="false" text="Sign Out">
+            <Button fx:id="btnSignout" onAction="#goSignOut" layoutX="135.0" layoutY="493.0" mnemonicParsing="false" text="Sign Out">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -59,7 +45,7 @@
                </font>
             </Label>
             <Separator layoutY="554.0" prefHeight="5.0" prefWidth="366.0" />
-            <MenuButton layoutX="78.0" layoutY="273.0" mnemonicParsing="false" popupSide="RIGHT" stylesheets="@object.css" text="Forms Management">
+            <MenuButton layoutX="75.0" layoutY="309.0" mnemonicParsing="false" popupSide="RIGHT" stylesheets="@object.css" text="Forms Management">
                <items>
                   <MenuItem mnemonicParsing="false" text="Booking Forms" />
                   <MenuItem mnemonicParsing="false" text="Successful Bookings" />
@@ -68,7 +54,7 @@
                   <Font size="18.0" />
                </font>
             </MenuButton>
-            <MenuButton layoutX="144.0" layoutY="402.0" mnemonicParsing="false" popupSide="RIGHT" stylesheets="@object.css" text="Lists">
+            <MenuButton layoutX="144.0" layoutY="433.0" mnemonicParsing="false" popupSide="RIGHT" stylesheets="@object.css" text="Lists">
                <items>
                   <MenuItem mnemonicParsing="false" text="Rooms" />
                   <MenuItem mnemonicParsing="false" text="Booking Agents" />
@@ -77,7 +63,7 @@
                   <Font size="18.0" />
                </font>
             </MenuButton>
-            <MenuButton layoutX="75.0" layoutY="338.0" mnemonicParsing="false" popupSide="RIGHT" stylesheets="@object.css" text="Rooms Management">
+            <MenuButton layoutX="73.0" layoutY="366.0" mnemonicParsing="false" popupSide="RIGHT" stylesheets="@object.css" text="Rooms Management">
                <items>
                   <MenuItem mnemonicParsing="false" text="Update Rooms Status" />
                </items>
@@ -85,21 +71,27 @@
                   <Font size="18.0" />
                </font>
             </MenuButton>
+            <MenuButton layoutX="94.0" layoutY="247.0" mnemonicParsing="false" popupSide="RIGHT" stylesheets="@object.css" text="Successful Forms">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Booking Forms" />
+                  <MenuItem mnemonicParsing="false" text="Successful Bookings" />
+               </items>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </MenuButton>
          </children>
       </AnchorPane>
-      <TableView layoutX="370.0" layoutY="127.0" prefHeight="543.0" prefWidth="1013.0">
+      <TableView fx:id="FormDPTable" layoutX="370.0" layoutY="127.0" prefHeight="543.0" prefWidth="1013.0">
          <columns>
-            <TableColumn prefWidth="61.0" text="ID Form" />
-            <TableColumn prefWidth="106.0" text="Submission Date" />
-            <TableColumn prefWidth="92.0" text="Check-in Date" />
-            <TableColumn prefWidth="93.0" text="Check-out Date" />
-            <TableColumn text="Group Name" />
-            <TableColumn prefWidth="100.0" text="Customer Name" />
-            <TableColumn prefWidth="98.0" text="ID Card" />
-            <TableColumn prefWidth="98.0" text="Phone number" />
-            <TableColumn prefWidth="108.0" text="Payment Status" />
-            <TableColumn prefWidth="105.0" text="ID Room" />
-            <TableColumn prefWidth="63.0" text="ID Agent" />
+            <TableColumn fx:id="columnMaphieu" prefWidth="61.0" text="ID Form" />
+            <TableColumn fx:id="columnTrangthai" prefWidth="106.0" text="Status" />
+            <TableColumn fx:id="columnDkvc" prefWidth="92.0" text="Đăng ký vận chuyển" />
+            <TableColumn fx:id="columnYcdb" prefWidth="93.0" text="Yêu cầu đặc biệt" />
+            <TableColumn fx:id="columnNgaylap" prefWidth="94.0" text="Ngày lập" />
+            <TableColumn fx:id="columnMadaily" prefWidth="100.0" text="Mã đại lý" />
+            <TableColumn fx:id="columnMakhachhang" prefWidth="98.0" text="Mã khách hàng" />
+            <TableColumn fx:id="columnNhanvienxuly" prefWidth="98.0" text="Nhân viên xử lý" />
          </columns>
       </TableView>
    </children>
