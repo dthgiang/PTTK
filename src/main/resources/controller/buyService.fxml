@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="filterCard" prefHeight="359.0" prefWidth="335.0" style="-fx-background-color: #D4ECF1; -fx-background-radius: 5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BuyServiceController">
+   <children>
+      <Label layoutX="11.0" layoutY="51.0" text="Please choose time to user" AnchorPane.leftAnchor="11.0" AnchorPane.topAnchor="51.0">
+         <font>
+            <Font name="Cambria Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="84.0" text="Time use (hour)" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="202.83333333333331" AnchorPane.topAnchor="84.0">
+         <font>
+            <Font name="Cambria" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="132.0" text="Time to use service" AnchorPane.leftAnchor="21.0">
+         <font>
+            <Font name="Cambria" size="16.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="priceFilterPane" layoutX="19.0" layoutY="104.0" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #FBFBFB; -fx-background-radius: 5;" AnchorPane.leftAnchor="17.5" AnchorPane.topAnchor="104.0">
+         <children>
+            <TextField fx:id="timeUse" layoutX="1.0" layoutY="1.0" prefHeight="27.0" prefWidth="300.0" AnchorPane.leftAnchor="1.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="lengthFilterPane" layoutX="19.0" layoutY="191.0" prefHeight="27.0" prefWidth="200.0" style="-fx-background-color: #FBFBFB; -fx-background-radius: 5;" AnchorPane.leftAnchor="17.5" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="191.0">
+         <children>
+            <DatePicker fx:id="startDate" layoutX="-2.0" layoutY="-5.0" prefHeight="27.0" prefWidth="300.0" style="-fx-background-color: #FBFBFB;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <ComboBox fx:id="hourStart" layoutX="12.0" layoutY="156.0" prefHeight="27.0" prefWidth="300.0" style="-fx-background-color: #FBFBFB; -fx-background-radius: 5;" AnchorPane.leftAnchor="17.5" AnchorPane.topAnchor="156.0" />
+      <AnchorPane layoutX="19.0" layoutY="247.0" prefHeight="33.0" prefWidth="300.0" style="-fx-background-color: #FBFBFB; -fx-background-radius: 5;" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="16.0">
+         <children>
+            <AnchorPane layoutX="-8.0" layoutY="-1.0" prefHeight="33.0" prefWidth="100.0" style="-fx-background-color: #7DC1FF; -fx-background-radius: 5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="200.0">
+               <children>
+                  <Label layoutX="24.0" layoutY="4.0" text="Total" textFill="WHITE" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="10.0">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label fx:id="contactLabel" layoutX="100.66666666666669" layoutY="6.333333333333336" prefHeight="28.0" prefWidth="303.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="105.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="120.0" layoutY="8.0" prefHeight="17.0" prefWidth="176.0" AnchorPane.rightAnchor="4.0">
+               <font>
+                  <Font name="Cambria" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="confirmButton" layoutX="195.0" layoutY="295.0" mnemonicParsing="false" onAction="#confirmButtonOnClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #63AAEB; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Confirm" textFill="#067fb4" AnchorPane.rightAnchor="17.5">
+         <font>
+            <Font name="Cambria Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="57.0" layoutY="297.0" mnemonicParsing="false" onAction="#cancelButtonOnClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #EB5211; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Cancel" textFill="#de3c18" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font name="Cambria" size="16.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="88.0" layoutY="17.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #7DC1FF; -fx-background-radius: 5;" AnchorPane.leftAnchor="67.5" AnchorPane.topAnchor="12.0">
+         <children>
+            <Label fx:id="serviceNameLabel" layoutX="24.0" layoutY="4.0" prefHeight="22.0" prefWidth="173.0" text="Service:" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="10.0">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

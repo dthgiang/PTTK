@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DetailController">
+   <children>
+      <AnchorPane layoutY="-6.0" prefHeight="33.0" prefWidth="1000.0" style="-fx-background-color: #63AAEB;">
+         <children>
+            <ImageView fx:id="homeIcon" fitHeight="35.0" fitWidth="35.0" layoutX="129.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="12.0">
+               <image>
+                  <Image url="@../../../../../../img/home.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="returnIcon" fitHeight="35.0" fitWidth="35.0" layoutX="-52.0" layoutY="-43.0" onMouseClicked="#returnIconOnClick" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="12.0">
+               <image>
+                  <Image url="@../../../../../../img/return.png" />
+               </image>
+            </ImageView>
+            <FontAwesomeIconView fx:id="userIcon" glyphName="USER_CIRCLE" layoutX="742.0" layoutY="38.85714340209961" size="36" text="" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="742.0" AnchorPane.rightAnchor="222.0" AnchorPane.topAnchor="12.0" />
+            <Label fx:id="userLabel" layoutX="804.0" layoutY="17.0" text="Hello 10ĐPTTK" AnchorPane.topAnchor="17.0">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="424.0" layoutY="232.0" prefHeight="475.0" prefWidth="948.0" style="-fx-background-radius: 10; -fx-background-color: #D4ECF1;" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="83.0">
+         <children>
+            <ImageView fx:id="tourImage" fitHeight="475.0" fitWidth="495.0" layoutX="43.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.3333333333333144" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../../../../../../img/NhaTrangDetail.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="buyButton" layoutX="807.6666666666666" layoutY="421.0" mnemonicParsing="false" onAction="#buyButtonOnClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #63AAEB; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Buy now" textFill="#067fb4" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="23.0">
+               <font>
+                  <Font name="Cambria Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="returnButton" layoutX="651.6666666666666" layoutY="428.0" mnemonicParsing="false" onAction="#returnButtonOnClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #EB5211; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Return" textFill="#de3c18" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="171.0">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Button>
+            <Label fx:id="welcomeLabel" layoutX="101.0" layoutY="70.0" style="-fx-stroke: #000000; -fx-stroke-width: 2;" text="Welcome to" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font name="Cambria Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="tourLabel" layoutX="236.0" layoutY="62.0" prefHeight="30.0" prefWidth="235.0" textFill="WHITE" AnchorPane.topAnchor="70.0">
+               <font>
+                  <Font name="Cambria Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="provinceLabel" layoutX="150.0" layoutY="106.0" prefHeight="30.0" prefWidth="206.0" textFill="WHITE">
+               <font>
+                  <Font name="Cambria Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="505.0" layoutY="18.0" text="About this tour">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="521.0" layoutY="44.0" prefHeight="33.0" prefWidth="404.0" style="-fx-background-color: #FBFBFB; -fx-background-radius: 5;" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="44.0">
+               <children>
+                  <AnchorPane layoutX="-8.0" layoutY="-1.0" prefHeight="33.0" prefWidth="100.0" style="-fx-background-color: #7DC1FF; -fx-background-radius: 5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                     <children>
+                        <Label layoutX="24.0" layoutY="4.0" text="Name" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="10.0">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="nameLabel" layoutX="105.0" layoutY="2.0" prefHeight="28.0" prefWidth="299.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="105.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="Cambria" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="521.0" layoutY="89.0" prefHeight="33.0" prefWidth="404.0" style="-fx-background-color: #FBFBFB; -fx-background-radius: 5;" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="89.0">
+               <children>
+                  <AnchorPane layoutX="-8.0" layoutY="-1.0" prefHeight="33.0" prefWidth="100.0" style="-fx-background-color: #7DC1FF; -fx-background-radius: 5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                     <children>
+                        <Label layoutX="24.0" layoutY="4.0" text="Province" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="10.0">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="province2Label" layoutX="106.0" layoutY="2.0" prefHeight="28.0" prefWidth="303.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="105.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="Cambria" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="521.0" layoutY="134.0" prefHeight="33.0" prefWidth="404.0" style="-fx-background-color: #FBFBFB; -fx-background-radius: 5;" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="134.0">
+               <children>
+                  <AnchorPane layoutX="-8.0" layoutY="-1.0" prefHeight="33.0" prefWidth="100.0" style="-fx-background-color: #7DC1FF; -fx-background-radius: 5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                     <children>
+                        <Label layoutX="24.0" layoutY="4.0" text="Area" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="10.0">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="areaLabel" layoutX="106.0" layoutY="2.0" prefHeight="28.0" prefWidth="303.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="105.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="Cambria" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="521.0" layoutY="179.0" prefHeight="33.0" prefWidth="404.0" style="-fx-background-color: #FBFBFB; -fx-background-radius: 5;" AnchorPane.topAnchor="179.0">
+               <children>
+                  <AnchorPane layoutX="-8.0" layoutY="-1.0" prefHeight="33.0" prefWidth="100.0" style="-fx-background-color: #7DC1FF; -fx-background-radius: 5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                     <children>
+                        <Label layoutX="24.0" layoutY="4.0" text="Owner" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="10.0">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="ownerLabel" layoutX="106.0" layoutY="2.0" prefHeight="28.0" prefWidth="303.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="105.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.3333333333333357">
+                     <font>
+                        <Font name="Cambria" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="521.0" layoutY="224.0" prefHeight="33.0" prefWidth="404.0" style="-fx-background-color: #FBFBFB; -fx-background-radius: 5;" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="224.0">
+               <children>
+                  <AnchorPane layoutX="-8.0" layoutY="-1.0" prefHeight="33.0" prefWidth="100.0" style="-fx-background-color: #7DC1FF; -fx-background-radius: 5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                     <children>
+                        <Label layoutX="24.0" layoutY="4.0" text="Contact" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="10.0">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="contactLabel" layoutX="100.66666666666669" layoutY="6.333333333333336" prefHeight="28.0" prefWidth="303.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="105.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="Cambria" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label layoutX="510.0" layoutY="272.0" text="Desctiption">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="518.0" layoutY="297.0" prefHeight="120.0" prefWidth="404.0" style="-fx-background-color: #FBFBFB; -fx-background-radius: 5;" AnchorPane.rightAnchor="23.0">
+               <children>
+                  <Label fx:id="descriptionLabel" layoutX="38.0" layoutY="27.0" prefHeight="120.0" prefWidth="404.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="Cambria" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

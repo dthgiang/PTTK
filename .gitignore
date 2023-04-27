@@ -1,3 +1,15 @@
+
+.idea/
+.classpath
+.project
+.settings/
+.mvn/
+mvnw
+mvnw.cmd
+*.iml
+*.ipr
+*.iws
+
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
