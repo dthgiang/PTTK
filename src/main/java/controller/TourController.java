@@ -15,7 +15,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.scene.control.ComboBox;
-import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+//import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -76,8 +76,8 @@ public  class TourController implements Initializable {
     private Label priceInfroLabel1, priceInfroLabel2, priceInfroLabel3;
     @FXML
     private ImageView searchIcon;
-    @FXML
-    private FontAwesomeIconView userIcon;
+   //@FXML
+    //private FontAwesomeIconView userIcon;
     @FXML
     private TextField searchField;
     @FXML
