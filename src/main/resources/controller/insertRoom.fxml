@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="498.0" prefWidth="278.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InsertRoomController">
+   <children>
+      <ImageView fitHeight="579.0" fitWidth="326.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/howart.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="roomIDTxt" alignment="CENTER" layoutX="88.0" layoutY="254.0" promptText="Nhập mã phòng" style="-fx-background-color: #EEE9DA;" />
+      <ComboBox fx:id="soguongCBB" layoutX="87.0" layoutY="291.0" prefWidth="150.0" promptText="Số giường" style="-fx-background-color: #EEE9DA;" />
+      <ComboBox fx:id="ttvesinhCBB" layoutX="87.0" layoutY="326.0" prefWidth="150.0" promptText="Trạng thái vệ sinh" style="-fx-background-color: #EEE9DA;" />
+      <ComboBox fx:id="loaiphongCBB" layoutX="87.0" layoutY="360.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="150.0" promptText="Loại phòng" style="-fx-background-color: #EEE9DA;" />
+      <Label layoutX="102.0" layoutY="209.0" text="Thêm phòng" textFill="#eee9da">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button id="backBtn" fx:id="backBtn" layoutX="248.0" layoutY="479.0" mnemonicParsing="false" onAction="#backBtnOnClick" prefHeight="26.0" prefWidth="63.0" style="-fx-background-color: #6096B4;" text="Trở về" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button id="insertBtn" fx:id="insertBtn" layoutX="119.0" layoutY="405.0" mnemonicParsing="false" onAction="#insertBtnOnClick" prefHeight="13.0" prefWidth="86.0" style="-fx-background-color: #6096B4;" text="Thêm" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
