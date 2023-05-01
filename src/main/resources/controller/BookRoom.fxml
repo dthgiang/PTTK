@@ -115,7 +115,7 @@
       </Pane>
       <ImageView fitHeight="706.0" fitWidth="351.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../assets/hogwarts1.png" />
+            <Image url="@../../../../assets/hogwarts1.png" />
          </image>
       </ImageView>
       <Separator layoutX="346.0" orientation="VERTICAL" prefHeight="706.0" prefWidth="16.0" />

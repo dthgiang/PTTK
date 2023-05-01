@@ -15,14 +15,23 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1000.0" styleClass="root" stylesheets="@object.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HelloController">
    <children>
-      <Pane layoutX="347.0" layoutY="-11.0" prefHeight="59.0" prefWidth="653.0" style="-fx-background-color: #BDCDD6;" stylesheets="@object.css" />
-      <TableView fx:id="roomTable" editable="true" layoutX="347.0" layoutY="47.0" prefHeight="613.0" prefWidth="653.0" stylesheets="@object.css">
+      <Pane layoutX="347.0" layoutY="-11.0" prefHeight="103.0" prefWidth="653.0" style="-fx-background-color: #BDCDD6;" stylesheets="@object.css">
+         <children>
+            <Label layoutX="243.0" layoutY="22.0" prefHeight="45.0" prefWidth="196.0" text="Rooms Detail">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Separator layoutX="109.0" layoutY="77.0" prefHeight="3.0" prefWidth="541.0" stylesheets="@object.css" />
+         </children></Pane>
+      <TableView fx:id="roomTable" editable="true" layoutX="347.0" layoutY="68.0" prefHeight="592.0" prefWidth="653.0" stylesheets="@object.css">
         <columns>
-            <TableColumn fx:id="columnID" prefWidth="139.0" text="ID" />
-            <TableColumn fx:id="columnName" prefWidth="139.0" text="Room Name" />
-            <TableColumn fx:id="columnPrice" prefWidth="78.0" text="Price" />
-            <TableColumn fx:id="columnDes" prefWidth="149.0" text="Description" />
-            <TableColumn fx:id="columnRating" prefWidth="62.0" text="Rating" />
+            <TableColumn fx:id="columnID" prefWidth="92.0" text="ID Room" />
+            <TableColumn fx:id="columnName" prefWidth="144.0" text="Room Name" />
+            <TableColumn fx:id="columnPrice" prefWidth="83.0" text="Price" />
+            <TableColumn fx:id="columnDes" prefWidth="158.0" text="Description" />
+            <TableColumn fx:id="columnRating" prefWidth="112.0" text="Services Provide" />
+            <TableColumn fx:id="columnRating1" prefWidth="63.0" text="Rating" />
         </columns>
          <contextMenu>
             <ContextMenu>
@@ -32,22 +41,22 @@
             </ContextMenu>
          </contextMenu>
       </TableView>
-      <Label layoutX="626.0" layoutY="1.0" text="RoomType">
-         <font>
-            <Font size="32.0" />
-         </font>
-      </Label>
-      <Separator layoutX="347.0" layoutY="47.0" prefHeight="3.0" prefWidth="653.0" stylesheets="@object.css" />
       <ImageView fitHeight="691.0" fitWidth="354.0" layoutX="-6.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../assets/hogwarts1.png" />
+            <Image url="@../../../../assets/hogwarts1.png" />
          </image>
       </ImageView>
       <Separator layoutX="338.0" layoutY="1.0" orientation="VERTICAL" prefHeight="660.0" prefWidth="22.0" stylesheets="@object.css" />
-      <Button fx:id="btnSignout" layoutX="122.0" layoutY="511.0" mnemonicParsing="false" onAction="#goSignOut" text="Sign Out">
+      <Button layoutX="88.0" layoutY="374.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="172.0" text="Back to Home">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
+      <Label layoutX="108.0" layoutY="600.0" text="Hi, username!">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="-1.0" layoutY="567.0" prefHeight="3.0" prefWidth="348.0" />
    </children>
 </AnchorPane>

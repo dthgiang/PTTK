@@ -2,60 +2,54 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
-   <left>
-      <AnchorPane prefHeight="400.0" prefWidth="275.0" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fx:id="bgImage" fitHeight="416.0" fitWidth="282.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../img/hotel2.jpg" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
-   </left>
-   <right>
-      <AnchorPane prefHeight="400.0" prefWidth="325.0" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fx:id="lockImage" fitHeight="48.0" fitWidth="47.0" layoutX="138.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../img/LoginN.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="20.0" layoutY="141.0" text="Account">
-               <font>
-                  <Font name="Cambria Bold" size="13.0" />
-               </font></Label>
-            <TextField fx:id="username" layoutX="87.0" layoutY="137.0" promptText="Username" />
-            <Label layoutX="20.0" layoutY="191.0" text="Password">
-               <font>
-                  <Font name="Cambria Bold" size="13.0" />
-               </font></Label>
-            <Button fx:id="loginButton" layoutX="48.0" layoutY="276.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="31.0" prefWidth="226.0" style="-fx-background-color: #95BDFF; -fx-background-radius: 5;" text="Login" textFill="#2b1a1afc">
-               <font>
-                  <Font name="Cambria Bold" size="13.0" />
-               </font>
-            </Button>
-            <Button fx:id="signUpButton" layoutX="48.0" layoutY="319.0" mnemonicParsing="false" onAction="#signUpButtonOnAction" prefHeight="31.0" prefWidth="226.0" style="-fx-background-color: #B4E4FF; -fx-background-radius: 5;" text="Exit" textFill="#2b1a1afc">
-               <font>
-                  <Font name="Cambria Bold" size="14.0" />
-               </font>
-            </Button>
-            <Label fx:id="loginLabel" layoutX="85.0" layoutY="237.0" text="Have a nice day" textFill="#ed0000">
-               <font>
-                  <Font name="System Italic" size="12.0" />
-               </font>
-            </Label>
-            <PasswordField fx:id="password" layoutX="88.0" layoutY="187.0" />
-         </children>
-      </AnchorPane>
-   </right>
-</BorderPane>
+<AnchorPane prefHeight="749.0" prefWidth="422.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HelloController">
+   <children>
+      <ImageView fitHeight="749.0" fitWidth="423.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../assets/hogwarts1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="-357.0" layoutY="567.0" style="-fx-text-fill: #EAE7DA;" stylesheets="@object.css" text="Username" textFill="#e8e5da">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="-357.0" layoutY="645.0" style="-fx-text-fill: #EAE7DA;" stylesheets="@object.css" text="Password" textFill="#e8e5da">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField layoutX="86.0" layoutY="339.0" prefHeight="25.0" prefWidth="298.0" style="-fx-background-color: transparent;" stylesheets="@object.css" />
+      <TextField layoutX="86.0" layoutY="417.0" prefHeight="25.0" prefWidth="298.0" style="-fx-background-color: transparent;" stylesheets="@object.css" />
+      <Separator layoutX="47.0" layoutY="373.0" prefHeight="5.0" prefWidth="333.0" />
+      <Separator layoutX="47.0" layoutY="454.0" prefHeight="5.0" prefWidth="333.0" />
+      <Button fx:id="btnLogin" layoutX="47.0" layoutY="532.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="333.0" stylesheets="@object.css" text="LOG IN">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnExit" layoutX="47.0" layoutY="584.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="333.0" stylesheets="@object.css" text="Exit">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="47.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../assets/icons8-user-48.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="48.0" layoutY="424.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../assets/icons8-password-50.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="177.0" layoutY="709.0" style="-fx-text-fill: #989898;" text="v.12.3.0.3739" />
+   </children>
+</AnchorPane>
