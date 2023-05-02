@@ -58,7 +58,7 @@ public  class  LoginController implements Initializable {
     public void loginButtonOnAction(ActionEvent event) throws IOException  {
         if (username.getText().isBlank() == false && password.getText().isBlank() == false) {
             if (validateAcc(username.getText(),password.getText())) {
-                spc.raiseOther(event, "HomePageforGuest.fxml");
+                spc.raiseOther(event, "ConfirmBooking.fxml");
             }
             else {
                 loginLabel.setText("Invalid username or password");
