@@ -29,12 +29,12 @@
             <TableColumn fx:id="columnNgaylap" minWidth="0.0" prefWidth="98.0" text="Status" />
          </columns>
       </TableView>
-      <Button layoutX="141.0" layoutY="495.0" mnemonicParsing="false" text="Sign Out">
+      <Button layoutX="137.0" layoutY="495.0" mnemonicParsing="false" text="Sign Out">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <MenuButton layoutX="82.0" layoutY="282.0" mnemonicParsing="false" popupSide="RIGHT" stylesheets="@object.css" text="Forms Management">
+      <MenuButton layoutX="78.0" layoutY="282.0" mnemonicParsing="false" popupSide="RIGHT" stylesheets="@object.css" text="Forms Management">
          <items>
             <MenuItem mnemonicParsing="false" text="Booking Forms" />
             <MenuItem mnemonicParsing="false" text="Successful Bookings" />
@@ -44,12 +44,12 @@
             <Font size="18.0" />
          </font>
       </MenuButton>
-      <Button layoutX="135.0" layoutY="355.0" mnemonicParsing="false" text="Room List">
+      <Button layoutX="131.0" layoutY="355.0" mnemonicParsing="false" text="Room List">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="135.0" layoutY="427.0" mnemonicParsing="false" text="Agent List">
+      <Button layoutX="131.0" layoutY="427.0" mnemonicParsing="false" text="Agent List">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

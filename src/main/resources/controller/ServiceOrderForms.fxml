@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="674.0" prefWidth="1214.0" stylesheets="@object.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HelloController">
+    <children>
+        <Pane layoutX="367.0" prefHeight="129.0" prefWidth="847.0" style="-fx-background-color: #BDCDD6;">
+            <children>
+                <Label layoutX="299.0" layoutY="14.0" prefHeight="40.0" prefWidth="289.0" text="Service Order Forms">
+                    <font>
+                        <Font size="28.0" />
+                    </font>
+                </Label>
+                <Button layoutX="87.0" layoutY="77.0" mnemonicParsing="false" text="Accept">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Button>
+                <Button layoutX="155.0" layoutY="77.0" mnemonicParsing="false" text="Reject">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Button>
+                <Button layoutX="14.0" layoutY="77.0" mnemonicParsing="false" text="Refresh">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Button>
+            </children>
+        </Pane>
+        <ImageView fitHeight="674.0" fitWidth="366.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../assets/hogwarts1.png" />
+            </image>
+        </ImageView>
+        <Separator layoutX="364.0" orientation="VERTICAL" prefHeight="660.0" prefWidth="0.0" />
+        <Separator layoutX="366.0" layoutY="60.0" prefHeight="5.0" prefWidth="847.0" />
+        <TableView layoutX="365.0" layoutY="131.0" prefHeight="543.0" prefWidth="847.0">
+            <columns>
+                <TableColumn prefWidth="61.0" text="ID Form" />
+                <TableColumn prefWidth="106.0" text="ID Service" />
+                <TableColumn prefWidth="92.0" text="Start Time" />
+                <TableColumn prefWidth="93.0" text="Usage Time" />
+                <TableColumn text="Status" />
+                <TableColumn prefWidth="100.0" text="Service Name" />
+                <TableColumn prefWidth="98.0" text="Description" />
+                <TableColumn prefWidth="108.0" text="Special Request" />
+                <TableColumn prefWidth="105.0" text="Payment Method" />
+            </columns>
+        </TableView>
+        <Button layoutX="131.0" layoutY="485.0" mnemonicParsing="false" text="Sign Out">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Button>
+        <Label layoutX="120.0" layoutY="595.0" text="Hi, username!">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Separator layoutY="554.0" prefHeight="5.0" prefWidth="366.0" />
+        <MenuButton layoutX="72.0" layoutY="272.0" mnemonicParsing="false" popupSide="RIGHT" stylesheets="@object.css" text="Forms Management">
+            <items>
+                <MenuItem mnemonicParsing="false" text="Booking Forms" />
+                <MenuItem mnemonicParsing="false" text="Successful Bookings" />
+                <MenuItem mnemonicParsing="false" text="Service Forms" />
+            </items>
+            <font>
+                <Font size="18.0" />
+            </font>
+        </MenuButton>
+        <Button layoutX="125.0" layoutY="345.0" mnemonicParsing="false" text="Room List">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Button>
+        <Button layoutX="125.0" layoutY="417.0" mnemonicParsing="false" text="Agent List">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
