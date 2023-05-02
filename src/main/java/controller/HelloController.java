@@ -134,7 +134,7 @@ public class HelloController  implements Initializable {
     @Override public void initialize(URL location, ResourceBundle resources) {
         //roomTable.setItems(loadData());
         //roomTable.getColumns().addAll(columnID, columnName, columnPrice, columnDes, columnRating);
-        setCellTable();
+        //setCellTable();
 
 
     };

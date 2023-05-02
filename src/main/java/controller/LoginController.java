@@ -46,13 +46,13 @@ public  class  LoginController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        File brandingFile = new File("img/hotel2.jpg");
+        /*File brandingFile = new File("img/hotel2.jpg");
         Image brandingImg = new Image(brandingFile.toURI().toString());
-        bgImage.setImage(brandingImg);
+        //bgImage.setImage(brandingImg);
 
         File lockFile = new File("img/LoginN.png");
         Image lockImg = new Image(lockFile.toURI().toString());
-        lockImage.setImage(lockImg);
+        //lockImage.setImage(lockImg);*/
     }
 
     public void loginButtonOnAction(ActionEvent event) throws IOException  {
