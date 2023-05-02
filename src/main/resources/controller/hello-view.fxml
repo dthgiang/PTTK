@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1000.0" styleClass="root" stylesheets="@object.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1000.0" styleClass="root" stylesheets="@object.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewDetailRoomController">
    <children>
       <Pane layoutX="347.0" layoutY="-11.0" prefHeight="103.0" prefWidth="653.0" style="-fx-background-color: #BDCDD6;" stylesheets="@object.css">
          <children>
@@ -47,7 +47,7 @@
          </image>
       </ImageView>
       <Separator layoutX="338.0" layoutY="1.0" orientation="VERTICAL" prefHeight="660.0" prefWidth="22.0" stylesheets="@object.css" />
-      <Button layoutX="88.0" layoutY="374.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="172.0" text="Back to Home">
+      <Button fx:id="BackToHome" layoutX="88.0" layoutY="374.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="172.0" text="Back to Home">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

@@ -30,10 +30,10 @@ public class HomePageforGuestController implements Initializable {
         // set event handler for ViewRoomDetail button
         ViewRoomDetail.setOnAction(event -> {
             try {
-                Parent bookRoomParent = FXMLLoader.load(getClass().getResource("/controller/hello-view.fxml"));
-                Scene bookRoomScene = new Scene(bookRoomParent);
+                Parent ViewRoomDetailParent = FXMLLoader.load(getClass().getResource("/controller/hello-view.fxml"));
+                Scene ViewRoomDetailScene = new Scene(ViewRoomDetailParent);
                 Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                window.setScene(bookRoomScene);
+                window.setScene(ViewRoomDetailScene);
                 window.show();
             } catch (IOException e) {
                 e.printStackTrace();
