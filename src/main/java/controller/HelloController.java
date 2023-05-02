@@ -76,11 +76,11 @@ public class HelloController  implements Initializable {
 
     private void setCellTable() {
 
-        columnID.setCellValueFactory(new PropertyValueFactory<>("id"));
+        /*columnID.setCellValueFactory(new PropertyValueFactory<>("id"));
         columnName.setCellValueFactory(new PropertyValueFactory<>("name"));
         columnPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
         columnDes.setCellValueFactory(new PropertyValueFactory<>("des"));
-        columnRating.setCellValueFactory(new PropertyValueFactory<>("rating"));
+        columnRating.setCellValueFactory(new PropertyValueFactory<>("rating"));*/
     }
     private ObservableList<RoomType> loadData() {
         ObservableList<RoomType> data = FXCollections.observableArrayList();
@@ -132,8 +132,8 @@ public class HelloController  implements Initializable {
 
 
     @Override public void initialize(URL location, ResourceBundle resources) {
-        roomTable.setItems(loadData());
-        roomTable.getColumns().addAll(columnID, columnName, columnPrice, columnDes, columnRating);
+        //roomTable.setItems(loadData());
+        //roomTable.getColumns().addAll(columnID, columnName, columnPrice, columnDes, columnRating);
         setCellTable();
 
 
