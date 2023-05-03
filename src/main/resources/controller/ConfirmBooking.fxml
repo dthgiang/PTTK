@@ -13,81 +13,82 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="661.0" prefWidth="1390.0" stylesheets="@object.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HelloController">
-   <children>
-      <Pane layoutX="367.0" prefHeight="129.0" prefWidth="1021.0" style="-fx-background-color: #BDCDD6;">
-         <children>
-            <Label layoutX="378.0" layoutY="14.0" prefHeight="40.0" prefWidth="289.0" text="Booking Forms List">
-               <font>
-                  <Font size="28.0" />
-               </font>
-            </Label>
-            <Button layoutX="87.0" layoutY="77.0" mnemonicParsing="false" text="Accept">
-               <font>
-                  <Font size="14.0" />
-               </font></Button>
-            <Button layoutX="155.0" layoutY="77.0" mnemonicParsing="false" text="Reject">
-               <font>
-                  <Font size="14.0" />
-               </font></Button>
-            <Button layoutX="14.0" layoutY="77.0" mnemonicParsing="false" text="Refresh">
-               <font>
-                  <Font size="14.0" />
-               </font></Button>
-         </children>
-      </Pane>
-      <ImageView fitHeight="674.0" fitWidth="366.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../assets/hogwarts1.png" />
-         </image>
-      </ImageView>
-      <Separator layoutX="364.0" orientation="VERTICAL" prefHeight="660.0" prefWidth="0.0" />
-      <Separator layoutX="366.0" layoutY="60.0" prefHeight="5.0" prefWidth="1021.0" />
-      <TableView layoutX="365.0" layoutY="131.0" prefHeight="543.0" prefWidth="1021.0">
-        <columns>
-          <TableColumn prefWidth="61.0" text="ID Form" />
-          <TableColumn prefWidth="106.0" text="Submission Date" />
-            <TableColumn prefWidth="92.0" text="Check-in Date" />
-            <TableColumn prefWidth="93.0" text="Check-out Date" />
-            <TableColumn text="Group Name" />
-            <TableColumn prefWidth="100.0" text="Customer Name" />
-            <TableColumn prefWidth="98.0" text="ID Card" />
-            <TableColumn prefWidth="98.0" text="Phone number" />
-            <TableColumn prefWidth="108.0" text="Special Request" />
-            <TableColumn prefWidth="105.0" text="Payment Method" />
-            <TableColumn prefWidth="79.0" text="ID Agent" />
-        </columns>
-      </TableView>
-      <Button layoutX="131.0" layoutY="485.0" mnemonicParsing="false" text="Sign Out">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Button>
-      <Label layoutX="120.0" layoutY="595.0" text="Hi, username!">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <Separator layoutY="554.0" prefHeight="5.0" prefWidth="366.0" />
-      <MenuButton layoutX="72.0" layoutY="272.0" mnemonicParsing="false" popupSide="RIGHT" stylesheets="@object.css" text="Forms Management">
-        <items>
-          <MenuItem mnemonicParsing="false" text="Booking Forms" />
-          <MenuItem mnemonicParsing="false" text="Successful Bookings" />
-            <MenuItem mnemonicParsing="false" text="Service Forms" />
-        </items>
-         <font>
-            <Font size="18.0" />
-         </font>
-      </MenuButton>
-      <Button layoutX="125.0" layoutY="345.0" mnemonicParsing="false" text="Room List">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Button>
-      <Button layoutX="125.0" layoutY="417.0" mnemonicParsing="false" text="Agent List">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Button>
-   </children>
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="661.0" prefWidth="1390.0"
+            stylesheets="@object.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.ConfirmBookingController">
+    <Pane layoutX="367.0" prefHeight="129.0" prefWidth="1021.0" style="-fx-background-color: #BDCDD6;">
+        <Label layoutX="378.0" layoutY="14.0" prefHeight="40.0" prefWidth="289.0" text="Booking Forms List">
+            <font>
+                <Font size="28.0"/>
+            </font>
+        </Label>
+        <Button fx:id="Accept" layoutX="87.0" layoutY="77.0" mnemonicParsing="false" text="Accept">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Button>
+        <Button fx:id="Reject" layoutX="155.0" layoutY="77.0" mnemonicParsing="false" text="Reject">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Button>
+        <Button fx:id="Refresh" layoutX="14.0" layoutY="77.0" mnemonicParsing="false" text="Refresh">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Button>
+    </Pane>
+    <ImageView fitHeight="674.0" fitWidth="366.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true"
+               preserveRatio="true">
+        <Image url="@../../../../assets/hogwarts1.png"/>
+    </ImageView>
+    <Separator layoutX="364.0" orientation="VERTICAL" prefHeight="660.0" prefWidth="0.0"/>
+    <Separator layoutX="366.0" layoutY="60.0" prefHeight="5.0" prefWidth="1021.0"/>
+    <TableView layoutX="365.0" layoutY="131.0" prefHeight="543.0" prefWidth="1021.0">
+      <columns>
+          <TableColumn prefWidth="61.0" text="ID Form"/>
+          <TableColumn prefWidth="106.0" text="Submission Date"/>
+          <TableColumn prefWidth="92.0" text="Check-in Date"/>
+          <TableColumn prefWidth="93.0" text="Check-out Date"/>
+          <TableColumn text="Group Name"/>
+          <TableColumn prefWidth="100.0" text="Customer Name"/>
+          <TableColumn prefWidth="98.0" text="ID Card"/>
+          <TableColumn prefWidth="98.0" text="Phone number"/>
+          <TableColumn prefWidth="108.0" text="Special Request"/>
+          <TableColumn prefWidth="105.0" text="Payment Method"/>
+          <TableColumn prefWidth="79.0" text="ID Agent"/>
+      </columns>
+    </TableView>
+    <Button fx:id="SignOut" layoutX="131.0" layoutY="485.0" mnemonicParsing="false" text="Sign Out">
+        <font>
+          <Font name="System Bold" size="18.0"/>
+        </font>
+    </Button>
+    <Label layoutX="120.0" layoutY="595.0" text="Hi, username!">
+        <font>
+          <Font size="20.0"/>
+        </font>
+    </Label>
+    <Separator layoutY="554.0" prefHeight="5.0" prefWidth="366.0"/>
+    <MenuButton layoutX="72.0" layoutY="272.0" mnemonicParsing="false" popupSide="RIGHT" stylesheets="@object.css"
+                text="Forms Management">
+      <items>
+          <MenuItem fx:id="BK" mnemonicParsing="false" text="Booking Forms"/>
+          <MenuItem fx:id="SB" mnemonicParsing="false" text="Successful Bookings"/>
+          <MenuItem fx:id="SF" mnemonicParsing="false" text="Service Forms"/>
+      </items>
+        <font>
+          <Font size="18.0"/>
+        </font>
+    </MenuButton>
+    <Button fx:id="RoomList" layoutX="125.0" layoutY="345.0" mnemonicParsing="false" text="Room List">
+        <font>
+          <Font name="System Bold" size="18.0"/>
+        </font>
+    </Button>
+    <Button fx:id="AgentList" layoutX="125.0" layoutY="417.0" mnemonicParsing="false" text="Agent List">
+        <font>
+          <Font name="System Bold" size="18.0"/>
+        </font>
+    </Button>
 </AnchorPane>
