@@ -10,6 +10,7 @@ Có nhiệm vụ giao tiếp giữa Database và Controller (Tầng thứ 2 tron
 Tầng này phụ trách giao tiếp với database và hỗ trợ các hàm trong Controller.
 
 ### DatabaseConnector
-Có nhiệm vụ duy nhất: Connect to database
+Có nhiệm vụ duy nhất: Connect to database.
+Để lấy connection chỉ cần gọi: **DatabaseConnector.getConnection(username, password)**
 ### Controller
 Có nhiệm vụ set up hiển thị cho màn hình, những thông tin để hiển thị cho người dùng sẽ được chỉnh sửa ở những file này.
