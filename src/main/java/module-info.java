@@ -9,5 +9,11 @@ module sample.demo2 {
 
     opens controller;//to javafx.fxml;
     exports controller;
+    exports databaseConnect;
+    opens databaseConnect;
+    exports helper;
+    opens helper;
+    exports model;
+    opens model;
 
 }

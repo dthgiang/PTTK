@@ -1,11 +1,11 @@
-package controller;
+package databaseConnect;
 
 import java.sql.*;
 
 public class DataBaseConnector {
     private static DataBaseConnector connector;
-    private String dbUrl;
-    private String username;
+    private static String dbUrl = "jdbc:oracle:thin:@localhost:1521:XE";
+    public static String username;
     private String password;
     private Connection connection;
 
@@ -32,9 +32,24 @@ public class DataBaseConnector {
         return connector;
     }
 
+    public static DataBaseConnector getConnector( String username, String password) {
+        if (connector == null) {
+            connector = new DataBaseConnector(dbUrl, username, password);
+        }
+
+        return connector;
+    }
+
     public static Connection getConnection(String dbURL, String username, String password) {
         if (connector == null) {
             connector = new DataBaseConnector(dbURL, username, password);
+        }
+
+        return connector.connection;
+    }
+    public static Connection getConnection(String username, String password) {
+        if (connector == null) {
+            connector = new DataBaseConnector(dbUrl, username, password);
         }
 
         return connector.connection;

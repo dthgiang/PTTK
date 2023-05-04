@@ -1,4 +1,7 @@
 package controller;
+import databaseConnect.DataBaseConnector;
+import helper.Helper;
+import helper.SwitchScreenHelper;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,7 +13,6 @@ import javafx.stage.Stage;
 
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -20,6 +22,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import model.Tour;
+
 public  class TourController implements Initializable {
 
     @FXML
@@ -85,7 +89,6 @@ public  class TourController implements Initializable {
     private Tour tour = new Tour();
 
     private int page = 0;
-    private SupportController spc = new SupportController();
     private ArrayList<Tour> tourList;
 
     public void setInforCard1(Tour tour) {
@@ -93,7 +96,7 @@ public  class TourController implements Initializable {
         timeInforLabel1.setText(Integer.toString(tour.getTime()) + " Days");
         shortDesInforLabel1.setText(tour.getDes());
         priceInfroLabel1.setText(Integer.toString(tour.getCost()));
-        spc.initImage(tourImage1, "img/tour/" + tour.getImage());
+        Helper.initHelper.initImage(tourImage1, "img/tour/" + tour.getImage());
 
     }
     public void setInforCard2(Tour tour) {
@@ -101,7 +104,7 @@ public  class TourController implements Initializable {
         timeInforLabel2.setText(Integer.toString(tour.getTime()) + " Days");
         shortDesInforLabel2.setText(tour.getDes());
         priceInfroLabel2.setText(Integer.toString(tour.getCost()));
-        spc.initImage(tourImage2, "img/tour/" + tour.getImage());
+        Helper.initHelper.initImage(tourImage2, "img/tour/" + tour.getImage());
 
     }
     public void setInforCard3(Tour tour) {
@@ -109,7 +112,7 @@ public  class TourController implements Initializable {
         timeInforLabel3.setText(Integer.toString(tour.getTime()) + " Days");
         shortDesInforLabel3.setText(tour.getDes());
         priceInfroLabel3.setText(Integer.toString(tour.getCost()));
-        spc.initImage(tourImage3, "img/tour/" + tour.getImage());
+        Helper.initHelper.initImage(tourImage3, "img/tour/" + tour.getImage());
 
     }
     public void loadCard(ArrayList<Tour> tourList, int page) {
@@ -151,12 +154,12 @@ public  class TourController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        spc.initImageIcon(returnIcon, "img/return.png");
-        spc.initImageIcon(homeIcon, "img/home.png");
-        spc.initImageIcon(searchIcon, "img/loupe.png");
+        Helper.initHelper.initImageIcon(returnIcon, "img/return.png");
+        Helper.initHelper.initImageIcon(homeIcon, "img/home.png");
+        Helper.initHelper.initImageIcon(searchIcon, "img/loupe.png");
         Tour temp = new Tour();
         areaFilter.setItems(FXCollections.observableArrayList(temp.getAllArea()));
-
+        userLabel.setText("Hello " + DataBaseConnector.username);
         tourList = tour.getAllTour();
         loadCard(tourList, page);
         page += 3;
@@ -164,42 +167,41 @@ public  class TourController implements Initializable {
 
     }
 
-    public void returnIconOnClick(MouseEvent event) {
-        Stage stage = (Stage) returnIcon.getScene().getWindow();
-        stage.close();
+    public void returnIconOnClick(MouseEvent event) throws IOException {
+        Helper.switchScreenHelper.raiseOther(event, "/controller/Home.fxml");
     }
 
     public void homeIconOnClick(MouseEvent event) throws IOException  {
-        spc.raiseOther(event, "main.fxml");
+        Helper.switchScreenHelper.raiseOther(event, "/controller/Home.fxml");
     }
 
     public void detailButtonOnClick1(ActionEvent event) throws IOException  {
         String maTour = tourList.get(page-3).getMaTour();
-        spc.raiseDetail(event, "detail.fxml", maTour);
+        Helper.switchScreenHelper.raiseDetail(event, Helper.screenName.tourDetailScreen, maTour);
     }
     public void detailButtonOnClick2(ActionEvent event) throws IOException  {
         String maTour = tourList.get(page-2).getMaTour();
-        spc.raiseDetail(event, "detail.fxml", maTour);
+        Helper.switchScreenHelper.raiseDetail(event, Helper.screenName.tourDetailScreen, maTour);
     }
     public void detailButtonOnClick3(ActionEvent event) throws IOException  {
         String maTour = tourList.get(page-1).getMaTour();
-        spc.raiseDetail(event, "detail.fxml", maTour);
+        Helper.switchScreenHelper.raiseDetail(event, Helper.screenName.tourDetailScreen, maTour);
     }
 
     public void buyButtonOnClick1(ActionEvent event) throws IOException  {
         Tour tourX = tourList.get(page-3);
         String welcome = tourX.getName() + " - " + tourX.getProvince();
-        spc.raiseBuyScreen(event, "buyTour.fxml", tourX.getMaTour(), welcome);
+        Helper.switchScreenHelper.raiseBuyScreen(event, Helper.screenName.buyTourScreen,tourX.getMaTour(), welcome);
     }
     public void buyButtonOnClick2(ActionEvent event) throws IOException  {
         Tour tourX = tourList.get(page-2);
         String welcome = tourX.getName() + " - " + tourX.getProvince();
-        spc.raiseBuyScreen(event, "buyTour.fxml", tourX.getMaTour(), welcome);
+        Helper.switchScreenHelper.raiseBuyScreen(event,  Helper.screenName.buyTourScreen, tourX.getMaTour(), welcome);
     }
     public void buyButtonOnClick3(ActionEvent event) throws IOException  {
         Tour tourX = tourList.get(page-1);
         String welcome = tourX.getName() + " - " + tourX.getProvince();
-        spc.raiseBuyScreen(event, "buyTour.fxml", tourX.getMaTour(), welcome);
+        Helper.switchScreenHelper.raiseBuyScreen(event,  Helper.screenName.buyTourScreen, tourX.getMaTour(), welcome);
     }
 
     public void searchButtonOnClick(ActionEvent event) throws IOException  {
@@ -217,7 +219,7 @@ public  class TourController implements Initializable {
         String condition = "TenTour = '" + searchName + "' OR " + "TinhThanh = '" + searchName + "'";
         tourList = tour.sqlTourQuery(condition);
         if (tourList.isEmpty()) {
-            spc.showAlert("Sorry we can not find this tour");
+            Helper.alertHelper.showAlert("Sorry we can not find this tour");
         } else {
             loadCard(tourList, 0);
             page = 3;
@@ -237,13 +239,13 @@ public  class TourController implements Initializable {
         lengthFilter.setText("");
 
         if (price == null || area == null || length == null) {
-            spc.showAlert("Please fill all filter");
+            Helper.alertHelper.showAlert("Please fill all filter");
         }
         else {
             condition = "Gia < " + price + " AND ThoiGian < " + length + " AND KhuVuc = '" + area + "'";
             tourList = tour.sqlTourQuery(condition);
             if (tourList.isEmpty()) {
-                spc.showAlert("Sorry we can not find this tour");
+                Helper.alertHelper.showAlert("Sorry we can not find this tour");
             } else {
                 loadCard(tourList, 0);
                 page = 3;

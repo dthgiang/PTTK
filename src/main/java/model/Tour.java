@@ -1,4 +1,6 @@
-package controller;
+package model;
+
+import databaseConnect.DataBaseConnector;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

@@ -1,6 +1,9 @@
 package controller;
 
+import databaseConnect.DataBaseConnector;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+import helper.Helper;
+import helper.SwitchScreenHelper;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -13,6 +16,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import model.Tour;
 
 public class DetailController implements Initializable {
 
@@ -63,12 +67,11 @@ public class DetailController implements Initializable {
     @FXML
     private Label welcomeLabel;
 
-    private SupportController spc = new SupportController();
     private Tour tourControl = new Tour();
     private String MaTour = "T01";
 
     public  void  initScreen(Tour tour) {
-        spc.initDetailImage(tourImage, "img/tour/" + tour.getImage());
+        Helper.initHelper.initDetailImage(tourImage, "img/tour/" + tour.getImage());
         nameLabel.setText(tour.getName());
         province2Label.setText(tour.getProvince());
         descriptionLabel.setText(tour.getDes());
@@ -78,17 +81,18 @@ public class DetailController implements Initializable {
 
         tourLabel.setText(tour.getName());
         provinceLabel.setText(tour.getProvince());
+        userLabel.setText("Hello " + DataBaseConnector.username);
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        spc.initImageIcon(returnIcon, "img/return.png");
-        spc.initImageIcon(homeIcon, "img/home.png");
+        Helper.initHelper.initImageIcon(returnIcon, "img/return.png");
+        Helper.initHelper.initImageIcon(homeIcon, "img/home.png");
 
     }
 
     public void returnIconOnClick(MouseEvent event) throws IOException  {
-        spc.raiseOther(event, "tourAndService.fxml");
+        Helper.switchScreenHelper.raiseOther(event, Helper.screenName.tourScreen);
     }
 
     public void setValue(String value) {
@@ -100,18 +104,18 @@ public class DetailController implements Initializable {
 
 
     public void homeIconOnClick(MouseEvent event) throws IOException  {
-        spc.raiseOther(event, "main.fxml");
+        Helper.switchScreenHelper.raiseOther(event, Helper.screenName.homeScreen);
     }
 
 
     public void buyButtonOnClick(ActionEvent event) throws IOException  {
         String welcome = tourControl.getName() + " - " + tourControl.getProvince();
-        spc.raiseBuyScreen(event, "buyTour.fxml", tourControl.getMaTour(), welcome);
+        Helper.switchScreenHelper.raiseBuyScreen(event, Helper.screenName.buyTourScreen, tourControl.getMaTour(), welcome);
     }
 
 
     public void returnButtonOnClick(ActionEvent event) throws IOException  {
-        spc.raiseOther(event, "tourAndService.fxml");
+        Helper.switchScreenHelper.raiseOther(event, Helper.screenName.tourScreen);
     }
     
 }

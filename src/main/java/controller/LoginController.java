@@ -1,6 +1,8 @@
 package controller;
 
 
+import helper.Helper;
+import helper.SwitchScreenHelper;
 import javafx.fxml.Initializable;
 
 import javafx.scene.control.Button;
@@ -9,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -26,25 +29,38 @@ public  class  LoginController implements Initializable {
 
     @FXML
     private Label loginLabel;
+    @FXML
+    private ImageView bgImage;
 
+    @FXML
+    private Button loginButton;
+
+    @FXML
+    private PasswordField password;
+
+    @FXML
+    private ImageView passwordIcon;
+
+    @FXML
+    private ImageView userIcon;
 
     @FXML
     private TextField username;
-    @FXML
-    private PasswordField password;
-    private SupportController spc = new SupportController();
 
 
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        Helper.initHelper.initImageIcon(bgImage, "img/howart.png");
+        Helper.initHelper.initImageIcon(userIcon, "img/userIcon.png");
+        Helper.initHelper.initImageIcon(passwordIcon, "img/passwordIcon.png");
 
     }
 
     public void loginButtonOnAction(ActionEvent event) throws IOException  {
         if (username.getText().isBlank() == false && password.getText().isBlank() == false) {
             if (validateAcc(username.getText(),password.getText())) {
-                spc.raiseOther(event, "HomePageforGuest.fxml");
+                Helper.switchScreenHelper.raiseOther(event, Helper.screenName.homeScreen);
             }
             else {
                 loginLabel.setText("Invalid username or password");

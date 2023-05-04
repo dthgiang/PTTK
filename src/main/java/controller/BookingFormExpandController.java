@@ -36,7 +36,7 @@ public class BookingFormExpandController implements Initializable {
 
         Back.setOnAction(event -> {
             try {
-                Parent OKButtonParent = FXMLLoader.load(getClass().getResource("/controller/HomePageforGuest.fxml"));
+                Parent OKButtonParent = FXMLLoader.load(getClass().getResource("/controller/Home.fxml"));
                 Scene OKButtonScene = new Scene(OKButtonParent);
                 Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 window.setScene(OKButtonScene);

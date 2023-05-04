@@ -37,7 +37,7 @@ public class BookingFormController implements Initializable {
 
         Home.setOnAction(event -> {
             try {
-                Parent  HomeParent = FXMLLoader.load(getClass().getResource("/controller/HomePageforGuest.fxml"));
+                Parent  HomeParent = FXMLLoader.load(getClass().getResource("/controller/Home.fxml"));
                 Scene  HomeScene = new Scene( HomeParent);
                 Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 window.setScene(HomeScene);

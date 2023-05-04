@@ -12,20 +12,20 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TourController">
    <children>
-      <AnchorPane layoutX="14.0" layoutY="11.0" prefHeight="33.0" prefWidth="1000.0" style="-fx-background-color: #63AAEB;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="14.0" layoutY="11.0" prefHeight="33.0" prefWidth="1000.0" style="-fx-background-color: #6096B4;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fx:id="homeIcon" fitHeight="35.0" fitWidth="35.0" layoutX="129.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="8.5">
+            <ImageView fx:id="homeIcon" fitHeight="35.0" fitWidth="35.0" layoutX="129.0" layoutY="19.0" onMouseClicked="#homeIconOnClick" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="8.5">
                <image>
-                  <Image url="@../../../../../../img/home.png" />
+                  <Image url="@../../../../img/home.png" />
                </image>
             </ImageView>
             <ImageView fx:id="returnIcon" fitHeight="35.0" fitWidth="35.0" layoutX="-52.0" layoutY="-43.0" onMouseClicked="#returnIconOnClick" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="8.5">
                <image>
-                  <Image url="@../../../../../../img/return.png" />
+                  <Image url="@../../../../img/return.png" />
                </image>
             </ImageView>
-            <FontAwesomeIconView fx:id="userIcon" glyphName="USER_CIRCLE" layoutX="742.0" layoutY="38.85714340209961" size="36" text="" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="742.0" AnchorPane.rightAnchor="222.0" AnchorPane.topAnchor="8.0" />
-            <Label fx:id="userLabel" layoutX="804.0" layoutY="17.0" text="Hello 10ĐPTTK" AnchorPane.topAnchor="17.0">
+            <FontAwesomeIconView fx:id="userIcon" fill="WHITE" glyphName="USER_CIRCLE" layoutX="742.0" layoutY="38.85714340209961" size="36" text="" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="742.0" AnchorPane.rightAnchor="222.0" AnchorPane.topAnchor="8.0" />
+            <Label fx:id="userLabel" layoutX="804.0" layoutY="17.0" text="Hello 10ĐPTTK" textFill="WHITE" AnchorPane.topAnchor="17.0">
                <font>
                   <Font name="Cambria Bold" size="18.0" />
                </font>
@@ -34,7 +34,7 @@
       </AnchorPane>
       <AnchorPane layoutX="12.0" layoutY="47.0" prefHeight="571.0" prefWidth="1000.0" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="47.0">
          <children>
-            <Button fx:id="searchButton" layoutX="606.0" layoutY="34.0" mnemonicParsing="false" onAction="#searchButtonOnClick" prefHeight="35.0" prefWidth="118.0" style="-fx-background-radius: 15; -fx-background-color: #63AAEB;" text="Search" textFill="WHITE">
+            <Button fx:id="searchButton" layoutX="606.0" layoutY="34.0" mnemonicParsing="false" onAction="#searchButtonOnClick" prefHeight="35.0" prefWidth="118.0" style="-fx-background-radius: 15; -fx-background-color: #93BFCF;" text="Search" textFill="WHITE">
                <font>
                   <Font name="Cambria" size="18.0" />
                </font>
@@ -53,7 +53,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="filterCard" layoutX="746.0" layoutY="36.0" prefHeight="309.0" prefWidth="233.0" style="-fx-background-color: #D4ECF1; -fx-background-radius: 5;" AnchorPane.rightAnchor="20.666666666666657">
+            <AnchorPane fx:id="filterCard" layoutX="746.0" layoutY="36.0" prefHeight="309.0" prefWidth="233.0" style="-fx-background-color: #BDCDD6; -fx-background-radius: 5;" AnchorPane.rightAnchor="20.666666666666657">
                <children>
                   <Label layoutX="19.0" layoutY="17.0" text="Filter" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
                      <font>
@@ -75,7 +75,7 @@
                         <Font name="Cambria" size="16.0" />
                      </font>
                   </Label>
-                  <Button layoutX="58.0" layoutY="234.0" mnemonicParsing="false" onAction="#applyButtonOnClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #63AAEB; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Apply" textFill="#067fb4" AnchorPane.rightAnchor="50.000000000000014">
+                  <Button layoutX="58.0" layoutY="234.0" mnemonicParsing="false" onAction="#applyButtonOnClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #93BFCF; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Apply" textFill="#067fb4" AnchorPane.rightAnchor="50.000000000000014">
                      <font>
                         <Font name="Cambria" size="16.0" />
                      </font>
@@ -97,19 +97,19 @@
                   </AnchorPane>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="inforCard1" layoutX="13.0" layoutY="107.0" prefHeight="138.0" prefWidth="722.0" style="-fx-background-radius: 20; -fx-background-color: #D4ECF1;" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="90.0">
+            <AnchorPane fx:id="inforCard1" layoutX="13.0" layoutY="107.0" prefHeight="138.0" prefWidth="722.0" style="-fx-background-radius: 20; -fx-background-color: #BDCDD6;" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="90.0">
                <children>
                   <ImageView fx:id="tourImage1" fitHeight="138.0" fitWidth="173.0" layoutX="-14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" style="-: 5;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <image>
                         <Image url="@../../../../img/NhaTrang.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="buyButton" layoutX="587.0" layoutY="81.0" mnemonicParsing="false" onAction="#buyButtonOnClick1" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #63AAEB; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Buy" textFill="#067fb4">
+                  <Button fx:id="buyButton" layoutX="587.0" layoutY="81.0" mnemonicParsing="false" onAction="#buyButtonOnClick1" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #93BFCF; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Buy" textFill="#067fb4">
                      <font>
                         <Font name="Cambria" size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="detailButton" layoutX="587.0" layoutY="16.0" mnemonicParsing="false" onAction="#detailButtonOnClick1" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-background-color: #4EA8FC;" text="Detail">
+                  <Button fx:id="detailButton" layoutX="587.0" layoutY="16.0" mnemonicParsing="false" onAction="#detailButtonOnClick1" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-background-color: #93BFCF;" text="Detail">
                      <font>
                         <Font name="Cambria" size="16.0" />
                      </font>
@@ -156,19 +156,19 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="inforCard2" layoutX="18.0" layoutY="240.0" prefHeight="138.0" prefWidth="722.0" style="-fx-background-radius: 20; -fx-background-color: #D4ECF1;" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="240.0">
+            <AnchorPane fx:id="inforCard2" layoutX="18.0" layoutY="240.0" prefHeight="138.0" prefWidth="722.0" style="-fx-background-radius: 20; -fx-background-color: #BDCDD6;" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="240.0">
                <children>
                   <ImageView fx:id="tourImage2" fitHeight="138.0" fitWidth="173.0" layoutX="-14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <image>
                         <Image url="@../../../../img/NhaTrang.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="buyButton1" layoutX="587.0" layoutY="81.0" mnemonicParsing="false" onAction="#buyButtonOnClick2" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #63AAEB; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Buy" textFill="#067fb4">
+                  <Button fx:id="buyButton1" layoutX="587.0" layoutY="81.0" mnemonicParsing="false" onAction="#buyButtonOnClick2" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #93BFCF; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Buy" textFill="#067fb4">
                      <font>
                         <Font name="Cambria" size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="detailButton1" layoutX="587.0" layoutY="16.0" mnemonicParsing="false" onAction="#detailButtonOnClick2" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-background-color: #4EA8FC;" text="Detail">
+                  <Button fx:id="detailButton1" layoutX="587.0" layoutY="16.0" mnemonicParsing="false" onAction="#detailButtonOnClick2" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-background-color: #93BFCF;" text="Detail">
                      <font>
                         <Font name="Cambria" size="16.0" />
                      </font>
@@ -215,24 +215,24 @@
                   </Label>
                </children>
             </AnchorPane>
-            <Button fx:id="backListButton" layoutX="806.0" layoutY="443.0" mnemonicParsing="false" onAction="#backListButtonOnClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #4EA8FC; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Back list" textFill="#10aae6" AnchorPane.bottomAnchor="95.0" AnchorPane.rightAnchor="70.0">
+            <Button fx:id="backListButton" layoutX="806.0" layoutY="443.0" mnemonicParsing="false" onAction="#backListButtonOnClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #93BFCF; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Back list" textFill="#10aae6" AnchorPane.bottomAnchor="95.0" AnchorPane.rightAnchor="70.0">
                <font>
                   <Font name="Cambria" size="16.0" />
                </font>
             </Button>
-            <AnchorPane fx:id="inforCard3" layoutX="-227.0" layoutY="389.0" prefHeight="138.0" prefWidth="722.0" style="-fx-background-radius: 20; -fx-background-color: #D4ECF1;" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="390.0">
+            <AnchorPane fx:id="inforCard3" layoutX="-227.0" layoutY="389.0" prefHeight="138.0" prefWidth="722.0" style="-fx-background-radius: 20; -fx-background-color: #BDCDD6;" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="390.0">
                <children>
                   <ImageView fx:id="tourImage3" fitHeight="138.0" fitWidth="173.0" layoutX="-14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <image>
                         <Image url="@../../../../img/NhaTrang.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="buyButton2" layoutX="587.0" layoutY="81.0" mnemonicParsing="false" onAction="#buyButtonOnClick3" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #63AAEB; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Buy" textFill="#067fb4">
+                  <Button fx:id="buyButton2" layoutX="587.0" layoutY="81.0" mnemonicParsing="false" onAction="#buyButtonOnClick3" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #93BFCF; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Buy" textFill="#067fb4">
                      <font>
                         <Font name="Cambria" size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="detailButton2" layoutX="587.0" layoutY="16.0" mnemonicParsing="false" onAction="#detailButtonOnClick3" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-background-color: #4EA8FC;" text="Detail">
+                  <Button fx:id="detailButton2" layoutX="587.0" layoutY="16.0" mnemonicParsing="false" onAction="#detailButtonOnClick3" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-background-color: #93BFCF;" text="Detail">
                      <font>
                         <Font name="Cambria" size="16.0" />
                      </font>
@@ -279,7 +279,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <Button fx:id="loadMoreButton" layoutX="806.0" layoutY="485.0" mnemonicParsing="false" onAction="#loadMoreButtonOnClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #2ecc8f; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="More Tour" textFill="#2ecc8f" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="70.00000000000004">
+            <Button fx:id="loadMoreButton" layoutX="806.0" layoutY="485.0" mnemonicParsing="false" onAction="#loadMoreButtonOnClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #50c38f; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="More Tour" textFill="#50c38f" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="70.00000000000004">
                <font>
                   <Font name="Cambria" size="16.0" />
                </font>

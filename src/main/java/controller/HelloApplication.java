@@ -1,5 +1,7 @@
 package controller;
 
+import databaseConnect.DataBaseConnector;
+import helper.Helper;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -10,8 +12,8 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        DataBaseConnector conn = DataBaseConnector.getConnector("jdbc:oracle:thin:@localhost:1521:XE", "DBA_PTTK", "123");
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Login.fxml"));
+        DataBaseConnector conn = DataBaseConnector.getConnector("DBA_PTTK", "123");
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(Helper.screenName.loginScreen));
         //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ManagementAgent.fxml"));
 
         //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("SuccessfulBookings.fxml"));

@@ -14,7 +14,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BuyTourController">
    <children>
-      <AnchorPane layoutY="-6.0" prefHeight="33.0" prefWidth="1000.0" style="-fx-background-color: #63AAEB;">
+      <AnchorPane layoutY="-6.0" prefHeight="33.0" prefWidth="1000.0" style="-fx-background-color: #6096B4;">
          <children>
             <ImageView fx:id="homeIcon" fitHeight="35.0" fitWidth="35.0" layoutX="129.0" layoutY="19.0" onMouseClicked="#homeIconOnClick" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="12.0">
                <image>
@@ -26,15 +26,15 @@
                   <Image url="@../../../../../../img/return.png" />
                </image>
             </ImageView>
-            <FontAwesomeIconView fx:id="userIcon" glyphName="USER_CIRCLE" layoutX="742.0" layoutY="38.85714340209961" size="36" text="" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="742.0" AnchorPane.rightAnchor="222.0" AnchorPane.topAnchor="12.0" />
-            <Label fx:id="userLabel" layoutX="804.0" layoutY="17.0" text="Hello 10ĐPTTK" AnchorPane.topAnchor="17.0">
+            <FontAwesomeIconView fx:id="userIcon" fill="WHITE" glyphName="USER_CIRCLE" layoutX="742.0" layoutY="38.85714340209961" size="36" text="" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="742.0" AnchorPane.rightAnchor="222.0" AnchorPane.topAnchor="12.0" />
+            <Label fx:id="userLabel" layoutX="804.0" layoutY="17.0" text="Hello 10ĐPTTK" textFill="WHITE" AnchorPane.topAnchor="17.0">
                <font>
                   <Font name="Cambria Bold" size="18.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="filterCard" layoutX="89.0" layoutY="139.0" prefHeight="397.0" prefWidth="435.0" style="-fx-background-color: #D4ECF1; -fx-background-radius: 5;" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="40.0">
+      <AnchorPane fx:id="filterCard" layoutX="89.0" layoutY="139.0" prefHeight="397.0" prefWidth="435.0" style="-fx-background-color: #BDCDD6; -fx-background-radius: 5;" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="40.0">
          <children>
             <Label layoutX="19.0" layoutY="17.0" text="Please fill your information" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
                <font>
@@ -83,7 +83,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="424.0" layoutY="-14.0" prefHeight="37.0" prefWidth="485.0" style="-fx-background-color: #4EA8FC; -fx-background-radius: 20;" AnchorPane.leftAnchor="251.0" AnchorPane.topAnchor="75.0">
+      <AnchorPane layoutX="424.0" layoutY="-14.0" prefHeight="37.0" prefWidth="485.0" style="-fx-background-color: #93BFCF; -fx-background-radius: 20;" AnchorPane.leftAnchor="251.0" AnchorPane.topAnchor="75.0">
          <children>
             <Label fx:id="welcomeLabel" layoutX="16.0" layoutY="8.0" prefHeight="17.0" prefWidth="458.0" textAlignment="CENTER" textFill="WHITE">
                <font>
@@ -92,7 +92,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="filterCard1" layoutX="559.0" layoutY="135.0" prefHeight="397.0" prefWidth="435.0" style="-fx-background-color: #D4ECF1; -fx-background-radius: 5;" AnchorPane.bottomAnchor="70.0" AnchorPane.rightAnchor="40.0">
+      <AnchorPane fx:id="filterCard1" layoutX="559.0" layoutY="135.0" prefHeight="397.0" prefWidth="435.0" style="-fx-background-color: #BDCDD6; -fx-background-radius: 5;" AnchorPane.bottomAnchor="70.0" AnchorPane.rightAnchor="40.0">
          <children>
             <Label layoutX="19.0" layoutY="17.0" text="Please fill your team's information" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
                <font>
@@ -101,7 +101,7 @@
             </Label>
             <AnchorPane layoutX="20.0" layoutY="62.0" prefHeight="27.0" prefWidth="404.0" style="-fx-background-color: #FBFBFB; -fx-background-radius: 5;" AnchorPane.rightAnchor="12.0">
                <children>
-                  <AnchorPane layoutX="2.0" layoutY="0.6666666666666679" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #7DC1FF; -fx-background-radius: 5;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0">
+                  <AnchorPane layoutX="2.0" layoutY="0.6666666666666679" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #93BFCF; -fx-background-radius: 5;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0">
                      <children>
                         <Label layoutX="10.0" layoutY="2.0" text="Name" AnchorPane.bottomAnchor="3.333333333333332" AnchorPane.leftAnchor="10.0">
                            <font>
@@ -121,7 +121,7 @@
             <AnchorPane layoutX="26.0" layoutY="113.0" prefHeight="27.0" prefWidth="404.0" style="-fx-background-color: #FBFBFB; -fx-background-radius: 5;" AnchorPane.rightAnchor="12.0">
                <children>
                   <TextField fx:id="emailField" prefHeight="27.0" prefWidth="300.0" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="0.0" />
-                  <AnchorPane layoutX="2.0" layoutY="0.6666666666666679" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #7DC1FF; -fx-background-radius: 5;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0">
+                  <AnchorPane layoutX="2.0" layoutY="0.6666666666666679" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #93BFCF; -fx-background-radius: 5;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0">
                      <children>
                         <Label layoutX="10.0" layoutY="2.0" text="Email" AnchorPane.bottomAnchor="3.333333333333332" AnchorPane.leftAnchor="10.0">
                            <font>
@@ -134,7 +134,7 @@
             </AnchorPane>
             <AnchorPane layoutX="17.0" layoutY="162.0" prefHeight="27.0" prefWidth="404.0" style="-fx-background-color: #FBFBFB; -fx-background-radius: 5;" AnchorPane.rightAnchor="12.0">
                <children>
-                  <AnchorPane layoutX="2.0" layoutY="0.6666666666666679" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #7DC1FF; -fx-background-radius: 5;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0">
+                  <AnchorPane layoutX="2.0" layoutY="0.6666666666666679" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #93BFCF; -fx-background-radius: 5;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0">
                      <children>
                         <Label layoutX="10.0" layoutY="2.0" text="Phone" AnchorPane.bottomAnchor="3.333333333333332" AnchorPane.leftAnchor="10.0">
                            <font>
@@ -148,7 +148,7 @@
             </AnchorPane>
             <AnchorPane layoutX="31.0" layoutY="210.0" prefHeight="27.0" prefWidth="404.0" style="-fx-background-color: #FBFBFB; -fx-background-radius: 5;" AnchorPane.rightAnchor="12.0">
                <children>
-                  <AnchorPane layoutX="2.0" layoutY="0.6666666666666679" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #7DC1FF; -fx-background-radius: 5;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0">
+                  <AnchorPane layoutX="2.0" layoutY="0.6666666666666679" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #93BFCF; -fx-background-radius: 5;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0">
                      <children>
                         <Label layoutX="10.0" layoutY="2.0" text="ID" AnchorPane.bottomAnchor="3.333333333333332" AnchorPane.leftAnchor="10.0">
                            <font>
@@ -160,19 +160,19 @@
                   <TextField fx:id="idField" layoutX="188.0" layoutY="9.0" prefHeight="27.0" prefWidth="300.0" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="0.0" />
                </children>
             </AnchorPane>
-            <Button fx:id="nextMemberButton" layoutX="299.0" layoutY="318.0" mnemonicParsing="false" onAction="#nextMemberButtonOnClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #38d77d; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Next member" textFill="#38d77d" AnchorPane.rightAnchor="12.0">
+            <Button fx:id="nextMemberButton" layoutX="299.0" layoutY="318.0" mnemonicParsing="false" onAction="#nextMemberButtonOnClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #5dcc8d; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Next member" textFill="#5dcc8d" AnchorPane.rightAnchor="12.0">
                <font>
                   <Font name="Cambria Bold" size="16.0" />
                </font>
             </Button>
          </children>
       </AnchorPane>
-      <Button fx:id="confirmButton" layoutX="815.0" layoutY="538.0" mnemonicParsing="false" onAction="#confirmButtonOnClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #63AAEB; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Confirm" textFill="#067fb4" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="60.0">
+      <Button fx:id="confirmButton" layoutX="815.0" layoutY="538.0" mnemonicParsing="false" onAction="#confirmButtonOnClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #6096B4; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Confirm" textFill="#6096b4" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="60.0">
          <font>
             <Font name="Cambria Bold" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="cancelButton" layoutX="642.0" layoutY="538.0" mnemonicParsing="false" onAction="#cancelButtonOnClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #EB5211; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Cancel" textFill="#de3c18" AnchorPane.bottomAnchor="20.000000000000036">
+      <Button fx:id="cancelButton" layoutX="642.0" layoutY="538.0" mnemonicParsing="false" onAction="#cancelButtonOnClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #d77b68; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Cancel" textFill="#d77b68" AnchorPane.bottomAnchor="20.000000000000036">
          <font>
             <Font name="Cambria" size="16.0" />
          </font>

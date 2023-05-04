@@ -1,6 +1,8 @@
 package controller;
 
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+import helper.Helper;
+import helper.SwitchScreenHelper;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,8 +17,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
+import model.Tour;
 
 import java.io.IOException;
 import java.net.URL;
@@ -50,18 +52,20 @@ public  class ServiceController implements Initializable {
     private Button searchButton;
 
     @FXML
-    private Label shortDesInforLabel;
+    private Label descriptionInforLabel1, descriptionInforLabel2, descriptionInforLabel3;
 
     @FXML
-    private Label timeInforLabel;
+    private Label timeInforLabel1, timeInforLabel2, timeInforLabel3;
 
     @FXML
-    private ImageView serviceImage;
+    private ImageView serviceImage1, serviceImage2, serviceImage3;
 
     @FXML
-    private Label tourNameInforLabel;
+    private Label serviceNameInforLabel1, serviceNameInforLabel2, serviceNameInforLabel3;
     @FXML
-    private Label priceInfroLabel;
+    private Label freeForInforLabel1, freeForInforLabel2, freeForInforLabel3;
+    @FXML
+    private Label priceInfroLabel1;
     @FXML
     private ImageView searchIcon;
     @FXML
@@ -71,17 +75,15 @@ public  class ServiceController implements Initializable {
     @FXML
     private Label userLabel;
 
-    private SupportController spc = new SupportController();
-
 
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        spc.initImage(returnIcon, "img/return.png");
-        spc.initImage(homeIcon, "img/home.png");
-        spc.initImage(searchIcon, "img/loupe.png");
-        spc.initImage(serviceImage, "img/service/spa.png");
+        Helper.initHelper.initImage(returnIcon, "img/return.png");
+        Helper.initHelper.initImage(homeIcon, "img/home.png");
+        Helper.initHelper.initImage(searchIcon, "img/loupe.png");
+        Helper.initHelper.initImage(serviceImage1, "img/service/spa.png");
 
         areaFilter.setItems(FXCollections.observableArrayList("Entertainment", "Sport", "Relax"));
 
@@ -90,27 +92,26 @@ public  class ServiceController implements Initializable {
                 "Tham quan nha Trang 7 ngày 7 đêm với trải\n nghiệm không thể nào tuyệt vời hơn."
                 , 7,"HCMUS"
         );
-        tourNameInforLabel.setText(tour.getName());
-        timeInforLabel.setText(Integer.toString(tour.getTime()) + " Days");
-        shortDesInforLabel.setText(tour.getDes());
-        priceInfroLabel.setText(Integer.toString(tour.getCost()));
+        serviceNameInforLabel1.setText(tour.getName());
+        timeInforLabel1.setText(Integer.toString(tour.getTime()) + " Days");
+        descriptionInforLabel1.setText(tour.getDes());
+        priceInfroLabel1.setText(Integer.toString(tour.getCost()));
 
 
     }
 
-    public void returnIconOnClick(MouseEvent event) {
-        Stage stage = (Stage) returnIcon.getScene().getWindow();
-        stage.close();
+    public void returnIconOnClick(MouseEvent event) throws IOException  {
+        Helper.switchScreenHelper.raiseOther(event, Helper.screenName.homeScreen);
     }
 
     public void homeIconOnClick(MouseEvent event) throws IOException  {
-        spc.raiseOther(event, "main.fxml");
+        Helper.switchScreenHelper.raiseOther(event, Helper.screenName.homeScreen);
     }
 
     public void buyButtonOnClick(ActionEvent event) throws IOException  {
         // create a new stage
         // Load the FXML file into a Parent node
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("buyService.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(Helper.screenName.buyServiceScreen));
         Parent otherScreen = loader.load();
 
         // Create a new stage

@@ -1,11 +1,14 @@
 package controller;
 
+import helper.Helper;
+import helper.SwitchScreenHelper;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import model.Tour;
 
 import java.io.IOException;
 import java.net.URL;
@@ -41,7 +44,6 @@ public class BuyServiceController implements Initializable {
     private TextField timeUse;
     @FXML
     private Label serviceNameLabel;
-    private SupportController spc = new SupportController();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -59,11 +61,11 @@ public class BuyServiceController implements Initializable {
 
 
     public void returnIconOnClick(MouseEvent event) throws IOException  {
-        spc.raiseOther(event, "tourAndService.fxml");
+        Helper.switchScreenHelper.raiseOther(event, Helper.screenName.tourScreen);
     }
 
     public void homeIconOnClick(MouseEvent event) throws IOException  {
-        spc.raiseOther(event, "main.fxml");
+        Helper.switchScreenHelper.raiseOther(event, Helper.screenName.homeScreen);
     }
 
 
@@ -75,9 +77,9 @@ public class BuyServiceController implements Initializable {
 
 
     public void cancelButtonOnClick(ActionEvent event) throws IOException  {
-        boolean b = spc.yesNoAlert("Are you sure to cancel it");
+        boolean b = Helper.alertHelper.yesNoAlert("Are you sure to cancel it");
         if (b) {
-            spc.raiseOther(event, "tourAndService.fxml");
+            Helper.switchScreenHelper.raiseOther(event, Helper.screenName.tourScreen);
         }
         //
     }

@@ -85,7 +85,7 @@ public class ConfirmBookingController implements Initializable {
 
         SignOut.setOnAction(event -> {
             try {
-                Parent SignOutParent = FXMLLoader.load(getClass().getResource("/controller/buyService.fxml"));
+                Parent SignOutParent = FXMLLoader.load(getClass().getResource("/controller/BuyService.fxml"));
                 Scene SignOutScene = new Scene(SignOutParent);
                 Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 window.setScene(SignOutScene);

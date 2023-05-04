@@ -1,4 +1,4 @@
-package controller;
+package model;
 
 public class RoomType {
     String id, name, des,price, rating;

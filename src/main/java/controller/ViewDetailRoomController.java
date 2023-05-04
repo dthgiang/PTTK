@@ -21,7 +21,7 @@ public class ViewDetailRoomController implements Initializable {
         // set event handler for ViewRoomDetail button
         BackToHome.setOnAction(event -> {
             try {
-                Parent BackToHomeParent = FXMLLoader.load(getClass().getResource("/controller/HomePageforGuest.fxml"));
+                Parent BackToHomeParent = FXMLLoader.load(getClass().getResource("/controller/Home.fxml"));
                 Scene BackToHomeScene = new Scene(BackToHomeParent);
                 Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 window.setScene(BackToHomeScene);

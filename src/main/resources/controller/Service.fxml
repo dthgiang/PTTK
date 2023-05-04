@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ServiceController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="11.0" prefHeight="33.0" prefWidth="1000.0" style="-fx-background-color: #6096B4;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="homeIcon" fitHeight="35.0" fitWidth="35.0" layoutX="129.0" layoutY="19.0" onMouseClicked="#homeIconOnClick" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="8.5">
+               <image>
+                  <Image url="@../../../../../../img/home.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="returnIcon" fitHeight="35.0" fitWidth="35.0" layoutX="-52.0" layoutY="-43.0" onMouseClicked="#returnIconOnClick" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="8.5">
+               <image>
+                  <Image url="@../../../../../../img/return.png" />
+               </image>
+            </ImageView>
+            <FontAwesomeIconView fx:id="userIcon" fill="WHITE" glyphName="USER_CIRCLE" layoutX="742.0" layoutY="38.85714340209961" size="36" text="" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="742.0" AnchorPane.rightAnchor="222.0" AnchorPane.topAnchor="8.0" />
+            <Label fx:id="userLabel" layoutX="804.0" layoutY="17.0" text="Hello 10ĐPTTK" textFill="WHITE" AnchorPane.topAnchor="17.0">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="12.0" layoutY="47.0" prefHeight="571.0" prefWidth="1000.0" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="47.0">
+         <children>
+            <Button fx:id="searchButton" layoutX="606.0" layoutY="34.0" mnemonicParsing="false" onAction="#searchButtonOnClick" prefHeight="35.0" prefWidth="118.0" style="-fx-background-radius: 15; -fx-background-color: #93BFCF;" text="Search" textFill="WHITE">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+            </Button>
+            <AnchorPane layoutX="11.0" layoutY="35.0" prefHeight="35.0" prefWidth="580.0" style="-fx-background-color: #BDCDD6; -fx-background-radius: 15;">
+               <children>
+                  <TextField fx:id="searchField" layoutX="42.0" layoutY="1.0" prefHeight="31.0" prefWidth="528.0" style="-fx-background-radius: 15; -fx-background-color: #BDCDD6;" text="Searching for service ?" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="1.0">
+                     <font>
+                        <Font name="Cambria" size="13.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fx:id="searchIcon" fitHeight="28.0" fitWidth="28.0" layoutX="6.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../img/loupe.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="filterCard" layoutX="746.0" layoutY="36.0" prefHeight="309.0" prefWidth="233.0" style="-fx-background-color: #BDCDD6;">
+               <children>
+                  <Label layoutX="19.0" layoutY="17.0" text="Filter" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="Cambria Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="33.0" layoutY="43.0" text="Price" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="43.0">
+                     <font>
+                        <Font name="Cambria" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="91.0" text="Area" AnchorPane.leftAnchor="20.0">
+                     <font>
+                        <Font name="Cambria" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="58.0" layoutY="234.0" mnemonicParsing="false" onAction="#applyButtonOnClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #6096B4; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Apply" textFill="#067fb4">
+                     <font>
+                        <Font name="Cambria" size="16.0" />
+                     </font>
+                  </Button>
+                  <AnchorPane fx:id="priceFilterPane" layoutX="20.0" layoutY="63.0" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #FBFBFB; -fx-background-radius: 5;" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="63.0">
+                     <children>
+                        <TextField fx:id="priceFilter" layoutX="1.0" layoutY="1.0" prefHeight="25.0" prefWidth="195.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="20.0" layoutY="115.0" prefHeight="27.0" prefWidth="199.0" style="-fx-background-color: #FBFBFB; -fx-background-radius: 5;">
+                     <children>
+                        <ComboBox fx:id="areaFilter" layoutX="4.0" layoutY="1.0" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: #FBFBFB; -fx-background-radius: 5;" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="inforCard" layoutX="13.0" layoutY="107.0" prefHeight="138.0" prefWidth="722.0" style="-fx-background-color: #BDCDD6;" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="90.0">
+               <children>
+                  <ImageView fx:id="serviceImage1" fitHeight="138.0" fitWidth="173.0" layoutX="-14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@../../../../../../img/service/spa.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="buyButton1" layoutX="591.0" layoutY="23.0" mnemonicParsing="false" onAction="#buyButtonOnClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #6096B4; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Buy" textFill="#6096b4">
+                     <font>
+                        <Font name="Cambria" size="16.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="200.0" layoutY="31.0" prefHeight="22.0" prefWidth="238.0" text="Time">
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="price2Label" layoutX="200.0" layoutY="50.0" prefHeight="22.0" prefWidth="82.0" text="Price">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="200.0" layoutY="96.0" prefHeight="22.0" prefWidth="238.0" text="Description">
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="priceInfroLabel1" layoutX="271.0" layoutY="49.0" prefHeight="22.0" prefWidth="120.0" text="99999" textFill="#085cda">
+                     <font>
+                        <Font name="Cambria Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="serviceNameInforLabel1" layoutX="202.0" layoutY="7.0" prefHeight="24.0" prefWidth="257.0">
+                     <font>
+                        <Font name="Cambria Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="timeInforLabel1" layoutX="256.0" layoutY="35.0" prefHeight="22.0" prefWidth="238.0">
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="descriptionInforLabel1" layoutX="281.0" layoutY="81.0" prefHeight="51.0" prefWidth="301.0">
+                     <font>
+                        <Font name="Cambria" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="price2Label1" layoutX="200.0" layoutY="70.0" prefHeight="22.0" prefWidth="82.0" text="Free for:">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="freeForInforLabel1" layoutX="272.0" layoutY="70.0" prefHeight="22.0" prefWidth="238.0">
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="inforCard1" layoutX="5.0" layoutY="257.0" prefHeight="138.0" prefWidth="722.0" style="-fx-background-color: #BDCDD6;" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="240.0">
+               <children>
+                  <ImageView fx:id="serviceImage2" fitHeight="138.0" fitWidth="173.0" layoutX="-14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@../../../../../../img/service/spa.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="buyButton11" layoutX="591.0" layoutY="23.0" mnemonicParsing="false" onAction="#buyButtonOnClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #6096B4; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Buy" textFill="#6096b4">
+                     <font>
+                        <Font name="Cambria" size="16.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="200.0" layoutY="31.0" prefHeight="22.0" prefWidth="238.0" text="Time">
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="price2Label1" layoutX="200.0" layoutY="50.0" prefHeight="22.0" prefWidth="82.0" text="Price">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="200.0" layoutY="96.0" prefHeight="22.0" prefWidth="238.0" text="Description">
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="priceInfroLabel2" layoutX="271.0" layoutY="49.0" prefHeight="22.0" prefWidth="120.0" text="99999" textFill="#085cda">
+                     <font>
+                        <Font name="Cambria Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="serviceNameInforLabel2" layoutX="202.0" layoutY="7.0" prefHeight="24.0" prefWidth="257.0">
+                     <font>
+                        <Font name="Cambria Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="timeInforLabel2" layoutX="256.0" layoutY="35.0" prefHeight="22.0" prefWidth="238.0">
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="descriptionInforLabel2" layoutX="281.0" layoutY="81.0" prefHeight="51.0" prefWidth="301.0">
+                     <font>
+                        <Font name="Cambria" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="price2Label11" layoutX="200.0" layoutY="70.0" prefHeight="22.0" prefWidth="82.0" text="Free for:">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="freeForInforLabel2" layoutX="272.0" layoutY="70.0" prefHeight="22.0" prefWidth="238.0">
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="inforCard11" layoutX="28.0" layoutY="412.0" prefHeight="138.0" prefWidth="722.0" style="-fx-background-color: #BDCDD6;" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="13.0">
+               <children>
+                  <ImageView fx:id="serviceImage3" fitHeight="138.0" fitWidth="173.0" layoutX="-14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@../../../../../../img/service/spa.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="buyButton111" layoutX="591.0" layoutY="23.0" mnemonicParsing="false" onAction="#buyButtonOnClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #6096B4; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Buy" textFill="#6096b4">
+                     <font>
+                        <Font name="Cambria" size="16.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="200.0" layoutY="31.0" prefHeight="22.0" prefWidth="238.0" text="Time">
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="price2Label11" layoutX="200.0" layoutY="50.0" prefHeight="22.0" prefWidth="82.0" text="Price">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="200.0" layoutY="96.0" prefHeight="22.0" prefWidth="238.0" text="Description">
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="priceInfroLabel3" layoutX="271.0" layoutY="49.0" prefHeight="22.0" prefWidth="120.0" text="99999" textFill="#085cda">
+                     <font>
+                        <Font name="Cambria Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="serviceNameInforLabel3" layoutX="202.0" layoutY="7.0" prefHeight="24.0" prefWidth="257.0">
+                     <font>
+                        <Font name="Cambria Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="timeInforLabel3" layoutX="256.0" layoutY="35.0" prefHeight="22.0" prefWidth="238.0">
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="descriptionInforLabel3" layoutX="281.0" layoutY="81.0" prefHeight="51.0" prefWidth="301.0">
+                     <font>
+                        <Font name="Cambria" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="price2Label111" layoutX="200.0" layoutY="70.0" prefHeight="22.0" prefWidth="82.0" text="Free for:">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="freeForInforLabel3" layoutX="272.0" layoutY="70.0" prefHeight="22.0" prefWidth="238.0">
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

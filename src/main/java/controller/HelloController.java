@@ -28,8 +28,8 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import model.RoomType;
 
 
 public class HelloController  implements Initializable {

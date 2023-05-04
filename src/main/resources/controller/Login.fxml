@@ -17,7 +17,7 @@
          <children>
             <ImageView fx:id="bgImage" fitHeight="737.0" fitWidth="475.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../assets/hogwarts1.png" />
+                  <Image url="@../../../../img/howart.png" />
                </image>
             </ImageView>
             <TextField fx:id="username" layoutX="83.0" layoutY="317.0" prefHeight="35.0" prefWidth="301.0" style="-fx-background-color: transparent;">
@@ -35,7 +35,7 @@
                   <Font name="Cambria Bold" size="24.0" />
                </font>
             </Button>
-            <Label fx:id="loginLabel" layoutX="53.0" layoutY="484.0" text="Have a nice day" textFill="#eee9da">
+            <Label fx:id="loginLabel" layoutX="53.0" layoutY="484.0" text="Have a nice day" textFill="#0d6219">
                <font>
                   <Font name="System Italic" size="17.0" />
                </font>
@@ -47,14 +47,14 @@
             </PasswordField>
             <Separator layoutX="36.0" layoutY="355.0" prefHeight="0.0" prefWidth="340.0" />
             <Separator layoutX="38.0" layoutY="448.0" prefHeight="0.0" prefWidth="340.0" />
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="38.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="userIcon" fitHeight="30.0" fitWidth="30.0" layoutX="38.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../assets/icons8-user-48.png" />
+                  <Image url="@../../../../img/icons8-user-48.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="38.0" layoutY="412.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="passwordIcon" fitHeight="30.0" fitWidth="30.0" layoutX="38.0" layoutY="412.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../assets/icons8-password-50.png" />
+                  <Image url="@../../../../img/icons8-password-50.png" />
                </image>
             </ImageView>
             <Label layoutX="168.0" layoutY="688.0" text="v124.004216.3" textFill="#00000071" />

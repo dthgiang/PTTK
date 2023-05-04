@@ -1,5 +1,6 @@
 package controller;
 
+import databaseConnect.DBUtil;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,6 +14,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.scene.input.MouseEvent;
+import model.RoomSchema;
 
 import java.io.IOException;
 import java.net.URL;

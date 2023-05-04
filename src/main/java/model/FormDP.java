@@ -1,4 +1,4 @@
-package controller;
+package model;
 
 public class FormDP {
     String maphieu, trangthai, dkvanchuyenhanhly, yeucaudacbiet, ngaylap, madaily, makhachhang, nhanvienxuly;

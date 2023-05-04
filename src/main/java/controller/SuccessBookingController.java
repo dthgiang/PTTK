@@ -29,6 +29,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import model.FormDP;
 
 
 public class SuccessBookingController implements Initializable {

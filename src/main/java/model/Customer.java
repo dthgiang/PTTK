@@ -1,10 +1,8 @@
-package controller;
+package model;
+
+import databaseConnect.DataBaseConnector;
 
 import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
 
 public class Customer {
     private  String maKh, name, address, phone, tax, email, cmnd, maDoan, username, password;

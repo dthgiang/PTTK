@@ -1,22 +1,22 @@
-package controller;
+package databaseConnect;
 import java.sql.*;
 
 public final class DBUtil {
     private static boolean isDriverLoaded = false;
+    private final static String url="jdbc:oracle:thin:@localhost:1521:XE";
+    private final static String user="DBA_PTTK";
+    private final static String password="123";
 
-    static{
-        try{
+    static {
+        try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             System.out.println("Driver Loaded");
             isDriverLoaded = true;
-        } catch(ClassNotFoundException e){
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
 
-    private final static String url="jdbc:oracle:thin:@localhost:1521:XE";
-    private final static String user="DBA_PTTK";
-    private final static String password="123";
 
     public static Connection getConnection() throws SQLException{
         Connection con = null;

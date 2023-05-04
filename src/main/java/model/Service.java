@@ -1,4 +1,6 @@
-package controller;
+package model;
+
+import databaseConnect.DataBaseConnector;
 
 public class Service {
     private String name;

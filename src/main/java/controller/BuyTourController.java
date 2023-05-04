@@ -1,6 +1,9 @@
 package controller;
 
+import databaseConnect.DataBaseConnector;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+import helper.Helper;
+import helper.SwitchScreenHelper;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,6 +17,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import model.Customer;
+import model.Tour;
 
 import java.io.IOException;
 import java.net.URL;
@@ -68,7 +73,6 @@ public class BuyTourController implements Initializable {
     @FXML
     private Label welcomeLabel;
 
-    private SupportController spc = new SupportController();
     private Tour tourControl = new Tour();
     private String maTour;
     private String tourName;
@@ -85,9 +89,9 @@ public class BuyTourController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        spc.initImageIcon(returnIcon, "img/return.png");
-        spc.initImageIcon(homeIcon, "img/home.png");
-
+        Helper.initHelper.initImageIcon(returnIcon, "img/return.png");
+        Helper.initHelper.initImageIcon(homeIcon, "img/home.png");
+        userLabel.setText("Hello " + DataBaseConnector.username);
         vehicle.setItems(FXCollections.observableArrayList("Tự túc", "Xe đạp", "Máy bay", "Tàu hỏa", "Tàu thủy", "Cân đẩu vân", "Xe hơi", "Rồng"));
 
     }
@@ -95,15 +99,15 @@ public class BuyTourController implements Initializable {
 
 
     public void returnIconOnClick(MouseEvent event) throws IOException  {
-        spc.raiseOther(event, "tourAndService.fxml");
+        Helper.switchScreenHelper.raiseOther(event, "Tour.fxml");
     }
 
     public void homeIconOnClick(MouseEvent event) throws IOException  {
-        spc.raiseOther(event, "main.fxml");
+        Helper.switchScreenHelper.raiseOther(event, "main.fxml");
     }
     public void nextMemberButtonOnClick(ActionEvent event) throws IOException {
         if (numOfMember == 0) {
-            spc.showAlert("Please enter number of member(s)");
+            Helper.alertHelper.showAlert("Please enter number of member(s)");
             return;
         }
 
@@ -141,18 +145,18 @@ public class BuyTourController implements Initializable {
     public void confirmButtonOnClick(ActionEvent event) throws IOException  {
         // call insert to db function
         if (memberNum.getText().trim().isEmpty()) {
-            spc.showAlert("Please fill number of member");
+            Helper.alertHelper.showAlert("Please fill number of member");
             return;
         }
 
         if (cusList.size() < numOfMember) {
-            spc.showAlert("Please fill all member information");
+            Helper.alertHelper.showAlert("Please fill all member information");
             return;
         }
 
         String memNum = memberNum.getText();
         int memberN = Integer.parseInt(memNum);
-        String dateStart = spc.dateToString(startDate);
+        String dateStart = Helper.convertTypeHelper.dateToString(startDate);
         String veh = vehicle.getValue();
         String req = otherRequire.getText();
 
@@ -172,9 +176,9 @@ public class BuyTourController implements Initializable {
 
 
     public void cancelButtonOnClick(ActionEvent event) throws IOException  {
-        boolean b = spc.yesNoAlert("Are you sure to cancel it");
+        boolean b = Helper.alertHelper.yesNoAlert("Are you sure to cancel it");
         if (b) {
-            spc.raiseOther(event, "tourAndService.fxml");
+            Helper.switchScreenHelper.raiseOther(event, Helper.screenName.tourScreen);
         }
         //
     }
