@@ -2,6 +2,7 @@ package controller;
 
 
 
+import helper.Helper;
 import javafx.scene.Scene;
 import java.io.IOException;
 import java.net.URL;
@@ -79,7 +80,13 @@ public class SuccessBookingController implements Initializable {
             }
         });
     }
-
+    @FXML private void goRoomManage(ActionEvent event) throws IOException {
+        Helper.switchScreenHelper.raiseOther(event, Helper.screenName.roomManage);
+    }
+    @FXML private void goFresh(ActionEvent event) throws IOException {
+        FormDP formDP=new FormDP();
+        FormDPTable.setItems(formDP.loadData());
+    }
     private void setCellTable() {
 
         columnMaphieu.setCellValueFactory(new PropertyValueFactory<>("maphieu"));
@@ -93,59 +100,12 @@ public class SuccessBookingController implements Initializable {
 
 
     }
-    private ObservableList<FormDP> loadData() {
-        ObservableList<FormDP> data = FXCollections.observableArrayList();
 
-        try {
-            // Register the Oracle JDBC driver
-            Class.forName("oracle.jdbc.driver.OracleDriver");
-
-            // Create a connection to the database
-            Connection connection = DriverManager.getConnection(
-                    "jdbc:oracle:thin:@localhost:1521:XE",
-                    "DBA_PTTK",
-                    "123");
-
-            // Create a statement
-            Statement statement = connection.createStatement();
-
-            // Execute the query and get the result set
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM phieudatphong");
-
-            // Loop through the result set and add the data to the tableview
-            while (resultSet.next()) {
-                String maPhieu = resultSet.getString("MaPhieu");
-                String trangThai = resultSet.getString("TrangThai");
-                String dkVanChuyenHanhLy = resultSet.getString("DKVanChuyenHanhLy");
-                String yeuCauDacBiet = resultSet.getString("YeuCauDacBiet");
-                String ngayLap = resultSet.getString("NgayLap");
-                String maDaiLy = resultSet.getString("MaDaiLy");
-                String maKhachHang = resultSet.getString("MaKhachHang");
-                String nhanVienXuLy = resultSet.getString("NhanVienXuLy");
-
-                data.add(new FormDP(maPhieu, trangThai, dkVanChuyenHanhLy, yeuCauDacBiet, ngayLap, maDaiLy, maKhachHang, nhanVienXuLy));
-
-            }
-
-            // Close the connection and statement
-            resultSet.close();
-            statement.close();
-            connection.close();
-
-        } catch (ClassNotFoundException e) {
-            System.out.println("Oracle JDBC driver not found");
-            e.printStackTrace();
-        } catch (SQLException e) {
-            System.out.println("Connection to Oracle database failed");
-            e.printStackTrace();
-        }
-
-        return data;
-    }
 
 
     @Override public void initialize(URL url, ResourceBundle rb) {
-        FormDPTable.setItems(loadData());
+        FormDP formDP=new FormDP();
+        FormDPTable.setItems(formDP.loadData());
         FormDPTable.getColumns().addAll(columnMaphieu, columnTrangthai, columnDkvc, columnYcdb, columnNgaylap, columnMadaily, columnMakhachhang, columnNhanvienxuly);
         setCellTable();
     };

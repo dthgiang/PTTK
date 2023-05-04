@@ -1,6 +1,6 @@
 package controller;
 
-import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+//import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import helper.Helper;
 import helper.SwitchScreenHelper;
 import javafx.collections.FXCollections;
@@ -68,8 +68,8 @@ public  class ServiceController implements Initializable {
     private Label priceInfroLabel1;
     @FXML
     private ImageView searchIcon;
-    @FXML
-    private FontAwesomeIconView userIcon;
+    //@FXML
+    //private FontAwesomeIconView userIcon;
     @FXML
     private TextField searchField;
     @FXML

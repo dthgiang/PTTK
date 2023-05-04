@@ -11,7 +11,7 @@ public class ScreenName {
     public String bookFormExpandScreen = "/controller/BookingFormExpand.fxml";
     public String confirmBookingScreen = "/controller/ConfirmBooking.fxml";
     public String tourDetailScreen = "/controller/TourDetail.fxml";
-
-
+    public String roomManage = "/controller/roomManage.fxml";
+    public String SuccessfulBookings = "/controller/SuccessfulBookings.fxml";
 
 }

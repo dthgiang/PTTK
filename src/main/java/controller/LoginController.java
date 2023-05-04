@@ -59,13 +59,19 @@ public  class  LoginController implements Initializable {
 
     public void loginButtonOnAction(ActionEvent event) throws IOException  {
         if (username.getText().isBlank() == false && password.getText().isBlank() == false) {
-            if (validateAcc(username.getText(),password.getText())) {
+            if (validateCusAcc(username.getText(),password.getText())) {
                 Helper.switchScreenHelper.raiseOther(event, Helper.screenName.homeScreen);
             }
-            else {
-                loginLabel.setText("Invalid username or password");
+            if (validateAdAcc(username.getText(),password.getText())) {
+                    Helper.switchScreenHelper.raiseOther(event, Helper.screenName.SuccessfulBookings);
+                }
+            else{
+                    loginLabel.setText("Invalid username or password");
+                }
             }
-        }
+
+
+
         else {
             loginLabel.setText("Please enter username and password");
         }
@@ -74,9 +80,15 @@ public  class  LoginController implements Initializable {
         loginLabel.setText("Ok");
     }
 
+    public boolean validateCusAcc(String Username, String pw) {
+        System.out.println(Username + ", " + pw);
+        if (Username.equals("khachhang") && pw.equals("123") ) {
+            return  true;
+        }
+        return  false;
+    }
 
-
-    public boolean validateAcc(String Username, String pw) {
+    public boolean validateAdAcc(String Username, String pw) {
         System.out.println(Username + ", " + pw);
         if (Username.equals("admin") && pw.equals("123") ) {
             return  true;

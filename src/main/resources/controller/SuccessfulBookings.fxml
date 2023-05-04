@@ -23,13 +23,16 @@
       <TableView fx:id="FormDPTable" layoutX="370.0" layoutY="127.0" prefHeight="543.0" prefWidth="648.0">
          <columns>
             <TableColumn fx:id="columnMaphieu" prefWidth="82.0" text="ID Form" />
-            <TableColumn fx:id="columnTrangthai" prefWidth="146.0" text="Creation Time" />
+            <TableColumn fx:id="columnTrangthai" prefWidth="146.0" text="Status" />
             <TableColumn fx:id="columnDkvc" prefWidth="153.0" text="Luggage Transportation" />
             <TableColumn fx:id="columnYcdb" minWidth="5.0" prefWidth="167.0" text="Special Request" />
-            <TableColumn fx:id="columnNgaylap" minWidth="0.0" prefWidth="98.0" text="Status" />
+            <TableColumn fx:id="columnNgaylap" minWidth="0.0" prefWidth="98.0" text="Creation Time" />
+            <TableColumn fx:id="columnMadaily" prefWidth="100.0" text="ID Agent" />
+            <TableColumn fx:id="columnMakhachhang" prefWidth="98.0" text="ID Cus" />
+            <TableColumn fx:id="columnNhanvienxuly" prefWidth="98.0" text="ID Staff" />
          </columns>
       </TableView>
-      <Button layoutX="137.0" layoutY="495.0" mnemonicParsing="false" text="Sign Out">
+      <Button fx:id="BackToHome" onAction="#goSignOut" layoutX="137.0" layoutY="495.0" mnemonicParsing="false" text="Sign Out">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -44,7 +47,7 @@
             <Font size="18.0" />
          </font>
       </MenuButton>
-      <Button layoutX="131.0" layoutY="355.0" mnemonicParsing="false" text="Room List">
+      <Button fx:id="btnRoomList" onAction="#goRoomManage" layoutX="131.0" layoutY="355.0" mnemonicParsing="false" text="Room List">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -61,7 +64,7 @@
                   <Font size="28.0" />
                </font>
             </Label>
-            <Button layoutX="14.0" layoutY="77.0" mnemonicParsing="false" text="Refresh">
+            <Button fx:id="btnFresh" onAction="#goFresh" layoutX="14.0" layoutY="77.0" mnemonicParsing="false" text="Refresh">
                <font>
                   <Font size="14.0" />
                </font>

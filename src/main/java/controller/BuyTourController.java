@@ -1,7 +1,7 @@
 package controller;
 
 import databaseConnect.DataBaseConnector;
-import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+//import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import helper.Helper;
 import helper.SwitchScreenHelper;
 import javafx.collections.FXCollections;
@@ -61,8 +61,8 @@ public class BuyTourController implements Initializable {
     @FXML
     private DatePicker startDate;
 
-    @FXML
-    private FontAwesomeIconView userIcon;
+    //@FXML
+    //private FontAwesomeIconView userIcon;
 
     @FXML
     private Label userLabel, memberNumLabel;

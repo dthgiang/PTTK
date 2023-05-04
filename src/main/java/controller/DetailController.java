@@ -1,7 +1,7 @@
 package controller;
 
 import databaseConnect.DataBaseConnector;
-import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+//import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import helper.Helper;
 import helper.SwitchScreenHelper;
 import javafx.fxml.FXML;
@@ -56,8 +56,8 @@ public class DetailController implements Initializable {
     @FXML
     private Label tourLabel;
 
-    @FXML
-    private FontAwesomeIconView userIcon;
+    //@FXML
+    //private FontAwesomeIconView userIcon;
 
     @FXML
     private Label userLabel;
