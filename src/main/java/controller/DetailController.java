@@ -16,6 +16,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import model.Login;
 import model.Tour;
 
 public class DetailController implements Initializable {
@@ -81,7 +82,7 @@ public class DetailController implements Initializable {
 
         tourLabel.setText(tour.getName());
         provinceLabel.setText(tour.getProvince());
-        userLabel.setText("Hello " + DataBaseConnector.username);
+        userLabel.setText("Hello " + Login.getUsername());
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {

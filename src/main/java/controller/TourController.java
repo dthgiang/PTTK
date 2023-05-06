@@ -22,6 +22,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import model.Login;
 import model.Tour;
 
 public  class TourController implements Initializable {
@@ -159,7 +160,7 @@ public  class TourController implements Initializable {
         Helper.initHelper.initImageIcon(searchIcon, "img/loupe.png");
         Tour temp = new Tour();
         areaFilter.setItems(FXCollections.observableArrayList(temp.getAllArea()));
-        userLabel.setText("Hello " + DataBaseConnector.username);
+        userLabel.setText("Hello " + Login.getUsername());
         tourList = tour.getAllTour();
         loadCard(tourList, page);
         page += 3;

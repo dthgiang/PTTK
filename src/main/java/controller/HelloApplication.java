@@ -12,7 +12,6 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        DataBaseConnector conn = DataBaseConnector.getConnector("DBA_PTTK", "123");
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(Helper.screenName.loginScreen));
         //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("ManagementAgent.fxml"));
 

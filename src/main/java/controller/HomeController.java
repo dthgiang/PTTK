@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import model.Login;
 
 
 public class HomeController implements Initializable {
@@ -32,7 +33,7 @@ public class HomeController implements Initializable {
 
         Helper.initHelper.initImageIcon(bgImage, "img/howart.png");
         Helper.initHelper.initImageIcon(avtImage, "img/avt.gif");
-        userWelcomeLabel.setText("Hello " + DataBaseConnector.username);
+        userWelcomeLabel.setText("Hello " + Login.getUsername());
         // set event handler for ViewRoomDetail button
         Helper.switchScreenHelper.swicthScreenOnButton(ViewRoomDetail, "/controller/hello-view.fxml");
         Helper.switchScreenHelper.swicthScreenOnButton(BookRoom, "/controller/BookRoom.fxml");

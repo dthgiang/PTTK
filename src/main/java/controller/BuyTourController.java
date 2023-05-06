@@ -18,6 +18,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import model.Customer;
+import model.Login;
 import model.Tour;
 
 import java.io.IOException;
@@ -91,7 +92,7 @@ public class BuyTourController implements Initializable {
 
         Helper.initHelper.initImageIcon(returnIcon, "img/return.png");
         Helper.initHelper.initImageIcon(homeIcon, "img/home.png");
-        userLabel.setText("Hello " + DataBaseConnector.username);
+        userLabel.setText("Hello " + Login.getUsername());
         vehicle.setItems(FXCollections.observableArrayList("Tự túc", "Xe đạp", "Máy bay", "Tàu hỏa", "Tàu thủy", "Cân đẩu vân", "Xe hơi", "Rồng"));
 
     }

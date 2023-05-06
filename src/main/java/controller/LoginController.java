@@ -1,6 +1,7 @@
 package controller;
 
 
+import databaseConnect.DataBaseConnector;
 import helper.Helper;
 import helper.SwitchScreenHelper;
 import javafx.fxml.Initializable;
@@ -12,9 +13,14 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import model.Login;
+import org.w3c.dom.Text;
 
 
 import java.io.IOException;
@@ -58,43 +64,29 @@ public  class  LoginController implements Initializable {
     }
 
     public void loginButtonOnAction(ActionEvent event) throws IOException  {
+
         if (username.getText().isBlank() == false && password.getText().isBlank() == false) {
-            if (validateCusAcc(username.getText(),password.getText())) {
+
+            Login user = new Login(username.getText(), password.getText());
+
+            if (user.authentication()) {
                 Helper.switchScreenHelper.raiseOther(event, Helper.screenName.homeScreen);
+                System.out.println(Login.getRole());
             }
-            if (validateAdAcc(username.getText(),password.getText())) {
-                    Helper.switchScreenHelper.raiseOther(event, Helper.screenName.SuccessfulBookings);
-                }
             else{
+                    loginLabel.setTextFill(Color.color(0.8, 0, 0));
+                    loginLabel.setFont(Font.font("Cambria", FontWeight.BOLD, 20));
                     loginLabel.setText("Invalid username or password");
                 }
             }
 
-
-
         else {
+            loginLabel.setTextFill(Color.color(0.8, 0, 0));
+            loginLabel.setFont(Font.font("Cambria", FontWeight.BOLD, 20));
             loginLabel.setText("Please enter username and password");
         }
     }
-    public void validate() {
-        loginLabel.setText("Ok");
-    }
 
-    public boolean validateCusAcc(String Username, String pw) {
-        System.out.println(Username + ", " + pw);
-        if (Username.equals("khachhang") && pw.equals("123") ) {
-            return  true;
-        }
-        return  false;
-    }
-
-    public boolean validateAdAcc(String Username, String pw) {
-        System.out.println(Username + ", " + pw);
-        if (Username.equals("admin") && pw.equals("123") ) {
-            return  true;
-        }
-        return  false;
-    }
 
 
     public void signUpButtonOnAction(ActionEvent event) {
