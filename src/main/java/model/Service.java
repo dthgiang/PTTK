@@ -13,7 +13,6 @@ public class Service {
     private  String province;
     private String owner;
     private  String contact;
-    private DataBaseConnector connector = DataBaseConnector.getConnector("jdbc:oracle:thin:@localhost:1521:XE", "DBA_PTTK", "123");
     public Service()
     {
         this.name = "Hello world";

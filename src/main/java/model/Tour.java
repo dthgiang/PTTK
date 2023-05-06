@@ -88,7 +88,7 @@ public class Tour {
         ArrayList<Tour> tourList = new ArrayList<Tour>();
         try {
             Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery("select * from TOUR");
+            ResultSet rs = stmt.executeQuery("select * from DBA_PTTK.TOUR");
             while (rs.next()) {
                 String maTour = rs.getString("MaTour");
                 String name = rs.getString("TenTour");
@@ -113,7 +113,7 @@ public class Tour {
         ArrayList<Tour> tourList = new ArrayList<Tour>();
         try {
             Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery("select * from Tour where " + condition);
+            ResultSet rs = stmt.executeQuery("select * from DBA_PTTK.Tour where " + condition);
             while (rs.next()) {
                 String maTour = rs.getString("MaTour");
                 String name = rs.getString("TenTour");
@@ -138,7 +138,7 @@ public class Tour {
         ArrayList<String> areaList = new ArrayList<String>();
         try {
             Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery("select distinct KhuVuc from Tour");
+            ResultSet rs = stmt.executeQuery("select distinct KhuVuc from DBA_PTTK.Tour");
             while (rs.next()) {
 
                 String khuVuc = rs.getString("khuVuc");
@@ -156,7 +156,7 @@ public class Tour {
 
     public void insertTourBuy(String MaThamGia, String NgayDangKy, String Matour, String MaKH) {
         String sql = "'" + MaThamGia + "',TO_DATE('" + NgayDangKy + "', 'DD-MM-YYYY'), '" + Matour + "', '" + MaKH + "'";
-        String insertSql = "insert into DANHSACHTHAMGIATOUR values(" + sql + ")";
+        String insertSql = "insert into DBA_PTTK.DANHSACHTHAMGIATOUR values(" + sql + ")";
         System.out.println(insertSql);
     }
 
