@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="737.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
     <left>
         <AnchorPane prefHeight="737.0" prefWidth="416.0" BorderPane.alignment="CENTER">
             <ImageView fx:id="bgImage" fitHeight="737.0" fitWidth="475.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
@@ -18,22 +18,22 @@
             <font>
                <Font name="Cambria Bold" size="14.0" />
             </font></Label>
-            <Button fx:id="ViewRoomDetail" layoutX="221.0" layoutY="409.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="160.0" stylesheets="@object.css" text="Room Detail" AnchorPane.rightAnchor="30.0">
+            <Button fx:id="ViewRoomDetail" layoutX="225.0" layoutY="363.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="160.0" stylesheets="@object.css" text="Room Detail" AnchorPane.rightAnchor="30.333333333333314">
                 <font>
                     <Font name="System Bold" size="21.0" />
                 </font>
             </Button>
-            <Button fx:id="BookRoom" layoutX="45.0" layoutY="409.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="160.0" stylesheets="@object.css" text="Book Room" AnchorPane.leftAnchor="30.0">
+            <Button fx:id="BookRoom" layoutX="30.0" layoutY="363.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="160.0" stylesheets="@object.css" text="Book Room" AnchorPane.leftAnchor="30.0">
                 <font>
                     <Font name="System Bold" size="21.0" />
                 </font>
             </Button>
-            <Button fx:id="serviceButton" layoutX="45.0" layoutY="519.0" mnemonicParsing="false" prefWidth="160.0" stylesheets="@object.css" text="Service" AnchorPane.leftAnchor="30.0">
+            <Button fx:id="serviceButton" layoutX="30.0" layoutY="473.0" mnemonicParsing="false" prefWidth="160.0" stylesheets="@object.css" text="Service" AnchorPane.leftAnchor="30.0">
                 <font>
                     <Font name="System Bold" size="21.0" />
                 </font>
             </Button>
-            <Button fx:id="SignOut" layoutX="128.0" layoutY="634.0" mnemonicParsing="false" prefWidth="160.0" style="-fx-background-color: #ffba3b;" stylesheets="@object.css" text="Sign Out">
+            <Button fx:id="SignOut" layoutX="128.0" layoutY="588.0" mnemonicParsing="false" prefWidth="160.0" style="-fx-background-color: #ffba3b;" stylesheets="@object.css" text="Sign Out">
                 <font>
                     <Font name="System Bold" size="21.0" />
                 </font>
@@ -43,7 +43,7 @@
                <Image url="@../../../../img/avt.gif" />
             </image>
          </ImageView>
-         <Button fx:id="tourButton" layoutX="271.0" layoutY="519.0" mnemonicParsing="false" prefWidth="160.0" stylesheets="@object.css" text="Tour" AnchorPane.rightAnchor="30.0">
+         <Button fx:id="tourButton" layoutX="225.0" layoutY="473.0" mnemonicParsing="false" prefWidth="160.0" stylesheets="@object.css" text="Tour" AnchorPane.rightAnchor="30.333333333333314">
             <font>
                <Font name="System Bold" size="21.0" />
             </font>

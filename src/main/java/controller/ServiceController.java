@@ -65,7 +65,7 @@ public  class ServiceController implements Initializable {
     @FXML
     private Label freeForInforLabel1, freeForInforLabel2, freeForInforLabel3;
     @FXML
-    private Label priceInfroLabel1;
+    private Label priceInfroLabel1, priceInfroLabel2, priceInfroLabel3;
     @FXML
     private ImageView searchIcon;
     //@FXML
@@ -76,7 +76,35 @@ public  class ServiceController implements Initializable {
     private Label userLabel;
 
 
+    public void setInforCard1(Tour tour) {
+        serviceNameInforLabel1.setText(tour.getName());
+        timeInforLabel1.setText(Integer.toString(tour.getTime()) + " Days");
+        descriptionInforLabel1.setText(tour.getDes());
+        freeForInforLabel1.setText("Vip 1, Vip 2, Diamond");
+        priceInfroLabel1.setText(Integer.toString(tour.getCost()));
+        Helper.initHelper.initImage(serviceImage1, "img/service/spa.png");
 
+    }
+
+    public void setInforCard2(Tour tour) {
+        serviceNameInforLabel2.setText("Karaoke");
+        timeInforLabel2.setText(Integer.toString(tour.getTime()) + " Days");
+        descriptionInforLabel2.setText(tour.getDes());
+        freeForInforLabel2.setText("Vip 1, Vip 2, Diamond");
+        priceInfroLabel2.setText(Integer.toString(tour.getCost()));
+        Helper.initHelper.initImage(serviceImage2, "img/service/karaoke.png");
+
+    }
+
+    public void setInforCard3(Tour tour) {
+        serviceNameInforLabel3.setText("Bi - A");
+        timeInforLabel3.setText(Integer.toString(tour.getTime()) + " Days");
+        descriptionInforLabel3.setText(tour.getDes());
+        freeForInforLabel3.setText("Vip 1, Vip 2, Diamond");
+        priceInfroLabel3.setText(Integer.toString(tour.getCost()));
+        Helper.initHelper.initImage(serviceImage3, "img/service/bia.png");
+
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
@@ -88,14 +116,14 @@ public  class ServiceController implements Initializable {
         areaFilter.setItems(FXCollections.observableArrayList("Entertainment", "Sport", "Relax"));
 
         Tour tour = new Tour(
-                "Nha Trang", 999999,
+                "Spa", 999999,
                 "Tham quan nha Trang 7 ngày 7 đêm với trải\n nghiệm không thể nào tuyệt vời hơn."
                 , 7,"HCMUS"
         );
-        serviceNameInforLabel1.setText(tour.getName());
-        timeInforLabel1.setText(Integer.toString(tour.getTime()) + " Days");
-        descriptionInforLabel1.setText(tour.getDes());
-        priceInfroLabel1.setText(Integer.toString(tour.getCost()));
+        setInforCard1(tour);
+        setInforCard2(tour);
+        setInforCard3(tour);
+
 
 
     }
