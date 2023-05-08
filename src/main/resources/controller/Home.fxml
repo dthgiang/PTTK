@@ -14,36 +14,31 @@
             <ImageView fx:id="bgImage" fitHeight="737.0" fitWidth="475.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
                 <Image url="@../../../../img/howart.png" />
             </ImageView>
-            <Label fx:id="userWelcomeLabel" layoutX="150.0" layoutY="331.0" text="Welcome Guest!" textFill="#e4070770">
+            <Label fx:id="userWelcomeLabel" layoutX="151.0" layoutY="301.0" style="-fx-text-fill: #EEE9DA;" stylesheets="@object.css" text="Welcome Guest!" textFill="#e4070770">
             <font>
-               <Font name="Cambria Bold" size="14.0" />
+               <Font name="Cambria Bold" size="15.0" />
             </font></Label>
-            <Button fx:id="ViewRoomDetail" layoutX="225.0" layoutY="363.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="160.0" stylesheets="@object.css" text="Room Detail" AnchorPane.rightAnchor="30.333333333333314">
+            <Button fx:id="ViewRoomDetail" layoutX="127.0" layoutY="428.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="160.0" stylesheets="@object.css" text="Room Detail" AnchorPane.rightAnchor="128.0">
                 <font>
                     <Font name="System Bold" size="21.0" />
                 </font>
             </Button>
-            <Button fx:id="BookRoom" layoutX="30.0" layoutY="363.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="160.0" stylesheets="@object.css" text="Book Room" AnchorPane.leftAnchor="30.0">
+            <Button fx:id="BookRoom" layoutX="128.0" layoutY="357.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="160.0" stylesheets="@object.css" text="Book Room" AnchorPane.leftAnchor="128.0">
                 <font>
                     <Font name="System Bold" size="21.0" />
                 </font>
             </Button>
-            <Button fx:id="serviceButton" layoutX="30.0" layoutY="473.0" mnemonicParsing="false" prefWidth="160.0" stylesheets="@object.css" text="Service" AnchorPane.leftAnchor="30.0">
+            <Button fx:id="serviceButton" layoutX="127.0" layoutY="500.0" mnemonicParsing="false" prefWidth="160.0" stylesheets="@object.css" text="Service" AnchorPane.leftAnchor="127.0">
                 <font>
                     <Font name="System Bold" size="21.0" />
                 </font>
             </Button>
-            <Button fx:id="SignOut" layoutX="128.0" layoutY="588.0" mnemonicParsing="false" prefWidth="160.0" style="-fx-background-color: #ffba3b;" stylesheets="@object.css" text="Sign Out">
+            <Button fx:id="SignOut" layoutX="127.0" layoutY="638.0" mnemonicParsing="false" prefWidth="160.0" style="-fx-background-color: #4B768D;" stylesheets="@object.css" text="Sign Out" textFill="#b91515">
                 <font>
                     <Font name="System Bold" size="21.0" />
                 </font>
             </Button>
-         <ImageView fx:id="avtImage" fitHeight="120.0" fitWidth="120.0" layoutX="142.0" layoutY="197.0" onMouseClicked="#avtImageOnClick" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../../img/avt.gif" />
-            </image>
-         </ImageView>
-         <Button fx:id="tourButton" layoutX="225.0" layoutY="473.0" mnemonicParsing="false" prefWidth="160.0" stylesheets="@object.css" text="Tour" AnchorPane.rightAnchor="30.333333333333314">
+         <Button fx:id="tourButton" layoutX="128.0" layoutY="570.0" mnemonicParsing="false" prefWidth="160.0" stylesheets="@object.css" text="Tour" AnchorPane.rightAnchor="127.0">
             <font>
                <Font name="System Bold" size="21.0" />
             </font>
