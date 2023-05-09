@@ -36,7 +36,6 @@ public class Login {
             }
             this.role = "Khach Hang";
             return true;
-
         }
         catch (SQLException e) {
             e.printStackTrace();

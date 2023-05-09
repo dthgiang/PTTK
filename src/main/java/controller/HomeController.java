@@ -28,11 +28,15 @@ public class HomeController implements Initializable {
     @FXML
     private Label userWelcomeLabel;
 
+    @FXML
+    private Button roomManage;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
         Helper.initHelper.initImageIcon(bgImage, "img/howart.png");
         Helper.initHelper.initImageIcon(avtImage, "img/avt.gif");
+        Helper.switchScreenHelper.swicthScreenOnButton(roomManage, "/controller/roomManage.fxml");
+
         userWelcomeLabel.setText("Hello " + Login.getUsername());
         // set event handler for ViewRoomDetail button
         Helper.switchScreenHelper.swicthScreenOnButton(ViewRoomDetail, "/controller/hello-view.fxml");

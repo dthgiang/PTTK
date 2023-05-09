@@ -1,6 +1,7 @@
 package controller;
 
 import databaseConnect.DBUtil;
+import helper.Helper;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -25,6 +27,9 @@ public class UpdateRoomController extends InsertRoomController implements Initia
 
     @FXML
     private Label updateRoomLabel;
+
+    @FXML
+    private ImageView bgImg;
 
     public void backBtnOnClick(ActionEvent e) throws IOException {
         Parent roomCRUD_page;
@@ -114,6 +119,9 @@ public class UpdateRoomController extends InsertRoomController implements Initia
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        //Helper.initHelper.initImageIcon(bgImg, "K:\\HCMUS Hoc Ki\\HCMUS Nam 3\\HK2 nam 3\\Phan Tich Thiet Ke HTTT\\Project Nhom\\PTTK\\img\\howart.png");
+        Helper.initHelper.initImageIcon(bgImg, "\\img\\howart.png");
+
         soguongCBB.getItems().addAll(2, 3, 4, 5);
         ttvesinhCBB.getItems().addAll("Đã dọn", "Chưa dọn");
         setRoomTypeCBB();

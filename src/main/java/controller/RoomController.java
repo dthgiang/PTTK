@@ -1,6 +1,7 @@
 package controller;
 
 import databaseConnect.DBUtil;
+import helper.Helper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -12,6 +13,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.scene.input.MouseEvent;
 import model.RoomSchema;
@@ -48,6 +50,12 @@ public class RoomController implements Initializable {
 
     @FXML
     private Label titleLabel;
+
+    @FXML
+    private Button backBtn;
+
+    @FXML
+    private ImageView bgImg;
 
     public String clickedItem;
 
@@ -103,6 +111,10 @@ public class RoomController implements Initializable {
             System.out.println("Connection to Oracle database failed");
             e.printStackTrace();
         }
+    }
+
+    public void backBtnOnClick(ActionEvent event) throws IOException {
+        Helper.switchScreenHelper.swicthScreenOnButton(backBtn, "/controller/Home.fxml");
     }
 
     public void refeshButtonClick(ActionEvent event) throws IOException {
@@ -217,6 +229,8 @@ public class RoomController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        //Helper.initHelper.initImageIcon(bgImg, "K:\\HCMUS Hoc Ki\\HCMUS Nam 3\\HK2 nam 3\\Phan Tich Thiet Ke HTTT\\Project Nhom\\PTTK\\img\\howart.png");
+        Helper.initHelper.initImageIcon(bgImg, "\\img\\howart.png");
         loadRoomData();
         setTableColum();
         setRowClickEvent();

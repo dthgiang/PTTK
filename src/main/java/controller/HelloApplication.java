@@ -22,6 +22,8 @@ public class HelloApplication extends Application {
 
         //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("BookRoom.fxml"));
         //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Home.fxml"));
+        //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(Helper.screenName.roomManage));
         Scene scene = new Scene(fxmlLoader.load(), 415, 737);
 
         stage.setTitle("Booking");

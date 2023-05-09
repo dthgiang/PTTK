@@ -1,6 +1,7 @@
 package controller;
 
 import databaseConnect.DBUtil;
+import helper.Helper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -11,6 +12,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -36,6 +38,9 @@ public class InsertRoomController implements Initializable {
 
     @FXML
     protected ComboBox<String> ttvesinhCBB;
+
+    @FXML
+    private ImageView bgImg;
 
     protected void setRoomTypeCBB() {
         ObservableList<String> roomType = FXCollections.observableArrayList();
@@ -122,6 +127,8 @@ public class InsertRoomController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        //Helper.initHelper.initImageIcon(bgImg, "K:\\HCMUS Hoc Ki\\HCMUS Nam 3\\HK2 nam 3\\Phan Tich Thiet Ke HTTT\\Project Nhom\\PTTK\\img\\howart.png");
+        Helper.initHelper.initImageIcon(bgImg, "\\img\\howart.png");
         soguongCBB.getItems().addAll(2, 3, 4, 5);
         ttvesinhCBB.getItems().addAll("Đã dọn", "Chưa dọn");
         setRoomTypeCBB();

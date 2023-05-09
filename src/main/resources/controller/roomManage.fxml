@@ -23,7 +23,7 @@
             <TableColumn fx:id="loaiphong" prefWidth="125.0" text="Loại phòng" />
          </columns>
       </TableView>
-      <ImageView fitHeight="500.0" fitWidth="332.0" layoutX="-6.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bgImg" fitHeight="500.0" fitWidth="332.0" layoutX="-6.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../img/howart.png" />
          </image>
@@ -52,13 +52,13 @@
             </Button>
          </children>
       </Pane>
-      <TextField fx:id="maphongTxtBox" layoutX="60.0" layoutY="214.0" />
-      <Text fill="#dee1c3" layoutX="91.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nhập mã phòng">
+      <TextField fx:id="maphongTxtBox" layoutX="60.0" layoutY="247.0" />
+      <Text fill="#dee1c3" layoutX="91.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nhập mã phòng">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <Button fx:id="searchBtn" layoutX="102.0" layoutY="250.0" mnemonicParsing="false" onAction="#searchBtnOnClick" style="-fx-background-color: #6096B4;" text="Tìm kiếm" textFill="WHITE">
+      <Button fx:id="searchBtn" layoutX="102.0" layoutY="284.0" mnemonicParsing="false" onAction="#searchBtnOnClick" style="-fx-background-color: #6096B4;" text="Tìm kiếm" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -72,5 +72,10 @@
             </Label>
          </children>
       </Pane>
+      <Button fx:id="backBtn" layoutX="100.0" layoutY="323.0" mnemonicParsing="false" onAction="#backBtnOnClick" prefHeight="26.0" prefWidth="69.0" style="-fx-background-color: #6096B4;" text="Home" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
