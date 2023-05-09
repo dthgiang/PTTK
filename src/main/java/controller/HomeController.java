@@ -16,9 +16,9 @@ import model.Login;
 
 public class HomeController implements Initializable {
     @FXML
-    private Button ViewRoomDetail;
+    private Button BookRoom, ViewRoomDetail,listCustomerButton, roomManage;
     @FXML
-    private Button BookRoom, serviceButton, tourButton;
+    private Button serviceButton, tourButton,  myTourAndServiceButton, cusBookRoom;
 
     @FXML
     private Button SignOut;
@@ -28,8 +28,6 @@ public class HomeController implements Initializable {
     @FXML
     private Label userWelcomeLabel;
 
-    @FXML
-    private Button roomManage;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -38,13 +36,27 @@ public class HomeController implements Initializable {
         Helper.switchScreenHelper.swicthScreenOnButton(roomManage, "/controller/roomManage.fxml");
 
         userWelcomeLabel.setText("Hello " + Login.getUsername());
+
+        if (Login.getRole() == "Nhan Vien") {
+            cusBookRoom.setVisible(false);
+            serviceButton.setVisible(false);
+            myTourAndServiceButton.setVisible(false);
+            tourButton.setVisible(false);
+        } else {
+            roomManage.setVisible(false);
+            BookRoom.setVisible(false);
+            listCustomerButton.setVisible(false);
+            ViewRoomDetail.setVisible(false);
+
+        }
+
+
         // set event handler for ViewRoomDetail button
         Helper.switchScreenHelper.swicthScreenOnButton(ViewRoomDetail, "/controller/hello-view.fxml");
         Helper.switchScreenHelper.swicthScreenOnButton(BookRoom, "/controller/BookRoom.fxml");
         Helper.switchScreenHelper.swicthScreenOnButton(tourButton, "/controller/Tour.fxml");
         Helper.switchScreenHelper.swicthScreenOnButton(serviceButton, "/controller/Service.fxml");
         Helper.switchScreenHelper.swicthScreenOnButton(SignOut, "/controller/Login.fxml");
-
     }
 
     public void avtImageOnClick(MouseEvent event) {

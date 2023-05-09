@@ -14,21 +14,17 @@
             <ImageView fx:id="bgImage" fitHeight="737.0" fitWidth="475.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
                 <Image url="@../../../../img/howart.png" />
             </ImageView>
-            <Label fx:id="userWelcomeLabel" layoutX="151.0" layoutY="273.0" style="-fx-text-fill: #EEE9DA;" stylesheets="@object.css" text="Welcome Guest!" textFill="#e4070770">
+         <ImageView fx:id="avtImage" fitHeight="115.0" fitWidth="153.0" layoutX="153.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="userWelcomeLabel" layoutX="153.0" layoutY="318.0" style="-fx-text-fill: #EEE9DA;" stylesheets="@object.css" text="Welcome Guest!" textFill="#e4070770">
             <font>
                <Font name="Cambria Bold" size="15.0" />
             </font></Label>
-            <Button fx:id="ViewRoomDetail" layoutX="93.0" layoutY="381.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="228.0" stylesheets="@object.css" text="Room Detail" AnchorPane.rightAnchor="94.19999999999999">
+            <Button fx:id="ViewRoomDetail" layoutX="94.0" layoutY="436.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="228.0" stylesheets="@object.css" text="Room Detail" AnchorPane.rightAnchor="93.33333333333331" AnchorPane.topAnchor="433.0">
                 <font>
                     <Font name="System Bold" size="21.0" />
                 </font>
             </Button>
-            <Button fx:id="BookRoom" layoutX="94.0" layoutY="318.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="228.0" stylesheets="@object.css" text="Book Room" AnchorPane.leftAnchor="94.0">
-                <font>
-                    <Font name="System Bold" size="21.0" />
-                </font>
-            </Button>
-            <Button fx:id="serviceButton" layoutX="94.0" layoutY="441.0" mnemonicParsing="false" prefWidth="228.0" stylesheets="@object.css" text="Service" AnchorPane.leftAnchor="94.0">
+            <Button fx:id="BookRoom" layoutX="95.0" layoutY="373.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="228.0" stylesheets="@object.css" text="Book Room" AnchorPane.leftAnchor="95.0">
                 <font>
                     <Font name="System Bold" size="21.0" />
                 </font>
@@ -38,12 +34,32 @@
                     <Font name="System Bold" size="21.0" />
                 </font>
             </Button>
-         <Button fx:id="tourButton" layoutX="94.0" layoutY="499.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="228.0" stylesheets="@object.css" text="Tour" AnchorPane.rightAnchor="93.19999999999999">
+         <Button fx:id="tourButton" layoutX="95.0" layoutY="493.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="228.0" stylesheets="@object.css" text="Tour" AnchorPane.rightAnchor="92.33333333333331">
             <font>
                <Font name="System Bold" size="21.0" />
             </font>
          </Button>
-         <Button fx:id="roomManage" layoutX="94.0" layoutY="562.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="228.0" stylesheets="@object.css" text="Room Management">
+         <Button fx:id="roomManage" layoutX="95.0" layoutY="559.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="228.0" stylesheets="@object.css" text="Room Management" AnchorPane.bottomAnchor="135.0">
+            <font>
+               <Font name="System Bold" size="21.0" />
+            </font>
+         </Button>
+         <Button fx:id="serviceButton" layoutX="94.0" layoutY="436.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="228.0" stylesheets="@object.css" text="Service" AnchorPane.topAnchor="433.0">
+            <font>
+               <Font name="System Bold" size="21.0" />
+            </font>
+         </Button>
+         <Button fx:id="listCustomerButton" layoutX="94.0" layoutY="493.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="228.0" stylesheets="@object.css" text="List Customer">
+            <font>
+               <Font name="System Bold" size="21.0" />
+            </font>
+         </Button>
+         <Button fx:id="cusBookRoom" layoutX="95.0" layoutY="373.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="228.0" stylesheets="@object.css" text="Book Room">
+            <font>
+               <Font name="System Bold" size="21.0" />
+            </font>
+         </Button>
+         <Button fx:id="myTourAndServiceButton" layoutX="93.0" layoutY="559.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="228.0" stylesheets="@object.css" text="My Tour &amp; Service" AnchorPane.bottomAnchor="135.0">
             <font>
                <Font name="System Bold" size="21.0" />
             </font>

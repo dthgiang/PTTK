@@ -107,7 +107,8 @@ public class BuyTourController implements Initializable {
         Helper.switchScreenHelper.raiseOther(event, "main.fxml");
     }
     public void nextMemberButtonOnClick(ActionEvent event) throws IOException {
-        if (numOfMember == 0) {
+
+        if (numOfMember == 0 || memberNum.getText().trim().isEmpty()) {
             Helper.alertHelper.showAlert("Please enter number of member(s)");
             return;
         }
@@ -175,7 +176,6 @@ public class BuyTourController implements Initializable {
 
     }
     public  void insertMember() {
-
     }
 
     public  void insertDSThamGia() {
