@@ -68,8 +68,8 @@ public class Customer {
         return this.maKh;
     }
 
-    public void insertCustomer(String MaKH, String Name, String email, String phone, String id) {
-        String sql = "'" + MaKH + "','" + name + "', '" + email + "','" + phone + "', '" + id + "'";
+    public void insertCustomer(String MaKH, String name, String email, String phone, String id) {
+        String sql = "'" + MaKH + "','" + name + "', '" + email + "','" + phone + "', '" + id + "','" + Login.getUserId() + "'";
         String insertSql = "insert into DANHSACHTHAMGIATOUR (MaKhachHang, Ten, Email, SoDienThoai, CMND) values(" + sql + ")";
         System.out.println(insertSql);
     }

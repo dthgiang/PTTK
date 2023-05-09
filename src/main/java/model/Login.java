@@ -9,7 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public class Login {
-    private static String username, password, role;
+    private static String username, password, role, MaUser;
 
     public Login(String username, String password) {
         this.username = username;
@@ -31,9 +31,11 @@ public class Login {
                 if (!rs.next()) {
                     return false;
                 }
+                this.MaUser = rs.getString("MANV");
                 this.role = "Nhan Vien";
                 return true;
             }
+            this.MaUser = rs.getString("MAKH");
             this.role = "Khach Hang";
             return true;
         }
@@ -50,5 +52,8 @@ public class Login {
 
     public static String getUsername() {
         return username;
+    }
+    public static String getUserId() {
+        return MaUser;
     }
 }

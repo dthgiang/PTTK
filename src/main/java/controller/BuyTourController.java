@@ -174,6 +174,13 @@ public class BuyTourController implements Initializable {
 
 
     }
+    public  void insertMember() {
+
+    }
+
+    public  void insertDSThamGia() {
+
+    }
 
 
     public void cancelButtonOnClick(ActionEvent event) throws IOException  {
