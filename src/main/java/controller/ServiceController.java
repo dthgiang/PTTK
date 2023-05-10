@@ -90,7 +90,6 @@ public  class ServiceController implements Initializable {
         freeForInforLabel1.setText(service.getForRoom());
         priceInfroLabel1.setText(service.getPrice());
         Helper.initHelper.initImage(serviceImage1, "img/service/" + service.getImage());
-        System.out.println(service.getImage());
 
     }
 
