@@ -15,7 +15,7 @@ import model.Login;
 
 public class HomeController implements Initializable {
     @FXML
-    private Button BookRoom, ViewRoomDetail,listCustomerButton, roomManage;
+    private Button BookRoom, ViewRoomDetail,listCustomerButton, roomManage, agentManage;
     @FXML
     private Button serviceButton, tourButton,  myTourAndServiceButton, SuccessfulBooking;
 
@@ -44,6 +44,7 @@ public class HomeController implements Initializable {
 
 
         } else {
+            agentManage.setVisible(false);
             roomManage.setVisible(false);
             listCustomerButton.setVisible(false);
             SuccessfulBooking.setVisible(false);
@@ -59,6 +60,7 @@ public class HomeController implements Initializable {
         Helper.switchScreenHelper.swicthScreenOnButton(roomManage, "/controller/roomManage.fxml");
         Helper.switchScreenHelper.swicthScreenOnButton(myTourAndServiceButton, "/controller/BoughtTourAndService.fxml");
         Helper.switchScreenHelper.swicthScreenOnButton(SuccessfulBooking, "/controller/SuccessfulBookings.fxml");
+        Helper.switchScreenHelper.swicthScreenOnButton(agentManage, "/controller/ManagementAgent.fxml");
 
 
 
