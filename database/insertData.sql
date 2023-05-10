@@ -410,56 +410,56 @@ delete from DanhSachDatPhong
 /
 
 insert all
-    into DanhSachDatPhong VALUES('DS001',  TO_DATE('5-7-2022','DD-MM-YYYY'), 5, 'PHG19', 'PHI49')
-    into DanhSachDatPhong VALUES('DS002',  TO_DATE('25-7-2023','DD-MM-YYYY'), 5, 'PHG28', 'PHI7')
-    into DanhSachDatPhong VALUES('DS003',  TO_DATE('1-1-2022','DD-MM-YYYY'), 4, 'PHG12', 'PHI14')
-    into DanhSachDatPhong VALUES('DS004',  TO_DATE('20-3-2020','DD-MM-YYYY'), 1, 'PHG23', 'PHI36')
-    into DanhSachDatPhong VALUES('DS005',  TO_DATE('13-4-2020','DD-MM-YYYY'), 4, 'PHG29', 'PHI24')
-    into DanhSachDatPhong VALUES('DS006',  TO_DATE('29-3-2020','DD-MM-YYYY'), 1, 'PHG3', 'PHI33')
-    into DanhSachDatPhong VALUES('DS007',  TO_DATE('29-8-2021','DD-MM-YYYY'), 3, 'PHG15', 'PHI29')
-    into DanhSachDatPhong VALUES('DS008',  TO_DATE('2-5-2021','DD-MM-YYYY'), 5, 'PHG21', 'PHI3')
-    into DanhSachDatPhong VALUES('DS009',  TO_DATE('27-6-2021','DD-MM-YYYY'), 2, 'PHG2', 'PHI35')
-    into DanhSachDatPhong VALUES('DS0010',  TO_DATE('26-11-2023','DD-MM-YYYY'), 3, 'PHG13', 'PHI20')
-    into DanhSachDatPhong VALUES('DS0011',  TO_DATE('10-4-2022','DD-MM-YYYY'), 1, 'PHG27', 'PHI1')
-    into DanhSachDatPhong VALUES('DS0012',  TO_DATE('1-6-2021','DD-MM-YYYY'), 4, 'PHG18', 'PHI47')
-    into DanhSachDatPhong VALUES('DS0013',  TO_DATE('17-1-2020','DD-MM-YYYY'), 1, 'PHG25', 'PHI49')
-    into DanhSachDatPhong VALUES('DS0014',  TO_DATE('4-12-2023','DD-MM-YYYY'), 4, 'PHG29', 'PHI36')
-    into DanhSachDatPhong VALUES('DS0015',  TO_DATE('25-6-2022','DD-MM-YYYY'), 4, 'PHG22', 'PHI37')
-    into DanhSachDatPhong VALUES('DS0016',  TO_DATE('11-8-2022','DD-MM-YYYY'), 1, 'PHG24', 'PHI34')
-    into DanhSachDatPhong VALUES('DS0017',  TO_DATE('30-7-2023','DD-MM-YYYY'), 4, 'PHG11', 'PHI29')
-    into DanhSachDatPhong VALUES('DS0018',  TO_DATE('16-9-2023','DD-MM-YYYY'), 4, 'PHG29', 'PHI12')
-    into DanhSachDatPhong VALUES('DS0019',  TO_DATE('9-11-2023','DD-MM-YYYY'), 2, 'PHG1', 'PHI5')
-    into DanhSachDatPhong VALUES('DS0020',  TO_DATE('4-8-2021','DD-MM-YYYY'), 5, 'PHG11', 'PHI27')
-    into DanhSachDatPhong VALUES('DS0021',  TO_DATE('22-9-2022','DD-MM-YYYY'), 1, 'PHG14', 'PHI49')
-    into DanhSachDatPhong VALUES('DS0022',  TO_DATE('30-7-2020','DD-MM-YYYY'), 2, 'PHG6', 'PHI9')
-    into DanhSachDatPhong VALUES('DS0023',  TO_DATE('12-3-2022','DD-MM-YYYY'), 5, 'PHG10', 'PHI2')
-    into DanhSachDatPhong VALUES('DS0024',  TO_DATE('7-8-2021','DD-MM-YYYY'), 5, 'PHG16', 'PHI43')
-    into DanhSachDatPhong VALUES('DS0025',  TO_DATE('27-9-2020','DD-MM-YYYY'), 1, 'PHG15', 'PHI3')
-    into DanhSachDatPhong VALUES('DS0026',  TO_DATE('4-7-2023','DD-MM-YYYY'), 1, 'PHG19', 'PHI46')
-    into DanhSachDatPhong VALUES('DS0027',  TO_DATE('2-9-2022','DD-MM-YYYY'), 4, 'PHG7', 'PHI28')
-    into DanhSachDatPhong VALUES('DS0028',  TO_DATE('28-8-2022','DD-MM-YYYY'), 3, 'PHG9', 'PHI23')
-    into DanhSachDatPhong VALUES('DS0029',  TO_DATE('22-2-2022','DD-MM-YYYY'), 1, 'PHG1', 'PHI14')
-    into DanhSachDatPhong VALUES('DS0030',  TO_DATE('7-10-2020','DD-MM-YYYY'), 5, 'PHG15', 'PHI47')
-    into DanhSachDatPhong VALUES('DS0031',  TO_DATE('20-1-2020','DD-MM-YYYY'), 2, 'PHG29', 'PHI36')
-    into DanhSachDatPhong VALUES('DS0032',  TO_DATE('19-10-2022','DD-MM-YYYY'), 1, 'PHG20', 'PHI8')
-    into DanhSachDatPhong VALUES('DS0033',  TO_DATE('28-10-2021','DD-MM-YYYY'), 2, 'PHG12', 'PHI37')
-    into DanhSachDatPhong VALUES('DS0034',  TO_DATE('1-1-2022','DD-MM-YYYY'), 4, 'PHG10', 'PHI12')
-    into DanhSachDatPhong VALUES('DS0035',  TO_DATE('13-3-2021','DD-MM-YYYY'), 4, 'PHG20', 'PHI21')
-    into DanhSachDatPhong VALUES('DS0036',  TO_DATE('28-10-2021','DD-MM-YYYY'), 5, 'PHG17', 'PHI37')
-    into DanhSachDatPhong VALUES('DS0037',  TO_DATE('6-7-2023','DD-MM-YYYY'), 3, 'PHG24', 'PHI18')
-    into DanhSachDatPhong VALUES('DS0038',  TO_DATE('4-11-2021','DD-MM-YYYY'), 3, 'PHG13', 'PHI3')
-    into DanhSachDatPhong VALUES('DS0039',  TO_DATE('22-4-2021','DD-MM-YYYY'), 3, 'PHG30', 'PHI21')
-    into DanhSachDatPhong VALUES('DS0040',  TO_DATE('25-12-2020','DD-MM-YYYY'), 4, 'PHG13', 'PHI44')
-    into DanhSachDatPhong VALUES('DS0041',  TO_DATE('14-5-2020','DD-MM-YYYY'), 1, 'PHG24', 'PHI45')
-    into DanhSachDatPhong VALUES('DS0042',  TO_DATE('15-2-2020','DD-MM-YYYY'), 2, 'PHG14', 'PHI43')
-    into DanhSachDatPhong VALUES('DS0043',  TO_DATE('12-2-2022','DD-MM-YYYY'), 3, 'PHG23', 'PHI6')
-    into DanhSachDatPhong VALUES('DS0044',  TO_DATE('2-5-2022','DD-MM-YYYY'), 2, 'PHG28', 'PHI39')
-    into DanhSachDatPhong VALUES('DS0045',  TO_DATE('21-10-2021','DD-MM-YYYY'), 1, 'PHG22', 'PHI14')
-    into DanhSachDatPhong VALUES('DS0046',  TO_DATE('29-8-2020','DD-MM-YYYY'), 5, 'PHG2', 'PHI1')
-    into DanhSachDatPhong VALUES('DS0047',  TO_DATE('29-1-2020','DD-MM-YYYY'), 1, 'PHG19', 'PHI20')
-    into DanhSachDatPhong VALUES('DS0048',  TO_DATE('17-10-2022','DD-MM-YYYY'), 4, 'PHG13', 'PHI24')
-    into DanhSachDatPhong VALUES('DS0049',  TO_DATE('20-1-2022','DD-MM-YYYY'), 4, 'PHG16', 'PHI46')
-    into DanhSachDatPhong VALUES('DS0050',  TO_DATE('12-12-2023','DD-MM-YYYY'), 5, 'PHG26', 'PHI22')
+    into DanhSachDatPhong VALUES('DS001',  TO_DATE('7-11-2022','DD-MM-YYYY'), 4, 'PHG15',  'PHI20', 'KH43')
+    into DanhSachDatPhong VALUES('DS002',  TO_DATE('10-7-2023','DD-MM-YYYY'), 5, 'PHG6',  'PHI17', 'KH11')
+    into DanhSachDatPhong VALUES('DS003',  TO_DATE('16-8-2023','DD-MM-YYYY'), 4, 'PHG13',  'PHI9', 'KH23')
+    into DanhSachDatPhong VALUES('DS004',  TO_DATE('5-10-2023','DD-MM-YYYY'), 4, 'PHG24',  'PHI27', 'KH14')
+    into DanhSachDatPhong VALUES('DS005',  TO_DATE('30-5-2023','DD-MM-YYYY'), 2, 'PHG8',  'PHI31', 'KH28')
+    into DanhSachDatPhong VALUES('DS006',  TO_DATE('24-6-2023','DD-MM-YYYY'), 2, 'PHG5',  'PHI39', 'KH43')
+    into DanhSachDatPhong VALUES('DS007',  TO_DATE('2-6-2021','DD-MM-YYYY'), 4, 'PHG4',  'PHI5', 'KH20')
+    into DanhSachDatPhong VALUES('DS008',  TO_DATE('10-8-2022','DD-MM-YYYY'), 5, 'PHG15',  'PHI20', 'KH22')
+    into DanhSachDatPhong VALUES('DS009',  TO_DATE('29-7-2023','DD-MM-YYYY'), 4, 'PHG2',  'PHI16', 'KH10')
+    into DanhSachDatPhong VALUES('DS0010',  TO_DATE('12-5-2022','DD-MM-YYYY'), 5, 'PHG29',  'PHI4', 'KH37')
+    into DanhSachDatPhong VALUES('DS0011',  TO_DATE('26-11-2023','DD-MM-YYYY'), 4, 'PHG8',  'PHI44', 'KH38')
+    into DanhSachDatPhong VALUES('DS0012',  TO_DATE('18-4-2020','DD-MM-YYYY'), 5, 'PHG4',  'PHI19', 'KH5')
+    into DanhSachDatPhong VALUES('DS0013',  TO_DATE('28-10-2022','DD-MM-YYYY'), 4, 'PHG5',  'PHI36', 'KH42')
+    into DanhSachDatPhong VALUES('DS0014',  TO_DATE('4-2-2022','DD-MM-YYYY'), 2, 'PHG6',  'PHI19', 'KH17')
+    into DanhSachDatPhong VALUES('DS0015',  TO_DATE('22-7-2020','DD-MM-YYYY'), 1, 'PHG2',  'PHI42', 'KH33')
+    into DanhSachDatPhong VALUES('DS0016',  TO_DATE('28-10-2023','DD-MM-YYYY'), 1, 'PHG23',  'PHI11', 'KH29')
+    into DanhSachDatPhong VALUES('DS0017',  TO_DATE('8-3-2021','DD-MM-YYYY'), 4, 'PHG7',  'PHI2', 'KH5')
+    into DanhSachDatPhong VALUES('DS0018',  TO_DATE('1-4-2021','DD-MM-YYYY'), 3, 'PHG30',  'PHI37', 'KH38')
+    into DanhSachDatPhong VALUES('DS0019',  TO_DATE('26-2-2021','DD-MM-YYYY'), 3, 'PHG23',  'PHI11', 'KH3')
+    into DanhSachDatPhong VALUES('DS0020',  TO_DATE('9-9-2022','DD-MM-YYYY'), 2, 'PHG4',  'PHI19', 'KH50')
+    into DanhSachDatPhong VALUES('DS0021',  TO_DATE('9-7-2020','DD-MM-YYYY'), 2, 'PHG1',  'PHI24', 'KH20')
+    into DanhSachDatPhong VALUES('DS0022',  TO_DATE('20-4-2021','DD-MM-YYYY'), 4, 'PHG11',  'PHI16', 'KH50')
+    into DanhSachDatPhong VALUES('DS0023',  TO_DATE('23-10-2020','DD-MM-YYYY'), 1, 'PHG17',  'PHI7', 'KH49')
+    into DanhSachDatPhong VALUES('DS0024',  TO_DATE('21-4-2023','DD-MM-YYYY'), 3, 'PHG25',  'PHI48', 'KH5')
+    into DanhSachDatPhong VALUES('DS0025',  TO_DATE('21-12-2020','DD-MM-YYYY'), 2, 'PHG18',  'PHI43', 'KH28')
+    into DanhSachDatPhong VALUES('DS0026',  TO_DATE('22-10-2021','DD-MM-YYYY'), 5, 'PHG12',  'PHI12', 'KH15')
+    into DanhSachDatPhong VALUES('DS0027',  TO_DATE('6-2-2023','DD-MM-YYYY'), 5, 'PHG3',  'PHI40', 'KH6')
+    into DanhSachDatPhong VALUES('DS0028',  TO_DATE('5-3-2021','DD-MM-YYYY'), 4, 'PHG18',  'PHI15', 'KH14')
+    into DanhSachDatPhong VALUES('DS0029',  TO_DATE('29-6-2021','DD-MM-YYYY'), 1, 'PHG25',  'PHI16', 'KH4')
+    into DanhSachDatPhong VALUES('DS0030',  TO_DATE('9-8-2020','DD-MM-YYYY'), 5, 'PHG13',  'PHI6', 'KH17')
+    into DanhSachDatPhong VALUES('DS0031',  TO_DATE('14-1-2021','DD-MM-YYYY'), 2, 'PHG20',  'PHI29', 'KH24')
+    into DanhSachDatPhong VALUES('DS0032',  TO_DATE('13-3-2021','DD-MM-YYYY'), 3, 'PHG1',  'PHI25', 'KH25')
+    into DanhSachDatPhong VALUES('DS0033',  TO_DATE('14-3-2023','DD-MM-YYYY'), 2, 'PHG19',  'PHI6', 'KH15')
+    into DanhSachDatPhong VALUES('DS0034',  TO_DATE('19-3-2023','DD-MM-YYYY'), 3, 'PHG30',  'PHI39', 'KH27')
+    into DanhSachDatPhong VALUES('DS0035',  TO_DATE('15-2-2022','DD-MM-YYYY'), 2, 'PHG13',  'PHI22', 'KH47')
+    into DanhSachDatPhong VALUES('DS0036',  TO_DATE('20-6-2023','DD-MM-YYYY'), 5, 'PHG18',  'PHI7', 'KH37')
+    into DanhSachDatPhong VALUES('DS0037',  TO_DATE('14-2-2020','DD-MM-YYYY'), 4, 'PHG20',  'PHI31', 'KH7')
+    into DanhSachDatPhong VALUES('DS0038',  TO_DATE('3-7-2020','DD-MM-YYYY'), 3, 'PHG25',  'PHI42', 'KH35')
+    into DanhSachDatPhong VALUES('DS0039',  TO_DATE('2-5-2023','DD-MM-YYYY'), 3, 'PHG6',  'PHI38', 'KH37')
+    into DanhSachDatPhong VALUES('DS0040',  TO_DATE('16-11-2022','DD-MM-YYYY'), 1, 'PHG29',  'PHI38', 'KH48')
+    into DanhSachDatPhong VALUES('DS0041',  TO_DATE('23-9-2022','DD-MM-YYYY'), 5, 'PHG15',  'PHI34', 'KH4')
+    into DanhSachDatPhong VALUES('DS0042',  TO_DATE('4-3-2020','DD-MM-YYYY'), 3, 'PHG19',  'PHI28', 'KH9')
+    into DanhSachDatPhong VALUES('DS0043',  TO_DATE('22-11-2023','DD-MM-YYYY'), 1, 'PHG10',  'PHI5', 'KH38')
+    into DanhSachDatPhong VALUES('DS0044',  TO_DATE('21-5-2022','DD-MM-YYYY'), 4, 'PHG22',  'PHI23', 'KH5')
+    into DanhSachDatPhong VALUES('DS0045',  TO_DATE('12-7-2021','DD-MM-YYYY'), 5, 'PHG1',  'PHI8', 'KH6')
+    into DanhSachDatPhong VALUES('DS0046',  TO_DATE('20-12-2020','DD-MM-YYYY'), 5, 'PHG30',  'PHI35', 'KH1')
+    into DanhSachDatPhong VALUES('DS0047',  TO_DATE('19-4-2021','DD-MM-YYYY'), 2, 'PHG28',  'PHI5', 'KH46')
+    into DanhSachDatPhong VALUES('DS0048',  TO_DATE('30-10-2022','DD-MM-YYYY'), 4, 'PHG25',  'PHI7', 'KH19')
+    into DanhSachDatPhong VALUES('DS0049',  TO_DATE('24-12-2021','DD-MM-YYYY'), 4, 'PHG3',  'PHI50', 'KH3')
+    into DanhSachDatPhong VALUES('DS0050',  TO_DATE('24-10-2021','DD-MM-YYYY'), 1, 'PHG5',  'PHI43', 'KH47')
 select 1 from dual;
 /
 
@@ -551,108 +551,107 @@ select 1 from dual;
 -----------------------------------
 -- waiting for full p1 p2 p3 p4
 
-insert all
-    into  PHIEUSUDUNGDICHVU VALUES('PDV00','6',  TO_DATE('12-2-2021','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV01', 'DS001', 'KH19')
-into  PHIEUSUDUNGDICHVU VALUES('PDV01','4',  TO_DATE('22-7-2022','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV02', 'DS002', 'KH96')
-into  PHIEUSUDUNGDICHVU VALUES('PDV02','3',  TO_DATE('4-9-2021','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV03', 'DS003', 'KH50')
-into  PHIEUSUDUNGDICHVU VALUES('PDV03','4',  TO_DATE('6-12-2022','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV04', 'DS004', 'KH3')
-into  PHIEUSUDUNGDICHVU VALUES('PDV04','3',  TO_DATE('5-3-2021','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV05', 'DS005', 'KH59')
-into  PHIEUSUDUNGDICHVU VALUES('PDV05','5',  TO_DATE('12-8-2022','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV06', 'DS006', 'KH45')
-into  PHIEUSUDUNGDICHVU VALUES('PDV06','5',  TO_DATE('8-4-2021','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV01', 'DS007', 'KH67')
-into  PHIEUSUDUNGDICHVU VALUES('PDV07','5',  TO_DATE('23-10-2021','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV02', 'DS008', 'KH37')
-into  PHIEUSUDUNGDICHVU VALUES('PDV08','1',  TO_DATE('1-10-2022','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV03', 'DS009', 'KH9')
-into  PHIEUSUDUNGDICHVU VALUES('PDV09','2',  TO_DATE('12-1-2023','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV04', 'DS0010', 'KH16')
-into  PHIEUSUDUNGDICHVU VALUES('PDV010','6',  TO_DATE('27-10-2022','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV05', 'DS0011', 'KH53')
-into  PHIEUSUDUNGDICHVU VALUES('PDV011','3',  TO_DATE('19-11-2022','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV06', 'DS0012', 'KH100')
-into  PHIEUSUDUNGDICHVU VALUES('PDV012','6',  TO_DATE('28-3-2023','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV01', 'DS0013', 'KH99')
-into  PHIEUSUDUNGDICHVU VALUES('PDV013','4',  TO_DATE('9-7-2021','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV02', 'DS0014', 'KH70')
-into  PHIEUSUDUNGDICHVU VALUES('PDV014','5',  TO_DATE('11-7-2020','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV03', 'DS0015', 'KH99')
-into  PHIEUSUDUNGDICHVU VALUES('PDV015','5',  TO_DATE('6-3-2023','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV04', 'DS0016', 'KH88')
-into  PHIEUSUDUNGDICHVU VALUES('PDV016','3',  TO_DATE('9-4-2020','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV05', 'DS0017', 'KH43')
-into  PHIEUSUDUNGDICHVU VALUES('PDV017','1',  TO_DATE('21-8-2022','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV06', 'DS0018', 'KH99')
-into  PHIEUSUDUNGDICHVU VALUES('PDV018','2',  TO_DATE('12-3-2020','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV01', 'DS0019', 'KH88')
-into  PHIEUSUDUNGDICHVU VALUES('PDV019','4',  TO_DATE('12-9-2020','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV02', 'DS0020', 'KH90')
-into  PHIEUSUDUNGDICHVU VALUES('PDV020','6',  TO_DATE('9-8-2020','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV03', 'DS0021', 'KH94')
-into  PHIEUSUDUNGDICHVU VALUES('PDV021','6',  TO_DATE('20-11-2020','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV04', 'DS0022', 'KH63')
-into  PHIEUSUDUNGDICHVU VALUES('PDV022','1',  TO_DATE('21-5-2022','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV05', 'DS0023', 'KH41')
-into  PHIEUSUDUNGDICHVU VALUES('PDV023','6',  TO_DATE('11-10-2022','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV06', 'DS0024', 'KH65')
-into  PHIEUSUDUNGDICHVU VALUES('PDV024','3',  TO_DATE('9-12-2021','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV01', 'DS0025', 'KH48')
-into  PHIEUSUDUNGDICHVU VALUES('PDV025','6',  TO_DATE('22-11-2023','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV02', 'DS0026', 'KH9')
-into  PHIEUSUDUNGDICHVU VALUES('PDV026','6',  TO_DATE('3-9-2023','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV03', 'DS0027', 'KH27')
-into  PHIEUSUDUNGDICHVU VALUES('PDV027','1',  TO_DATE('27-11-2020','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV04', 'DS0028', 'KH72')
-into  PHIEUSUDUNGDICHVU VALUES('PDV028','2',  TO_DATE('5-3-2023','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV05', 'DS0029', 'KH32')
-into  PHIEUSUDUNGDICHVU VALUES('PDV029','5',  TO_DATE('22-11-2021','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV06', 'DS0030', 'KH19')
-into  PHIEUSUDUNGDICHVU VALUES('PDV030','2',  TO_DATE('27-10-2020','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV01', 'DS0031', 'KH36')
-into  PHIEUSUDUNGDICHVU VALUES('PDV031','2',  TO_DATE('18-12-2020','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV02', 'DS0032', 'KH17')
-into  PHIEUSUDUNGDICHVU VALUES('PDV032','6',  TO_DATE('8-8-2023','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV03', 'DS0033', 'KH94')
-into  PHIEUSUDUNGDICHVU VALUES('PDV033','3',  TO_DATE('21-2-2022','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV04', 'DS0034', 'KH24')
-into  PHIEUSUDUNGDICHVU VALUES('PDV034','3',  TO_DATE('27-1-2022','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV05', 'DS0035', 'KH1')
-into  PHIEUSUDUNGDICHVU VALUES('PDV035','1',  TO_DATE('24-7-2023','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV06', 'DS0036', 'KH27')
-into  PHIEUSUDUNGDICHVU VALUES('PDV036','5',  TO_DATE('26-12-2021','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV01', 'DS0037', 'KH25')
-into  PHIEUSUDUNGDICHVU VALUES('PDV037','4',  TO_DATE('20-2-2022','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV02', 'DS0038', 'KH15')
-into  PHIEUSUDUNGDICHVU VALUES('PDV038','5',  TO_DATE('25-8-2023','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV03', 'DS0039', 'KH6')
-into  PHIEUSUDUNGDICHVU VALUES('PDV039','3',  TO_DATE('4-9-2023','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV04', 'DS0040', 'KH90')
-into  PHIEUSUDUNGDICHVU VALUES('PDV040','6',  TO_DATE('16-2-2021','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV05', 'DS0041', 'KH9')
-into  PHIEUSUDUNGDICHVU VALUES('PDV041','6',  TO_DATE('25-12-2021','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV06', 'DS0042', 'KH67')
-into  PHIEUSUDUNGDICHVU VALUES('PDV042','4',  TO_DATE('2-2-2022','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV01', 'DS0043', 'KH70')
-into  PHIEUSUDUNGDICHVU VALUES('PDV043','2',  TO_DATE('7-1-2023','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV02', 'DS0044', 'KH70')
-into  PHIEUSUDUNGDICHVU VALUES('PDV044','5',  TO_DATE('14-7-2023','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV03', 'DS0045', 'KH10')
-into  PHIEUSUDUNGDICHVU VALUES('PDV045','5',  TO_DATE('19-8-2021','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV04', 'DS0046', 'KH46')
-into  PHIEUSUDUNGDICHVU VALUES('PDV046','1',  TO_DATE('2-3-2020','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV05', 'DS0047', 'KH53')
-into  PHIEUSUDUNGDICHVU VALUES('PDV047','1',  TO_DATE('25-1-2021','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV06', 'DS0048', 'KH4')
-into  PHIEUSUDUNGDICHVU VALUES('PDV048','1',  TO_DATE('10-2-2021','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV01', 'DS0049', 'KH12')
-into  PHIEUSUDUNGDICHVU VALUES('PDV049','2',  TO_DATE('17-5-2020','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV02', 'DS0050', 'KH92')
-into  PHIEUSUDUNGDICHVU VALUES('PDV050','2',  TO_DATE('4-10-2020','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV03', 'DS001', 'KH28')
-into  PHIEUSUDUNGDICHVU VALUES('PDV051','5',  TO_DATE('18-4-2021','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV04', 'DS002', 'KH56')
-into  PHIEUSUDUNGDICHVU VALUES('PDV052','6',  TO_DATE('2-6-2021','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV05', 'DS003', 'KH2')
-into  PHIEUSUDUNGDICHVU VALUES('PDV053','3',  TO_DATE('15-11-2022','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV06', 'DS004', 'KH24')
-into  PHIEUSUDUNGDICHVU VALUES('PDV054','2',  TO_DATE('27-8-2021','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV01', 'DS005', 'KH55')
-into  PHIEUSUDUNGDICHVU VALUES('PDV055','2',  TO_DATE('5-6-2022','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV02', 'DS006', 'KH89')
-into  PHIEUSUDUNGDICHVU VALUES('PDV056','6',  TO_DATE('20-5-2023','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV03', 'DS007', 'KH38')
-into  PHIEUSUDUNGDICHVU VALUES('PDV057','3',  TO_DATE('15-12-2020','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV04', 'DS008', 'KH4')
-into  PHIEUSUDUNGDICHVU VALUES('PDV058','2',  TO_DATE('13-5-2021','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV05', 'DS009', 'KH60')
-into  PHIEUSUDUNGDICHVU VALUES('PDV059','2',  TO_DATE('4-2-2020','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV06', 'DS0010', 'KH4')
-into  PHIEUSUDUNGDICHVU VALUES('PDV060','5',  TO_DATE('17-5-2022','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV01', 'DS0011', 'KH95')
-into  PHIEUSUDUNGDICHVU VALUES('PDV061','1',  TO_DATE('27-11-2020','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV02', 'DS0012', 'KH63')
-into  PHIEUSUDUNGDICHVU VALUES('PDV062','1',  TO_DATE('1-5-2023','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV03', 'DS0013', 'KH40')
-into  PHIEUSUDUNGDICHVU VALUES('PDV063','5',  TO_DATE('26-8-2021','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV04', 'DS0014', 'KH67')
-into  PHIEUSUDUNGDICHVU VALUES('PDV064','1',  TO_DATE('8-4-2021','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV05', 'DS0015', 'KH43')
-into  PHIEUSUDUNGDICHVU VALUES('PDV065','1',  TO_DATE('26-8-2020','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV06', 'DS0016', 'KH16')
-into  PHIEUSUDUNGDICHVU VALUES('PDV066','2',  TO_DATE('6-1-2022','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV01', 'DS0017', 'KH51')
-into  PHIEUSUDUNGDICHVU VALUES('PDV067','1',  TO_DATE('27-6-2022','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV02', 'DS0018', 'KH6')
-into  PHIEUSUDUNGDICHVU VALUES('PDV068','4',  TO_DATE('24-6-2021','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV03', 'DS0019', 'KH86')
-into  PHIEUSUDUNGDICHVU VALUES('PDV069','1',  TO_DATE('18-7-2021','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV04', 'DS0020', 'KH14')
-into  PHIEUSUDUNGDICHVU VALUES('PDV070','2',  TO_DATE('14-6-2020','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV05', 'DS0021', 'KH88')
-into  PHIEUSUDUNGDICHVU VALUES('PDV071','1',  TO_DATE('6-3-2023','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV06', 'DS0022', 'KH96')
-into  PHIEUSUDUNGDICHVU VALUES('PDV072','4',  TO_DATE('2-11-2022','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV01', 'DS0023', 'KH46')
-into  PHIEUSUDUNGDICHVU VALUES('PDV073','5',  TO_DATE('9-7-2023','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV02', 'DS0024', 'KH41')
-into  PHIEUSUDUNGDICHVU VALUES('PDV074','1',  TO_DATE('14-6-2022','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV03', 'DS0025', 'KH66')
-into  PHIEUSUDUNGDICHVU VALUES('PDV075','6',  TO_DATE('17-5-2022','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV04', 'DS0026', 'KH13')
-into  PHIEUSUDUNGDICHVU VALUES('PDV076','4',  TO_DATE('10-3-2022','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV05', 'DS0027', 'KH95')
-into  PHIEUSUDUNGDICHVU VALUES('PDV077','3',  TO_DATE('24-11-2023','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV06', 'DS0028', 'KH76')
-into  PHIEUSUDUNGDICHVU VALUES('PDV078','5',  TO_DATE('25-4-2022','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV01', 'DS0029', 'KH4')
-into  PHIEUSUDUNGDICHVU VALUES('PDV079','5',  TO_DATE('7-5-2023','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV02', 'DS0030', 'KH46')
-into  PHIEUSUDUNGDICHVU VALUES('PDV080','6',  TO_DATE('25-7-2022','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV03', 'DS0031', 'KH47')
-into  PHIEUSUDUNGDICHVU VALUES('PDV081','4',  TO_DATE('22-2-2023','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV04', 'DS0032', 'KH83')
-into  PHIEUSUDUNGDICHVU VALUES('PDV082','1',  TO_DATE('8-7-2021','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV05', 'DS0033', 'KH94')
-into  PHIEUSUDUNGDICHVU VALUES('PDV083','2',  TO_DATE('7-7-2023','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV06', 'DS0034', 'KH41')
-into  PHIEUSUDUNGDICHVU VALUES('PDV084','2',  TO_DATE('3-1-2020','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV01', 'DS0035', 'KH39')
-into  PHIEUSUDUNGDICHVU VALUES('PDV085','6',  TO_DATE('25-1-2020','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV02', 'DS0036', 'KH26')
-into  PHIEUSUDUNGDICHVU VALUES('PDV086','2',  TO_DATE('6-3-2021','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV03', 'DS0037', 'KH66')
-into  PHIEUSUDUNGDICHVU VALUES('PDV087','2',  TO_DATE('7-12-2022','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV04', 'DS0038', 'KH17')
-into  PHIEUSUDUNGDICHVU VALUES('PDV088','6',  TO_DATE('1-11-2023','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV05', 'DS0039', 'KH100')
-into  PHIEUSUDUNGDICHVU VALUES('PDV089','2',  TO_DATE('20-6-2020','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV06', 'DS0040', 'KH41')
-into  PHIEUSUDUNGDICHVU VALUES('PDV090','3',  TO_DATE('26-2-2023','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV01', 'DS0041', 'KH69')
-into  PHIEUSUDUNGDICHVU VALUES('PDV091','6',  TO_DATE('15-3-2020','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV02', 'DS0042', 'KH31')
-into  PHIEUSUDUNGDICHVU VALUES('PDV092','1',  TO_DATE('27-3-2020','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV03', 'DS0043', 'KH16')
-into  PHIEUSUDUNGDICHVU VALUES('PDV093','3',  TO_DATE('10-8-2020','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV04', 'DS0044', 'KH52')
-into  PHIEUSUDUNGDICHVU VALUES('PDV094','6',  TO_DATE('26-10-2023','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV05', 'DS0045', 'KH36')
-into  PHIEUSUDUNGDICHVU VALUES('PDV095','4',  TO_DATE('21-6-2022','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV06', 'DS0046', 'KH71')
-into  PHIEUSUDUNGDICHVU VALUES('PDV096','4',  TO_DATE('10-1-2020','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV01', 'DS0047', 'KH1')
-into  PHIEUSUDUNGDICHVU VALUES('PDV097','6',  TO_DATE('23-2-2021','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV02', 'DS0048', 'KH40')
-into  PHIEUSUDUNGDICHVU VALUES('PDV098','5',  TO_DATE('8-4-2021','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV03', 'DS0049', 'KH65')
-into  PHIEUSUDUNGDICHVU VALUES('PDV099','4',  TO_DATE('22-1-2021','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV04', 'DS0050', 'KH13')
-select 1 from dual;
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(4,  TO_DATE('26-11-2021','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV01', 'DS001', 'KH3');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('28-2-2022','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV02', 'DS002', 'KH28');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(3,  TO_DATE('18-12-2021','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV03', 'DS003', 'KH39');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(4,  TO_DATE('28-11-2021','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV04', 'DS004', 'KH30');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(4,  TO_DATE('11-12-2023','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV05', 'DS005', 'KH43');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(4,  TO_DATE('9-1-2022','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV06', 'DS006', 'KH41');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(2,  TO_DATE('18-5-2022','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV01', 'DS007', 'KH41');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(3,  TO_DATE('21-12-2023','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV02', 'DS008', 'KH49');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(5,  TO_DATE('6-2-2020','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV03', 'DS009', 'KH19');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(5,  TO_DATE('9-4-2020','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV04', 'DS0010', 'KH38');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(3,  TO_DATE('15-9-2022','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV05', 'DS0011', 'KH6');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('24-4-2022','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV06', 'DS0012', 'KH31');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(5,  TO_DATE('25-7-2020','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV01', 'DS0013', 'KH4');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(3,  TO_DATE('21-1-2021','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV02', 'DS0014', 'KH46');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(3,  TO_DATE('12-11-2023','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV03', 'DS0015', 'KH34');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('14-2-2021','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV04', 'DS0016', 'KH43');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(3,  TO_DATE('21-11-2020','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV05', 'DS0017', 'KH6');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(4,  TO_DATE('1-6-2023','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV06', 'DS0018', 'KH13');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(5,  TO_DATE('3-4-2021','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV01', 'DS0019', 'KH29');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('18-11-2022','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV02', 'DS0020', 'KH23');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(4,  TO_DATE('2-10-2020','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV03', 'DS0021', 'KH23');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(3,  TO_DATE('22-7-2020','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV04', 'DS0022', 'KH26');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(1,  TO_DATE('5-2-2022','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV05', 'DS0023', 'KH38');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('12-9-2023','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV06', 'DS0024', 'KH23');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(1,  TO_DATE('25-5-2022','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV01', 'DS0025', 'KH22');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(5,  TO_DATE('11-10-2022','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV02', 'DS0026', 'KH14');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('4-2-2022','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV03', 'DS0027', 'KH37');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(5,  TO_DATE('20-1-2020','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV04', 'DS0028', 'KH10');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(3,  TO_DATE('4-6-2021','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV05', 'DS0029', 'KH13');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(4,  TO_DATE('19-9-2023','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV06', 'DS0030', 'KH42');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(3,  TO_DATE('27-12-2022','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV01', 'DS0031', 'KH10');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('7-10-2022','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV02', 'DS0032', 'KH6');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(1,  TO_DATE('28-2-2023','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV03', 'DS0033', 'KH46');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(1,  TO_DATE('20-3-2021','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV04', 'DS0034', 'KH47');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(4,  TO_DATE('2-5-2020','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV05', 'DS0035', 'KH3');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(5,  TO_DATE('28-2-2021','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV06', 'DS0036', 'KH22');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(1,  TO_DATE('19-9-2023','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV01', 'DS0037', 'KH46');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(3,  TO_DATE('21-6-2021','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV02', 'DS0038', 'KH14');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('9-7-2020','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV03', 'DS0039', 'KH22');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(3,  TO_DATE('14-5-2020','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV04', 'DS0040', 'KH8');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(4,  TO_DATE('14-1-2023','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV05', 'DS0041', 'KH39');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(2,  TO_DATE('21-9-2022','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV06', 'DS0042', 'KH26');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(2,  TO_DATE('18-11-2021','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV01', 'DS0043', 'KH8');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('23-10-2023','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV02', 'DS0044', 'KH21');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('14-9-2022','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV03', 'DS0045', 'KH27');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(5,  TO_DATE('8-10-2022','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV04', 'DS0046', 'KH11');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('2-3-2022','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV05', 'DS0047', 'KH9');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(1,  TO_DATE('20-8-2021','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV06', 'DS0048', 'KH3');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(1,  TO_DATE('8-5-2021','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV01', 'DS0049', 'KH5');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(5,  TO_DATE('7-3-2020','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV02', 'DS0050', 'KH18');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(4,  TO_DATE('3-8-2022','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV03', 'DS001', 'KH14');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(4,  TO_DATE('7-9-2021','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV04', 'DS002', 'KH45');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(2,  TO_DATE('26-7-2022','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV05', 'DS003', 'KH30');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(3,  TO_DATE('16-2-2023','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV06', 'DS004', 'KH33');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(1,  TO_DATE('17-10-2023','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV01', 'DS005', 'KH6');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(4,  TO_DATE('7-7-2022','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV02', 'DS006', 'KH34');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(2,  TO_DATE('8-2-2022','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV03', 'DS007', 'KH38');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(1,  TO_DATE('22-12-2022','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV04', 'DS008', 'KH25');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(3,  TO_DATE('20-7-2023','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV05', 'DS009', 'KH48');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(2,  TO_DATE('23-8-2023','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV06', 'DS0010', 'KH48');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(5,  TO_DATE('11-4-2021','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV01', 'DS0011', 'KH8');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('20-12-2021','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV02', 'DS0012', 'KH45');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('18-3-2023','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV03', 'DS0013', 'KH37');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('9-1-2021','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV04', 'DS0014', 'KH29');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(3,  TO_DATE('23-3-2021','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV05', 'DS0015', 'KH21');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(5,  TO_DATE('2-9-2023','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV06', 'DS0016', 'KH1');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('23-2-2020','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV01', 'DS0017', 'KH8');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('26-3-2023','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV02', 'DS0018', 'KH16');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('5-8-2021','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV03', 'DS0019', 'KH11');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(2,  TO_DATE('6-9-2023','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV04', 'DS0020', 'KH32');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(1,  TO_DATE('27-3-2023','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV05', 'DS0021', 'KH24');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(4,  TO_DATE('12-3-2021','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV06', 'DS0022', 'KH13');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(2,  TO_DATE('18-11-2020','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV01', 'DS0023', 'KH6');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(1,  TO_DATE('9-4-2022','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV02', 'DS0024', 'KH35');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('9-11-2022','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV03', 'DS0025', 'KH31');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(1,  TO_DATE('4-5-2023','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV04', 'DS0026', 'KH23');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(3,  TO_DATE('13-1-2021','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV05', 'DS0027', 'KH14');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(1,  TO_DATE('27-4-2020','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV06', 'DS0028', 'KH35');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(3,  TO_DATE('26-5-2021','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV01', 'DS0029', 'KH12');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(3,  TO_DATE('5-10-2023','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV02', 'DS0030', 'KH6');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(5,  TO_DATE('5-3-2022','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV03', 'DS0031', 'KH25');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(2,  TO_DATE('13-3-2023','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV04', 'DS0032', 'KH40');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('13-8-2020','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV05', 'DS0033', 'KH36');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('17-2-2020','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV06', 'DS0034', 'KH15');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(4,  TO_DATE('8-11-2020','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV01', 'DS0035', 'KH49');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(5,  TO_DATE('9-9-2020','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV02', 'DS0036', 'KH10');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(2,  TO_DATE('27-11-2022','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV03', 'DS0037', 'KH15');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('28-3-2023','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV04', 'DS0038', 'KH47');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(1,  TO_DATE('22-3-2020','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV05', 'DS0039', 'KH1');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('4-6-2020','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV06', 'DS0040', 'KH24');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(4,  TO_DATE('12-3-2022','DD-MM-YYYY'), 400000, 'Đã sử dụng', 'DV01', 'DS0041', 'KH31');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(3,  TO_DATE('12-2-2020','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV02', 'DS0042', 'KH7');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(5,  TO_DATE('3-5-2022','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV03', 'DS0043', 'KH10');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(5,  TO_DATE('9-7-2023','DD-MM-YYYY'), 500000, 'Đã sử dụng', 'DV04', 'DS0044', 'KH35');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(1,  TO_DATE('22-7-2021','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV05', 'DS0045', 'KH38');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(2,  TO_DATE('24-11-2021','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV06', 'DS0046', 'KH48');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(3,  TO_DATE('17-4-2021','DD-MM-YYYY'), 300000, 'Đã sử dụng', 'DV01', 'DS0047', 'KH47');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(6,  TO_DATE('9-8-2022','DD-MM-YYYY'), 600000, 'Đã sử dụng', 'DV02', 'DS0048', 'KH12');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(1,  TO_DATE('28-4-2021','DD-MM-YYYY'), 100000, 'Đã sử dụng', 'DV03', 'DS0049', 'KH50');/
+insert into  PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) VALUES(2,  TO_DATE('20-11-2023','DD-MM-YYYY'), 200000, 'Đã sử dụng', 'DV04', 'DS0050', 'KH34');/
+
 
 
 

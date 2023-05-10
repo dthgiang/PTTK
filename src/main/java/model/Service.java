@@ -3,10 +3,7 @@ package model;
 import databaseConnect.DataBaseConnector;
 import helper.Helper;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class Service {
@@ -17,7 +14,7 @@ public class Service {
     private String forRoom;
     private String startDate,endDate;
     private  String area, province, owner,contact, image;
-    private Connection connection = DataBaseConnector.getConnection();
+    private static Connection connection = DataBaseConnector.getConnection();
 
     public final String type = "Dịch vụ";
     public Service()
@@ -52,9 +49,10 @@ public class Service {
 
     }
 
-    public Service(String MaDV, String tenDV, String gia, String moTa, String theLoai, String forR, String img) {
+    public Service(String MaDV, String tenDV, int pric,  String gia, String moTa, String theLoai, String forR, String img) {
         MaDichVu = MaDV;
         name = tenDV;
+        cost = pric;
         price = gia;
         des = moTa;
         typeS = theLoai;
@@ -103,7 +101,7 @@ public class Service {
             String theLoai = rs.getString("TheLoai");
             String moTa = rs.getString("MoTa");
             String image = rs.getString("Image");
-            sList.add(new Service(maDV, name, Helper.convertTypeHelper.formatNumber(price), moTa,theLoai, forR, image));
+            sList.add(new Service(maDV, name, price, Helper.convertTypeHelper.formatNumber(price), moTa,theLoai, forR, image));
         }
         return sList;
     }
@@ -146,7 +144,8 @@ public class Service {
         ArrayList<Service> sList = new ArrayList<Service>();
         try {
             Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery("select * from DBA_PTTK.DICHVU where " + condition);
+            String sql = "select * from DBA_PTTK.DICHVU where " + condition;
+            ResultSet rs = stmt.executeQuery(sql);
             return setServiceList(rs);
         }
         catch (SQLException e) {
@@ -195,4 +194,31 @@ public class Service {
 
         return serviceList;
     }
+
+    public static boolean insertPhieuSuDungDichVu(int thoiGianSD, String ThoiGianBatDau, int gia, String maDV, String maPhong, String maKH) {
+        String sql = "insert into " + DataBaseConnector.getOwner() + ".PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) values(?, TO_DATE(?, 'dd-MM-yyyy hh24-mi'), ?, ?, ?, ?, ?)";
+        try {
+            PreparedStatement statement = DataBaseConnector.getConnection().prepareStatement(sql);
+            statement.setInt(1, thoiGianSD);
+            statement.setString(2, ThoiGianBatDau);
+            statement.setInt(3, gia);
+            statement.setString(4, "Đang chờ xử lý");
+            statement.setString(5, maDV);
+            statement.setString(6, maPhong);
+            statement.setString(7, maKH);
+
+
+            int rowsInserted = statement.executeUpdate();
+            if (rowsInserted > 0) {
+                return true;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return  false;
+    }
+
+
+
 }

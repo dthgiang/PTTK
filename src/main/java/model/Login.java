@@ -9,7 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public class Login {
-    private static String username, password, role, MaUser;
+    private static String username, password, role, MaUser, maPhong, loaiPhong, maDatPhong;
 
     public Login(String username, String password) {
         this.username = username;
@@ -46,6 +46,22 @@ public class Login {
         return false;
     }
 
+    private static void getMyRoom() {
+        try {
+            Connection connection = DataBaseConnector.getConnection();
+            Statement stmt = connection.createStatement();
+            ResultSet rs = stmt.executeQuery("select * from  DBA_PTTK.VW_MYROOM ");
+            while (rs.next()) {
+                maPhong = rs.getString("MaPhong");
+                loaiPhong = rs.getString("LoaiPhong");
+                maDatPhong = rs.getString("MADATPHONG");
+            }
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static String getRole() {
         return role;
     }
@@ -56,4 +72,7 @@ public class Login {
     public static String getUserId() {
         return MaUser;
     }
+    public static String getMaPhong() { getMyRoom(); return maPhong;}
+    public static String getLoaiPhong() { getMyRoom(); return  loaiPhong;}
+    public static String getMaDatPhong() {getMyRoom(); return maDatPhong;}
 }
