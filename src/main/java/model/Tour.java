@@ -1,6 +1,7 @@
 package model;
 
 import databaseConnect.DataBaseConnector;
+import helper.Helper;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -11,13 +12,15 @@ public class Tour {
     private  String maT;
     private String name;
     private int cost;
+    private String sPrice;
     private int time;
     private String des;
     private  String area;
     private  String province;
     private String owner;
-    private  String contact;
+    private  String contact, startTime;
     private  String img;
+    public String type = "Tour";
     private Connection connection = DataBaseConnector.getConnection();//("jdbc:oracle:thin:@localhost:1521:XE", "DBA_PTTK", "123");
 
     public Tour()
@@ -38,6 +41,19 @@ public class Tour {
         this.des = Des;
         this.time = time;
         this.owner = owner;
+    }
+    public Tour(String name, int cost, String Des, String timeStart) {
+        this.name = name;
+        this.cost = cost;
+        this.des = Des;
+        this.startTime = timeStart;
+    }
+    public Tour(String name, String price, String Des, String timeStart, String type) {
+        this.name = name;
+        this.sPrice = price;
+        this.des = Des;
+        this.startTime = timeStart;
+        this.type = type;
     }
 
     public Tour(String name, int cost, String Des, int time,String province, String area, String owner, String contact) {
@@ -81,7 +97,10 @@ public class Tour {
     public Tour getTour() {
         return this;
     }
+    public String getStartTime() {return  startTime;}
+    public String getType() {return type;}
     public String getImage() {return img;}
+    public String getSPrice() {return sPrice;}
 
 
     public ArrayList<Tour> getAllTour() {
@@ -133,6 +152,27 @@ public class Tour {
 
         return tourList;
     }
+    public static ArrayList<Tour> getMyTour() {
+        ArrayList<Tour> tourList = new ArrayList<Tour>();
+        try {
+            Statement stmt = DataBaseConnector.getConnection().createStatement();
+            String sql = "select * from " + DataBaseConnector.getOwner() + ".VW_MYTOUR";
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                String name = rs.getString("TenTOUR");
+                int price = rs.getInt("Gia");
+                String moTa = rs.getString("MoTa");
+                String thoiGianBD = rs.getString("NGAYBATDAU");
+                tourList.add(new Tour(name, price, moTa, thoiGianBD));
+            }
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return tourList;
+    }
+
 
     public ArrayList<String> getAllArea() {
         ArrayList<String> areaList = new ArrayList<String>();
@@ -161,7 +201,20 @@ public class Tour {
     }
 
 
+    public static ArrayList<Tour> getMyTourAndService() {
+        ArrayList<Tour> rs = new ArrayList<Tour>();
+        ArrayList<Tour> tl = Tour.getMyTour();
+        ArrayList<Service> sl = Service.getMyService();
+        if (tl.size() < 1 && sl.size() <1) return null;
+        for(Tour x: tl) {
+            rs.add(new Tour(x.getName(), Helper.convertTypeHelper.formatNumber(x.getCost()), x.getDes(), x.getStartTime(), "Tour"));
+        }
+        for (Service y: sl) {
+            rs.add(new Tour(y.getName(),Helper.convertTypeHelper.formatNumber(y.getCost()), y.getDes(), y.getStartDate(), "Service"));
+        }
 
+        return rs;
+    }
     public void outTour() {
         System.out.println(this.name + " " + this.province + " " + this.owner);
     }

@@ -94,6 +94,7 @@ public class BuyTourController implements Initializable {
         Helper.initHelper.initImageIcon(homeIcon, "img/home.png");
         userLabel.setText("Hello " + Login.getUsername());
         vehicle.setItems(FXCollections.observableArrayList("Tự túc", "Xe đạp", "Máy bay", "Tàu hỏa", "Tàu thủy", "Cân đẩu vân", "Xe hơi", "Rồng"));
+        emailField.setText("@gmail.com");
 
     }
 
@@ -114,6 +115,11 @@ public class BuyTourController implements Initializable {
         }
 
         // user infor
+
+        if (nameField.getText().trim().isEmpty() || emailField.getText().trim().isEmpty() || phoneField.getText().trim().isEmpty() || idField.getText().trim().isEmpty()) {
+            Helper.alertHelper.showAlert("Please fill all information before switch");
+            return;
+        }
         String uName = nameField.getText();
         String uEmail = emailField.getText();
         String uPhone = phoneField.getText();
@@ -122,14 +128,16 @@ public class BuyTourController implements Initializable {
         cusList.add(new Customer(uName, uPhone, uEmail, uId));
         int i = cusList.size() + 1;
         String strNumber = String.valueOf(i);
-        if ( i == numOfMember) nextMemberButton.setText("OK");
-        else if ( i > numOfMember) nextMemberButton.setVisible(false);
+        if ( i >= numOfMember) nextMemberButton.setVisible(false);
         memberNumLabel.setText("Member : "+ strNumber);
+
+
+
         // clear when input
         nameField.setText("");
         phoneField.setText("");
         idField.setText("");
-        emailField.setText("");
+        emailField.setText("@gmail.com");
 
     }
 
@@ -151,6 +159,8 @@ public class BuyTourController implements Initializable {
             return;
         }
 
+        nextMemberButtonOnClick(event);
+
         if (cusList.size() < numOfMember) {
             Helper.alertHelper.showAlert("Please fill all member information");
             return;
@@ -162,20 +172,29 @@ public class BuyTourController implements Initializable {
         String veh = vehicle.getValue();
         String req = otherRequire.getText();
 
-        for (Customer x: cusList) {
-            x.outCustomer();
+
+
+
+        if(insertMember(dateStart, veh)) {
+            Helper.alertHelper.showAlert("Registor successful");
+        }
+        else {
+            Helper.alertHelper.showAlert("Some thing error! Please try agian T_T");
         }
 
-
-        System.out.println(dateStart + " - " + veh + " - " + req);
-
-        // clear all text fiedl
+        // clear all text field
         memberNum.setText("");
         otherRequire.setText("");
+        numOfMember = 1;
 
 
     }
-    public  void insertMember() {
+    public  boolean insertMember(String date, String vehicle) {
+        for (Customer x: cusList) {
+            boolean z = Customer.insertDSThamGiaTour(maTour, date,vehicle, Login.getUserId(), x.getName(), x.getEmail(), x.getPhone(), x.getID());
+            if(z == false) return false;
+        }
+        return true;
     }
 
     public  void insertDSThamGia() {

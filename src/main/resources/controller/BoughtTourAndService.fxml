@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MyTourAndServiceController">
+   <children>
+      <AnchorPane layoutY="-6.0" prefHeight="33.0" prefWidth="1000.0" style="-fx-background-color: #6096B4;">
+         <children>
+            <ImageView fx:id="homeIcon" fitHeight="35.0" fitWidth="35.0" layoutX="129.0" layoutY="19.0" onMouseClicked="#homeIconOnClick" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="12.0">
+               <image>
+                  <Image url="@../../../../img/home.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="returnIcon" fitHeight="35.0" fitWidth="35.0" layoutX="-52.0" layoutY="-43.0" onMouseClicked="#returnIconOnClick" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="12.0">
+               <image>
+                  <Image url="@../../../../img/return.png" />
+               </image>
+            </ImageView>
+            <FontAwesomeIconView fx:id="userIcon" fill="#fdfdfd" glyphName="USER_CIRCLE" layoutX="742.0" layoutY="38.85714340209961" size="36" text="" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="742.0" AnchorPane.rightAnchor="222.0" AnchorPane.topAnchor="12.0" />
+            <Label fx:id="userLabel" layoutX="804.0" layoutY="17.0" text="Hello 10ĐPTTK" textFill="WHITE" AnchorPane.topAnchor="17.0">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="moreTourButton" layoutX="335.0" layoutY="508.0" mnemonicParsing="false" onAction="#moreTourButtonOnClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #5dcc8d; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="Mor Tour" textFill="#5dcc8d" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="330.0">
+         <font>
+            <Font name="Cambria Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="moreServiceButton" layoutX="574.0" layoutY="511.0" mnemonicParsing="false" onAction="#moreServiceButtonOnClick" prefHeight="37.0" prefWidth="125.0" style="-fx-background-radius: 5; -fx-border-color: #6096B4; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: #F2FEF7;" text="More Service" textFill="#6096b4" AnchorPane.bottomAnchor="50.000000000000036" AnchorPane.rightAnchor="330.0">
+         <font>
+            <Font name="Cambria Bold" size="16.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tableServiceAndTour" layoutX="153.0" layoutY="94.0" prefHeight="393.0" prefWidth="760.0" stylesheets="@object.css" AnchorPane.bottomAnchor="122.0" AnchorPane.leftAnchor="120.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="149.3333740234375" text="Name" />
+          <TableColumn fx:id="typeColumn" minWidth="0.0" prefWidth="141.9998779296875" text="Type" />
+            <TableColumn fx:id="priceColumn" minWidth="0.0" prefWidth="131.3333740234375" text="Price" />
+            <TableColumn fx:id="descriptionColumn" minWidth="0.0" prefWidth="206.6666259765625" text="Description" />
+            <TableColumn fx:id="timeColumn" minWidth="0.0" prefWidth="126.0" text="TimeToUse" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="notFoundImage" fitHeight="300.0" fitWidth="400.0" layoutX="400.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="345.0" />
+      <Label fx:id="oopLabel" layoutX="368.0" layoutY="85.0" text="Oop!!!  you do not have any thing :((" textFill="#639eeb" AnchorPane.leftAnchor="363.0">
+         <font>
+            <Font name="Cambria Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -51,7 +51,7 @@ public class Login {
     }
 
     public static String getUsername() {
-        return username;
+        return username.toUpperCase();
     }
     public static String getUserId() {
         return MaUser;

@@ -3,6 +3,8 @@ package model;
 import databaseConnect.DataBaseConnector;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class Customer {
     private  String maKh, name, address, phone, tax, email, cmnd, maDoan, username, password;
@@ -68,10 +70,33 @@ public class Customer {
         return this.maKh;
     }
 
-    public void insertCustomer(String MaKH, String name, String email, String phone, String id) {
-        String sql = "'" + MaKH + "','" + name + "', '" + email + "','" + phone + "', '" + id + "','" + Login.getUserId() + "'";
-        String insertSql = "insert into DANHSACHTHAMGIATOUR (MaKhachHang, Ten, Email, SoDienThoai, CMND) values(" + sql + ")";
-        System.out.println(insertSql);
+    public static boolean insertDSThamGiaTour(String MaTour, String date, String phuongTien, String MaKH, String name, String email, String phone, String id) {
+
+        String ndate = "TO_DATE('" + date + "',dd-mm-yyyy')";
+        String sql = "insert into " + DataBaseConnector.getOwner() + ".DANHSACHTHAMGIATOUR (NguoiDangKy, Ten, Email, SDT, CMND, Tour, NgayBatDau, PhuongTien) values(?, ?, ?, ?, ?, ?, TO_DATE(?, 'DD-MM-YYYY'), ?)";
+
+
+        try {
+            PreparedStatement statement = DataBaseConnector.getConnection().prepareStatement(sql);
+            statement.setString(1, MaKH);
+            statement.setString(2, name);
+            statement.setString(3, email);
+            statement.setString(4, phone);
+            statement.setString(5, id);
+            statement.setString(6, MaTour);
+            statement.setString(7, date);
+            statement.setString(8, phuongTien);
+
+
+            int rowsInserted = statement.executeUpdate();
+            if (rowsInserted > 0) {
+                return true;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return  false;
     }
 
 

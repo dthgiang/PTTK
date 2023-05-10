@@ -3,7 +3,6 @@ package controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import databaseConnect.DataBaseConnector;
 import helper.Helper;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -33,7 +32,6 @@ public class HomeController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         Helper.initHelper.initImageIcon(bgImage, "img/howart.png");
         Helper.initHelper.initImageIcon(avtImage, "img/avt.gif");
-        Helper.switchScreenHelper.swicthScreenOnButton(roomManage, "/controller/roomManage.fxml");
 
         userWelcomeLabel.setText("Hello " + Login.getUsername());
 
@@ -57,6 +55,12 @@ public class HomeController implements Initializable {
         Helper.switchScreenHelper.swicthScreenOnButton(tourButton, "/controller/Tour.fxml");
         Helper.switchScreenHelper.swicthScreenOnButton(serviceButton, "/controller/Service.fxml");
         Helper.switchScreenHelper.swicthScreenOnButton(SignOut, "/controller/Login.fxml");
+        Helper.switchScreenHelper.swicthScreenOnButton(roomManage, "/controller/roomManage.fxml");
+        Helper.switchScreenHelper.swicthScreenOnButton(myTourAndServiceButton, "/controller/BoughtTourAndService.fxml");
+        Helper.switchScreenHelper.swicthScreenOnButton(cusBookRoom, "/controller/BookRoom.fxml");
+
+
+
     }
 
     public void avtImageOnClick(MouseEvent event) {

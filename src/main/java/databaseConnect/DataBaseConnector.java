@@ -49,6 +49,9 @@ public class DataBaseConnector {
     public static Connection getConnection() {
         return connector.connection;
     }
+    public static String getOwner() {
+        return "DBA_PTTK";
+    }
 
 
 }

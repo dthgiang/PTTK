@@ -2,6 +2,12 @@ package model;
 
 import databaseConnect.DataBaseConnector;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
 public class Service {
     private String name;
     private int cost;
@@ -13,6 +19,7 @@ public class Service {
     private  String province;
     private String owner;
     private  String contact;
+    public final String type = "Dịch vụ";
     public Service()
     {
         this.name = "Hello world";
@@ -27,6 +34,13 @@ public class Service {
         this.name = name;
     }
 
+    public Service(String name, int cost, String Des, String thoiGianBD) {
+        this.name = name;
+        this.cost = cost;
+        this.des = Des;
+        this.startDate = thoiGianBD;
+
+    }
     public Service(String name, int cost, String Des, String startDate, String endDate, int time, String owner) {
         this.name = name;
         this.cost = cost;
@@ -72,7 +86,27 @@ public class Service {
     public String getOwner() { return  owner;}
     public String getContact() {return contact;}
     public  int getTime() {return time;}
-    public Service getTour() {
+    public Service getSerivce() {
         return this;
+    }
+    public static ArrayList<Service> getMyService() {
+        ArrayList<Service> serviceList = new ArrayList<Service>();
+        try {
+            Statement stmt = DataBaseConnector.getConnection().createStatement();
+            String sql = "select * from " + DataBaseConnector.getOwner() + ".VW_MYSERVICE";
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                String name = rs.getString("TenDichVu");
+                int price = rs.getInt("Gia");
+                String moTa = rs.getString("MoTa");
+                String thoiGianBD = rs.getString("THOIGIANBATDAU");
+                serviceList.add(new Service(name, price, moTa, thoiGianBD));
+            }
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return serviceList;
     }
 }

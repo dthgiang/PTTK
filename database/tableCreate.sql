@@ -161,10 +161,16 @@ exec dropTable('DanhSachThamGiaTour');
 /
 create table DanhSachThamGiaTour
 (
-	MaThamGiaTour varchar2(10) not null,
+	MaThamGiaTour  NUMBER(10) GENERATED ALWAYS as IDENTITY(START with 1 INCREMENT by 1),
 	Tour varchar2(10),
-	KhachHang varchar2(10),
 	NgayBatDau date,
+    Ten VARCHAR2(50),
+    SDT VARCHAR2(15),
+    EMAIL VARCHAR2(100),
+    CMND VARCHAR2(15),
+    NGUOIDANGKY VARCHAR2(100),
+    PhuongTien VARCHAR2(100),
+
 
 	Constraint PK_DSThamGiaTour
 	Primary key (MaThamGiaTour)
@@ -231,6 +237,7 @@ create table BangDanhGia
 ) ;
 /
 
+/*
 exec dropTable('KhachHangTour');
 /
 
@@ -244,6 +251,7 @@ create table KhachHangTour (
     CONSTRAINT KhachHangTour_pk PRIMARY KEY (MaKhachHangTour)
 );
 /
+*/
 ----------------Khoa ngoai
 --Tour
 Alter table Tour
@@ -279,7 +287,7 @@ Alter table DanhSachThamGiaTour
 add constraint FK_DSThamGiaTour_Tour foreign key (Tour) references Tour (MaTour);
 
 Alter table DanhSachThamGiaTour
-Add constraint FK_DSThamGiaTour_KhachHang foreign key (KhachHang) references KhachHang (MaKH);
+Add constraint FK_DSThamGiaTour_KhachHang foreign key (NguoiDangKy) references KhachHang (MaKH);
 
 --DS dat phong
 Alter table DanhSachDatPhong
@@ -309,7 +317,9 @@ add constraint FK_BangDanhGia_KhachHang foreign key (MaKH) references KhachHang 
 alter table BangDanhGia
 add constraint FK_BangDanhGia_DSDatPhong foreign key (MaPhong) references DanhSachDatPhong (MaDatPhong);
 
+/*
 -- KhachHangTour
 
 alter table KhachHangTour
 add constraint FK_KhachHangTour_KhachHang foreign key (NguoiDangKy) references KhachHang (Username);
+*/

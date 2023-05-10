@@ -95,7 +95,7 @@ public  class TourController implements Initializable {
         tourNameInforLabel1.setText(tour.getName());
         timeInforLabel1.setText(Integer.toString(tour.getTime()) + " Days");
         shortDesInforLabel1.setText(tour.getDes());
-        priceInfroLabel1.setText(Integer.toString(tour.getCost()));
+        priceInfroLabel1.setText(Helper.convertTypeHelper.formatNumber(tour.getCost()));
         Helper.initHelper.initImage(tourImage1, "img/tour/" + tour.getImage());
 
     }
@@ -103,7 +103,7 @@ public  class TourController implements Initializable {
         tourNameInforLabel2.setText(tour.getName());
         timeInforLabel2.setText(Integer.toString(tour.getTime()) + " Days");
         shortDesInforLabel2.setText(tour.getDes());
-        priceInfroLabel2.setText(Integer.toString(tour.getCost()));
+        priceInfroLabel2.setText(Helper.convertTypeHelper.formatNumber(tour.getCost()));
         Helper.initHelper.initImage(tourImage2, "img/tour/" + tour.getImage());
 
     }
@@ -111,7 +111,7 @@ public  class TourController implements Initializable {
         tourNameInforLabel3.setText(tour.getName());
         timeInforLabel3.setText(Integer.toString(tour.getTime()) + " Days");
         shortDesInforLabel3.setText(tour.getDes());
-        priceInfroLabel3.setText(Integer.toString(tour.getCost()));
+        priceInfroLabel3.setText(Helper.convertTypeHelper.formatNumber(tour.getCost()));
         Helper.initHelper.initImage(tourImage3, "img/tour/" + tour.getImage());
 
     }
@@ -159,6 +159,7 @@ public  class TourController implements Initializable {
         Helper.initHelper.initImageIcon(searchIcon, "img/loupe.png");
         Tour temp = new Tour();
         areaFilter.setItems(FXCollections.observableArrayList(temp.getAllArea()));
+
         userLabel.setText("Hello " + Login.getUsername());
         tourList = tour.getAllTour();
         loadCard(tourList, page);
