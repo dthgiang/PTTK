@@ -13,146 +13,113 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="624.0" prefWidth="1000.0" stylesheets="@object.css" xmlns="http://javafx.com/javafx/19"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookingFormController">
+<AnchorPane prefHeight="624.0" prefWidth="1000.0" stylesheets="@object.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookingFormController">
    <Pane layoutX="355.0" prefHeight="706.0" prefWidth="646.0" style="-fx-background-color: #BDCDD6;">
       <Label layoutX="227.0" layoutY="9.0" text="Booking Form">
          <font>
-            <Font size="29.0"/>
+            <Font size="29.0" />
          </font>
       </Label>
-      <Separator layoutY="56.0" prefHeight="2.0" prefWidth="646.0"/>
+      <Separator layoutY="56.0" prefHeight="2.0" prefWidth="646.0" />
       <Label layoutX="33.0" layoutY="81.0" text="Full Name:">
          <font>
-            <Font size="14.0"/>
+            <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="234.0" layoutY="75.0" prefHeight="20.0" prefWidth="371.0"/>
+      <TextField layoutX="234.0" layoutY="75.0" prefHeight="20.0" prefWidth="371.0" />
       <Label layoutX="33.0" layoutY="121.0" text="Identification card:">
          <font>
-            <Font size="14.0"/>
+            <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="234.0" layoutY="115.0" prefHeight="25.0" prefWidth="371.0"/>
+      <TextField layoutX="234.0" layoutY="115.0" prefHeight="25.0" prefWidth="371.0" />
       <Label layoutX="33.0" layoutY="161.0" text="Date of birth:">
          <font>
-            <Font size="14.0"/>
+            <Font size="14.0" />
          </font>
       </Label>
-      <DatePicker layoutX="233.0" layoutY="155.0"/>
+      <DatePicker layoutX="233.0" layoutY="155.0" />
       <Label layoutX="33.0" layoutY="201.0" text="Phone number:">
          <font>
-            <Font size="14.0"/>
+            <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="234.0" layoutY="195.0" prefHeight="25.0" prefWidth="371.0"/>
+      <TextField layoutX="234.0" layoutY="195.0" prefHeight="25.0" prefWidth="371.0" />
       <Label layoutX="33.0" layoutY="241.0" text="Email address:">
          <font>
-            <Font size="14.0"/>
+            <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="234.0" layoutY="235.0" prefHeight="25.0" prefWidth="371.0"/>
+      <TextField layoutX="234.0" layoutY="235.0" prefHeight="25.0" prefWidth="371.0" />
       <Label layoutX="33.0" layoutY="281.0" text="Payment method:">
          <font>
-            <Font size="14.0"/>
+            <Font size="14.0" />
          </font>
       </Label>
-      <ComboBox layoutX="234.0" layoutY="275.0" prefHeight="25.0" prefWidth="174.0"/>
+      <ComboBox layoutX="234.0" layoutY="275.0" prefHeight="25.0" prefWidth="174.0" />
       <Label layoutX="33.0" layoutY="321.0" text="Special request:">
          <font>
-            <Font size="14.0"/>
+            <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="234.0" layoutY="315.0" prefHeight="25.0" prefWidth="371.0"/>
-      <Label layoutX="61.0" layoutY="628.0"
-             text="I confirm that all of the information I have provided is true and correct to the best of my knowledge">
+      <TextField layoutX="234.0" layoutY="315.0" prefHeight="25.0" prefWidth="371.0" />
+      <Label layoutX="61.0" layoutY="628.0" text="I confirm that all of the information I have provided is true and correct to the best of my knowledge">
          <font>
-            <Font size="11.0"/>
+            <Font size="11.0" />
          </font>
       </Label>
-      <CheckBox layoutX="33.0" layoutY="626.0" mnemonicParsing="false"/>
+      <CheckBox layoutX="33.0" layoutY="626.0" mnemonicParsing="false" />
       <Label layoutX="33.0" layoutY="361.0" text="Types of travel:">
          <font>
-            <Font size="14.0"/>
+            <Font size="14.0" />
          </font>
       </Label>
-      <ComboBox layoutX="234.0" layoutY="355.0" prefHeight="25.0" prefWidth="174.0"/>
-      <Label layoutX="33.0" layoutY="457.0" prefHeight="17.0" prefWidth="611.0"
-             text="If the type of travel is traveling with a group, please fill in the following information, otherwise please skip."
-             textFill="WHITE">
+      <ComboBox layoutX="234.0" layoutY="355.0" prefHeight="25.0" prefWidth="174.0" />
+      <Label layoutX="33.0" layoutY="457.0" prefHeight="17.0" prefWidth="611.0" text="If the type of travel is traveling with a group, please fill in the following information, otherwise please skip." textFill="WHITE">
          <font>
-            <Font size="11.0"/>
+            <Font size="11.0" />
          </font>
       </Label>
       <Button layoutX="287.0" layoutY="659.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="85.0" text="Send">
          <font>
-            <Font size="18.0"/>
+            <Font size="18.0" />
          </font>
       </Button>
       <Label layoutX="33.0" layoutY="491.0" text="Group name:">
          <font>
-            <Font size="14.0"/>
+            <Font size="14.0" />
          </font>
       </Label>
-      <Separator layoutX="-1.0" layoutY="443.0" prefHeight="2.0" prefWidth="646.0"/>
+      <Separator layoutX="-1.0" layoutY="443.0" prefHeight="2.0" prefWidth="646.0" />
       <Label layoutX="33.0" layoutY="531.0" text="Registrant name:">
          <font>
-            <Font size="14.0"/>
+            <Font size="14.0" />
          </font>
       </Label>
       <Label layoutX="33.0" layoutY="571.0" text="Number of people:">
          <font>
-            <Font size="14.0"/>
+            <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="234.0" layoutY="485.0" prefHeight="25.0" prefWidth="371.0"/>
-      <TextField layoutX="234.0" layoutY="525.0" prefHeight="25.0" prefWidth="371.0"/>
-      <TextField layoutX="234.0" layoutY="565.0" prefHeight="25.0" prefWidth="371.0"/>
-      <Separator layoutX="-2.0" layoutY="614.0" prefHeight="2.0" prefWidth="646.0"/>
+      <TextField layoutX="234.0" layoutY="485.0" prefHeight="25.0" prefWidth="371.0" />
+      <TextField layoutX="234.0" layoutY="525.0" prefHeight="25.0" prefWidth="371.0" />
+      <TextField layoutX="234.0" layoutY="565.0" prefHeight="25.0" prefWidth="371.0" />
+      <Separator layoutX="-2.0" layoutY="614.0" prefHeight="2.0" prefWidth="646.0" />
       <Label layoutX="33.0" layoutY="403.0" text="Agent ID:">
          <font>
-            <Font size="14.0"/>
+            <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="234.0" layoutY="397.0" prefHeight="25.0" prefWidth="371.0"
-                 promptText="Skip if you are not an agent"/>
+      <TextField layoutX="234.0" layoutY="397.0" prefHeight="25.0" prefWidth="371.0" promptText="Skip if you are not an agent" />
    </Pane>
    <ImageView fitHeight="706.0" fitWidth="351.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
-      <Image url="@../../../../assets/hogwarts1.png"/>
+      <Image url="@../../../../img/howart.png" />
    </ImageView>
-   <Separator layoutX="346.0" orientation="VERTICAL" prefHeight="706.0" prefWidth="16.0"/>
-   <Button fx:id="Home" layoutX="120.0" layoutY="637.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="94.0"
-           text="Home">
+   <Separator layoutX="346.0" orientation="VERTICAL" prefHeight="706.0" prefWidth="16.0" />
+   <Button fx:id="Home" layoutX="120.0" layoutY="637.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="94.0" text="Home">
       <font>
-         <Font name="System Bold" size="20.0"/>
+         <Font name="System Bold" size="20.0" />
       </font>
    </Button>
-   <Label layoutX="52.0" layoutY="274.0" style="-fx-text-fill: #EEE9DA;" text="Total number of forms:">
-      <font>
-         <Font name="System Bold" size="18.0"/>
-      </font>
-   </Label>
-   <Label layoutX="291.0" layoutY="274.0" style="-fx-text-fill: #EEE9DA;" text="3">
-      <font>
-         <Font name="System Bold" size="18.0"/>
-      </font>
-   </Label>
-   <Button fx:id="AddForm" layoutX="74.0" layoutY="353.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="203.0" text="Add Form">
-      <font>
-         <Font name="System Bold" size="20.0"/>
-      </font>
-   </Button>
-   <Separator layoutX="-136.0" layoutY="614.0" prefHeight="3.0" prefWidth="485.0"/>
-   <DatePicker layoutX="156.0" layoutY="462.0" stylesheets="@DatePicker.css"/>
-   <Label layoutX="31.0" layoutY="464.0" style="-fx-text-fill: 6096B4;" text="Check-in date:">
-      <font>
-         <Font size="15.0"/>
-      </font>
-   </Label>
-   <DatePicker layoutX="156.0" layoutY="522.0" stylesheets="@DatePicker.css"/>
-   <Label layoutX="31.0" layoutY="524.0" style="-fx-text-fill: #6096B4;" text="Check-out date:">
-      <font>
-         <Font size="15.0"/>
-      </font>
-   </Label>
+   <Separator layoutX="-136.0" layoutY="614.0" prefHeight="3.0" prefWidth="485.0" />
 </AnchorPane>
