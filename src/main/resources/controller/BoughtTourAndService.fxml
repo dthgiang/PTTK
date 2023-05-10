@@ -42,13 +42,14 @@
             <Font name="Cambria Bold" size="16.0" />
          </font>
       </Button>
-      <TableView fx:id="tableServiceAndTour" layoutX="153.0" layoutY="94.0" prefHeight="393.0" prefWidth="760.0" stylesheets="@object.css" AnchorPane.bottomAnchor="122.0" AnchorPane.leftAnchor="120.0">
+      <TableView fx:id="tableServiceAndTour" layoutX="38.0" layoutY="94.0" prefHeight="393.0" prefWidth="840.0" stylesheets="@object.css" AnchorPane.bottomAnchor="122.0" AnchorPane.leftAnchor="80.0">
         <columns>
           <TableColumn fx:id="nameColumn" prefWidth="149.3333740234375" text="Name" />
-          <TableColumn fx:id="typeColumn" minWidth="0.0" prefWidth="141.9998779296875" text="Type" />
-            <TableColumn fx:id="priceColumn" minWidth="0.0" prefWidth="131.3333740234375" text="Price" />
-            <TableColumn fx:id="descriptionColumn" minWidth="0.0" prefWidth="206.6666259765625" text="Description" />
-            <TableColumn fx:id="timeColumn" minWidth="0.0" prefWidth="126.0" text="TimeToUse" />
+          <TableColumn fx:id="typeColumn" minWidth="0.0" prefWidth="104.66668701171875" text="Type" />
+            <TableColumn fx:id="priceColumn" minWidth="0.0" prefWidth="150.44442749023438" text="Price" />
+            <TableColumn fx:id="descriptionColumn" minWidth="0.0" prefWidth="181.55551147460938" text="Description" />
+            <TableColumn fx:id="timeColumn" minWidth="0.0" prefWidth="130.2222900390625" text="TimeToUse" />
+            <TableColumn fx:id="statusColumn" prefWidth="124.4444580078125" text="Status" />
         </columns>
       </TableView>
       <ImageView fx:id="notFoundImage" fitHeight="300.0" fitWidth="400.0" layoutX="400.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="345.0" />

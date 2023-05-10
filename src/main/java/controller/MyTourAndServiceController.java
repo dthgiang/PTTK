@@ -39,7 +39,7 @@ public class MyTourAndServiceController implements Initializable {
     @FXML
     private TableView<Tour> tableServiceAndTour;
     @FXML
-    private TableColumn<Tour, String> descriptionColumn, nameColumn, typeColumn, timeColumn, priceColumn;
+    private TableColumn<Tour, String> descriptionColumn, nameColumn, typeColumn, timeColumn, priceColumn, statusColumn;
 
 
     @FXML
@@ -73,6 +73,7 @@ public class MyTourAndServiceController implements Initializable {
         descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("des"));
         timeColumn.setCellValueFactory(new PropertyValueFactory<>("startTime"));
         typeColumn.setCellValueFactory(new PropertyValueFactory<>("Type"));
+        statusColumn.setCellValueFactory(new PropertyValueFactory<>("Stt"));
 
         return setValueTable();
     }

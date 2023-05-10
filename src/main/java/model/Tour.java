@@ -20,7 +20,8 @@ public class Tour {
     private String owner;
     private  String contact, startTime;
     private  String img;
-    public String type = "Tour";
+    private String type = "Tour";
+    private String stt = "Đang xử lý";
     private Connection connection = DataBaseConnector.getConnection();//("jdbc:oracle:thin:@localhost:1521:XE", "DBA_PTTK", "123");
 
     public Tour()
@@ -54,6 +55,14 @@ public class Tour {
         this.des = Des;
         this.startTime = timeStart;
         this.type = type;
+    }
+    public Tour(String name, String price, String Des, String timeStart, String type, String status) {
+        this.name = name;
+        this.sPrice = price;
+        this.des = Des;
+        this.startTime = timeStart;
+        this.type = type;
+        this.stt = status;
     }
 
     public Tour(String name, int cost, String Des, int time,String province, String area, String owner, String contact) {
@@ -101,6 +110,7 @@ public class Tour {
     public String getType() {return type;}
     public String getImage() {return img;}
     public String getSPrice() {return sPrice;}
+    public String getStt() {return stt;}
 
 
     public ArrayList<Tour> getAllTour() {
@@ -210,7 +220,7 @@ public class Tour {
             rs.add(new Tour(x.getName(), Helper.convertTypeHelper.formatNumber(x.getCost()), x.getDes(), x.getStartTime(), "Tour"));
         }
         for (Service y: sl) {
-            rs.add(new Tour(y.getName(),Helper.convertTypeHelper.formatNumber(y.getCost()), y.getDes(), y.getStartDate(), "Service"));
+            rs.add(new Tour(y.getName(),Helper.convertTypeHelper.formatNumber(y.getCost()), y.getDes(), y.getStartDate(), "Service", y.getStatus()));
         }
 
         return rs;

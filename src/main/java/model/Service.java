@@ -13,7 +13,7 @@ public class Service {
     private String des, price, typeS;
     private String forRoom;
     private String startDate,endDate;
-    private  String area, province, owner,contact, image;
+    private  String area, province, owner,contact, image, status;
     private static Connection connection = DataBaseConnector.getConnection();
 
     public final String type = "Dịch vụ";
@@ -31,11 +31,12 @@ public class Service {
         this.name = name;
     }
 
-    public Service(String name, int cost, String Des, String thoiGianBD) {
+    public Service(String name, int cost, String Des, String thoiGianBD, String stt) {
         this.name = name;
         this.cost = cost;
         this.des = Des;
         this.startDate = thoiGianBD;
+        this.status = stt;
 
     }
     public Service(String name, int cost, String Des, String startDate, String endDate, int time, String owner) {
@@ -89,6 +90,7 @@ public class Service {
     public Service getSerivce() {
         return this;
     }
+    public String getStatus() {return status;}
 
 
     public ArrayList<Service> setServiceList(ResultSet rs ) throws SQLException {
@@ -185,7 +187,8 @@ public class Service {
                 int price = rs.getInt("Gia");
                 String moTa = rs.getString("MoTa");
                 String thoiGianBD = rs.getString("THOIGIANBATDAU");
-                serviceList.add(new Service(name, price, moTa, thoiGianBD));
+                String stt = rs.getString("TRANGTHAI");
+                serviceList.add(new Service(name, price, moTa, thoiGianBD, stt));
             }
         }
         catch (SQLException e) {
