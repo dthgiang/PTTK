@@ -45,11 +45,11 @@ public class RoomType {
             Statement statement = connection.createStatement();
 
             // Execute the query and get the result set
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM LoaiPhong");
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM DBA_PTTK.LoaiPhong");
 
             // Loop through the result set and add the data to the tableview
             while (resultSet.next()) {
-                String id = resultSet.getString("ID");
+                String id = resultSet.getString("LoaiPhong");
                 String name = resultSet.getString("Ten");
                 String price = resultSet.getString("Gia");
                 String Rating = resultSet.getString("Rating");

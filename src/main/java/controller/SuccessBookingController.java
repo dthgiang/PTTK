@@ -56,29 +56,8 @@ public class SuccessBookingController implements Initializable {
     private TableColumn<FormDP, String> columnNhanvienxuly;
 
     @FXML private void goSignOut(ActionEvent event) throws IOException {
+        Helper.switchScreenHelper.raiseOther(event, Helper.screenName.homeScreen);
 
-        Alert alert = new Alert(AlertType.CONFIRMATION);
-        alert.setTitle("Confirmation Dialog");
-        alert.setHeaderText(null);
-        alert.setContentText("Are you sure you want to signout?");
-        alert.showAndWait().ifPresent(type -> {
-
-            if(type == ButtonType.CANCEL) {
-                event.consume();
-            } else if (type == ButtonType.OK) {
-                Parent home_page_parent;
-                try {
-                    home_page_parent = FXMLLoader.load(getClass().getResource("Login.fxml") );
-                    Scene home_page_scene = new Scene (home_page_parent);
-                    Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                    app_stage.setScene(home_page_scene);
-                    app_stage.show();
-                } catch (IOException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-            }
-        });
     }
     @FXML private void goRoomManage(ActionEvent event) throws IOException {
         Helper.switchScreenHelper.raiseOther(event, Helper.screenName.roomManage);

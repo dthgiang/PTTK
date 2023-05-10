@@ -67,6 +67,9 @@ exec dropTable('LoaiPhong');
 create table LoaiPhong
 (
 	LoaiPhong nvarchar2(20) primary key, 
+    Ten nvarchar2(100),
+    Gia number,
+    Rating float,
     MoTa nvarchar2(100)
 );
 /

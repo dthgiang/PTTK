@@ -1,6 +1,6 @@
 package controller;
 
-import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+//import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import helper.Helper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -42,8 +42,8 @@ public class MyTourAndServiceController implements Initializable {
     private TableColumn<Tour, String> descriptionColumn, nameColumn, typeColumn, timeColumn, priceColumn, statusColumn;
 
 
-    @FXML
-    private FontAwesomeIconView userIcon;
+    //@FXML
+   // private FontAwesomeIconView userIcon;
 
     @FXML
     private Label userLabel, oopLabel;
