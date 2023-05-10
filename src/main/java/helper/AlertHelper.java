@@ -9,8 +9,8 @@ import java.util.Optional;
 public class AlertHelper {
     public void showAlert(String content) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Warning");
-        alert.setHeaderText("Cancel");
+        alert.setTitle("Notification");
+        alert.setHeaderText("OK");
         alert.setContentText(content);
 
         alert.showAndWait();

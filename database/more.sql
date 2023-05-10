@@ -15,15 +15,17 @@ grant select on DBA_PTTK.VW_MYSERVICE TO PTTK_RL_KHACHHANG;
 
 ALTER TABLE PHIEUSUDUNGDICHVU
 ADD MaKH VARCHAR2(20);
+/
+update DICHVU SET IMAGE = 'massage.gif' where madichvu = 'DV01';
 
-
-
-
+/
 ------------------ Test area
 SELECT * FROM KHACHHANGTOUR;
 select * from DANHSACHTHAMGIATOUR;
 select * from TOUR;
 select * from DICHVU;
+select * from DICHVUPHONG;
+
 select * from PHIEUSUDUNGDICHVU;
 select * from DBA_PTTK.VW_MYTOUR;
 

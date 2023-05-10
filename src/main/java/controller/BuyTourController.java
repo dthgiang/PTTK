@@ -101,11 +101,11 @@ public class BuyTourController implements Initializable {
 
 
     public void returnIconOnClick(MouseEvent event) throws IOException  {
-        Helper.switchScreenHelper.raiseOther(event, "Tour.fxml");
+        Helper.switchScreenHelper.raiseOther(event, Helper.screenName.tourScreen);
     }
 
     public void homeIconOnClick(MouseEvent event) throws IOException  {
-        Helper.switchScreenHelper.raiseOther(event, "main.fxml");
+        Helper.switchScreenHelper.raiseOther(event, Helper.screenName.homeScreen);
     }
     public void nextMemberButtonOnClick(ActionEvent event) throws IOException {
 
@@ -195,10 +195,6 @@ public class BuyTourController implements Initializable {
             if(z == false) return false;
         }
         return true;
-    }
-
-    public  void insertDSThamGia() {
-
     }
 
 

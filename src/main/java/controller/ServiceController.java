@@ -18,10 +18,13 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import model.Tour;
+import model.Login;
+import model.Service;
+import model.Service;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public  class ServiceController implements Initializable {
@@ -31,7 +34,8 @@ public  class ServiceController implements Initializable {
 
     @FXML
     private Button buyButton;
-
+    @FXML
+    private AnchorPane inforCard1, inforCard2, inforCard3;
     @FXML
     private ImageView homeIcon;
 
@@ -49,13 +53,11 @@ public  class ServiceController implements Initializable {
     private ImageView returnIcon;
 
     @FXML
-    private Button searchButton;
+    private Button searchButton, backListButton, loadMoreButton;
 
     @FXML
     private Label descriptionInforLabel1, descriptionInforLabel2, descriptionInforLabel3;
 
-    @FXML
-    private Label timeInforLabel1, timeInforLabel2, timeInforLabel3;
 
     @FXML
     private ImageView serviceImage1, serviceImage2, serviceImage3;
@@ -74,96 +76,143 @@ public  class ServiceController implements Initializable {
     private TextField searchField;
     @FXML
     private Label userLabel;
+    private Service service = new Service();
+
+    private int page = 0;
+    private ArrayList<Service> serviceList;
 
 
-    public void setInforCard1(Tour tour) {
-        serviceNameInforLabel1.setText(tour.getName());
-        timeInforLabel1.setText(Integer.toString(tour.getTime()) + " Days");
-        descriptionInforLabel1.setText(tour.getDes());
-        freeForInforLabel1.setText("Vip 1, Vip 2, Diamond");
-        priceInfroLabel1.setText(Integer.toString(tour.getCost()));
-        Helper.initHelper.initImage(serviceImage1, "img/service/spa.png");
 
-    }
 
-    public void setInforCard2(Tour tour) {
-        serviceNameInforLabel2.setText("Karaoke");
-        timeInforLabel2.setText(Integer.toString(tour.getTime()) + " Days");
-        descriptionInforLabel2.setText(tour.getDes());
-        freeForInforLabel2.setText("Vip 1, Vip 2, Diamond");
-        priceInfroLabel2.setText(Integer.toString(tour.getCost()));
-        Helper.initHelper.initImage(serviceImage2, "img/service/karaoke.png");
+    public void setInforCard1(Service service) {
+        serviceNameInforLabel1.setText(service.getName());
+        descriptionInforLabel1.setText(service.getDes());
+        freeForInforLabel1.setText(service.getForRoom());
+        priceInfroLabel1.setText(service.getPrice());
+        Helper.initHelper.initImage(serviceImage1, "img/service/" + service.getImage());
+        System.out.println(service.getImage());
 
     }
 
-    public void setInforCard3(Tour tour) {
-        serviceNameInforLabel3.setText("Bi - A");
-        timeInforLabel3.setText(Integer.toString(tour.getTime()) + " Days");
-        descriptionInforLabel3.setText(tour.getDes());
-        freeForInforLabel3.setText("Vip 1, Vip 2, Diamond");
-        priceInfroLabel3.setText(Integer.toString(tour.getCost()));
-        Helper.initHelper.initImage(serviceImage3, "img/service/bia.png");
+    public void setInforCard2(Service service) {
+        serviceNameInforLabel2.setText(service.getName());
+        descriptionInforLabel2.setText(service.getDes());
+        freeForInforLabel2.setText(service.getForRoom());
+        priceInfroLabel2.setText(service.getPrice());
+        Helper.initHelper.initImage(serviceImage2, "img/service/" + service.getImage());
 
     }
+
+    public void setInforCard3(Service service) {
+        serviceNameInforLabel3.setText(service.getName());
+        descriptionInforLabel3.setText(service.getDes());
+        freeForInforLabel3.setText(service.getForRoom());
+        priceInfroLabel3.setText(service.getPrice());
+        Helper.initHelper.initImage(serviceImage3, "img/service/" + service.getImage());
+
+    }
+    public void loadCard(ArrayList<Service> serviceList, int page) {
+        int n = serviceList.size();
+        if (page < 3) {
+            backListButton.setVisible(false);
+        }
+        else {
+            backListButton.setVisible(true);
+        }
+
+        if (n > page + 3) {
+            loadMoreButton.setVisible(true);
+        }
+        else {
+            loadMoreButton.setVisible(false);
+        }
+
+
+        int i = page;
+        if (i < n) {
+            setInforCard1(serviceList.get(i));
+            if (i + 1 >= n ) {
+                inforCard2.setVisible(false);
+                inforCard3.setVisible(false);
+            } else {
+                setInforCard2(serviceList.get(i+1));
+                inforCard2.setVisible(true);
+                if (i + 2 >= n) {
+                    inforCard3.setVisible(false);
+                }else {
+                    setInforCard3(serviceList.get(i+2));
+                    inforCard3.setVisible(true);
+                }
+            }
+        }
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        Helper.initHelper.initImage(returnIcon, "img/return.png");
-        Helper.initHelper.initImage(homeIcon, "img/home.png");
-        Helper.initHelper.initImage(searchIcon, "img/loupe.png");
-        Helper.initHelper.initImage(serviceImage1, "img/service/spa.png");
-
-        areaFilter.setItems(FXCollections.observableArrayList("Entertainment", "Sport", "Relax"));
-
-        Tour tour = new Tour(
-                "Spa", 999999,
-                "Tham quan nha Trang 7 ngày 7 đêm với trải\n nghiệm không thể nào tuyệt vời hơn."
-                , 7,"HCMUS"
-        );
-        setInforCard1(tour);
-        setInforCard2(tour);
-        setInforCard3(tour);
-
+        Helper.initHelper.initImageIcon(returnIcon, "img/return.png");
+        Helper.initHelper.initImageIcon(homeIcon, "img/home.png");
+        Helper.initHelper.initImageIcon(searchIcon, "img/loupe.png");
+        Service temp = new Service();
+        ArrayList<String> typeList = temp.getAllType();
+        areaFilter.setItems(FXCollections.observableArrayList(typeList));
+        areaFilter.setValue(typeList.get(0));
+        userLabel.setText("Hello " + Login.getUsername());
+        serviceList = service.getAllService();
+        loadCard(serviceList, page);
+        page += 3;
 
 
     }
 
-    public void returnIconOnClick(MouseEvent event) throws IOException  {
-        Helper.switchScreenHelper.raiseOther(event, Helper.screenName.homeScreen);
+    public void returnIconOnClick(MouseEvent event) throws IOException {
+        Helper.switchScreenHelper.raiseOther(event, "/controller/Home.fxml");
     }
 
     public void homeIconOnClick(MouseEvent event) throws IOException  {
-        Helper.switchScreenHelper.raiseOther(event, Helper.screenName.homeScreen);
+        Helper.switchScreenHelper.raiseOther(event, "/controller/Home.fxml");
     }
 
-    public void buyButtonOnClick(ActionEvent event) throws IOException  {
-        // create a new stage
-        // Load the FXML file into a Parent node
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(Helper.screenName.buyServiceScreen));
-        Parent otherScreen = loader.load();
-
-        // Create a new stage
-        Stage newStage = new Stage();
-
-        // Set the scene to the FXML file
-        Scene newScene = new Scene(otherScreen);
-        newStage.setScene(newScene);
-
-//        // Set the modality and owner of the new stage
-//        newStage.initModality(Modality.APPLICATION_MODAL);
-//        newStage.initOwner(); // replace primaryStage with the name of your current stage
-//
-//        // Show the new stage
-        newStage.show();
 
 
+    public void buyButtonOnClick1(ActionEvent event) throws IOException  {
+        Service serviceX = serviceList.get(page-3);
+        String welcome = serviceX.getName() + " - " + serviceX.getProvince();
+        Helper.switchScreenHelper.raiseBuyScreen(event, Helper.screenName.buyServiceScreen,serviceX.getMaDichVu(), welcome);
+    }
+    public void buyButtonOnClick2(ActionEvent event) throws IOException  {
+        Service serviceX = serviceList.get(page-2);
+        String welcome = serviceX.getName() + " - " + serviceX.getProvince();
+        Helper.switchScreenHelper.raiseBuyScreen(event,  Helper.screenName.buyServiceScreen, serviceX.getMaDichVu(), welcome);
+    }
+    public void buyButtonOnClick3(ActionEvent event) throws IOException  {
+        Service serviceX = serviceList.get(page-1);
+        String welcome = serviceX.getName() + " - " + serviceX.getProvince();
+        Helper.switchScreenHelper.raiseBuyScreen(event,  Helper.screenName.buyServiceScreen, serviceX.getMaDichVu(), welcome);
     }
 
     public void searchButtonOnClick(ActionEvent event) throws IOException  {
         // search with name
+
+        if (searchField.getText().trim().isEmpty()) {
+            page = 0;
+            serviceList = service.getAllService();
+            loadCard(serviceList, page);
+            page += 3;
+            return;
+        }
         String searchName = searchField.getText();
         searchField.setText("");
-        System.out.println(searchName);
+        String condition = "UPPER(TenDichVu) = '" + searchName.toUpperCase() + "' OR " + "MADICHVU = '" + searchName.toUpperCase() + "'";
+        serviceList = service.sqlServiceQuery(condition);
+        if (serviceList.isEmpty()) {
+            Helper.alertHelper.showAlert("Sorry we can not find this service");
+        } else {
+            loadCard(serviceList, 0);
+            page = 3;
+        }
+
+
     }
 
     public void applyButtonOnClick(ActionEvent event) throws IOException  {
@@ -171,8 +220,34 @@ public  class ServiceController implements Initializable {
         String price = priceFilter.getText();
         String area = areaFilter.getValue();
 
+        String condition = "";
         priceFilter.setText("");
-        System.out.println(price + "-" + area );
+
+
+        price = price.isEmpty() ? "9999999999" : price;
+
+        condition = "Gia < " + price +  " AND THELOAI = '" + area + "'";
+        serviceList = service.sqlServiceQuery(condition);
+        if (serviceList.isEmpty()) {
+            Helper.alertHelper.showAlert("Sorry we can not find this service");
+        } else {
+            loadCard(serviceList, 0);
+            page = 3;
+        }
+
+
     }
 
+    public void loadMoreButtonOnClick(ActionEvent event) throws IOException  {
+        // search with filter
+        loadCard(serviceList, page);
+        page += 3;
+    }
+
+    public void backListButtonOnClick(ActionEvent event) throws IOException  {
+        // search with filter
+        page -= 3;
+        loadCard(serviceList, page);
+
+    }
 }
