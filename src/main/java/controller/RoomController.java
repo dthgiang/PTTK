@@ -23,6 +23,8 @@ import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
 
+import static model.RoomSchema.*;
+
 public class RoomController implements Initializable {
     @FXML
     private TableView<RoomSchema> roomtable;
@@ -49,6 +51,12 @@ public class RoomController implements Initializable {
     private Button searchBtn;
 
     @FXML
+    private Button updateBtn;
+
+    @FXML
+    private Button insertBtn;
+
+    @FXML
     private Label titleLabel;
 
     @FXML
@@ -67,7 +75,10 @@ public class RoomController implements Initializable {
         trangthaiVS.setCellValueFactory(new PropertyValueFactory<>("roomStatus"));
     }
 
-    private void fetchData(ResultSet resultSet, ObservableList<RoomSchema> rooms) throws SQLException {
+    private void fetchData(ResultSet resultSet) {
+        ObservableList<RoomSchema> rooms = FXCollections.observableArrayList();
+
+        try {
         while (resultSet.next()) {
             String roomID = resultSet.getString("MAPHONG");
             String roomType = resultSet.getString("LOAIPHONG");
@@ -76,106 +87,31 @@ public class RoomController implements Initializable {
             String roomStatus = resultSet.getString("TRANGTHAIVESINH");
             rooms.add(new RoomSchema(roomID, roomStatus, roomType, roomPrice, bedQuantity));
         }
+        } catch(SQLException e) {
+            System.out.println("Cannot fetch Data!!!");
+        }
 
         roomtable.setItems(rooms);
         setTableColum();
     }
 
-    public void insertBtnOnClick(ActionEvent e) throws IOException {
-        Parent insert_page;
-        insert_page = FXMLLoader.load(getClass().getResource("insertRoom.fxml") );
-        Scene insert_page_scene = new Scene (insert_page);
-        Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        app_stage.setScene(insert_page_scene);
-        app_stage.show();
-    }
-
     public void searchBtnOnClick(ActionEvent event) throws IOException {
-        ObservableList<RoomSchema> rooms = FXCollections.observableArrayList();
-        Connection connection =null;
-
-        try {
-            connection = DBUtil.getConnection();
-            String sqlQuery = "SELECT * FROM PHONG WHERE MAPHONG = ?";
-            PreparedStatement statement = connection.prepareStatement(sqlQuery);
-            statement.setString(1, maphongTxtBox.getText());
-            ResultSet resultSet = statement.executeQuery();
-
-            fetchData(resultSet, rooms);
-
-            resultSet.close();
-            statement.close();
-            connection.close();
-
-        } catch (SQLException e) {
-            System.out.println("Connection to Oracle database failed");
-            e.printStackTrace();
-        }
+        fetchData(searchRoom(maphongTxtBox.getText()));
     }
 
-    public void backBtnOnClick(ActionEvent event) throws IOException {
-        Helper.switchScreenHelper.swicthScreenOnButton(backBtn, "/controller/Home.fxml");
+    private void loadRoomData () {
+        fetchData(allRoom());
     }
 
-    public void refeshButtonClick(ActionEvent event) throws IOException {
-        ObservableList<RoomSchema> rooms = FXCollections.observableArrayList();
-        Connection connection =null;
-
-        try {
-            connection = DBUtil.getConnection();
-            String sqlQuery = "SELECT * FROM PHONG";
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(sqlQuery);
-
-            fetchData(resultSet, rooms);
-
-            resultSet.close();
-            statement.close();
-            connection.close();
-
-        } catch (SQLException e) {
-            System.out.println("Connection to Oracle database failed");
-            e.printStackTrace();
-        }
+    public void refeshButtonClick(ActionEvent event) {
+        fetchData(allRoom());
     }
 
     public void deleteBtnOnClick(ActionEvent event) throws SQLException {
-        Connection connection = DBUtil.getConnection();
-
-        try {
-            String sqlQuery = "DELETE FROM PHONG WHERE MAPHONG = ?";
-            PreparedStatement statement = connection.prepareStatement(sqlQuery);
-            statement.setString(1, clickedItem);
-            System.out.println(clickedItem);
-
-            int resultSet = statement.executeUpdate();
-
-            if (resultSet == 1)
-                System.out.println("Xóa phòng thành công !!!");
-            else
-                System.out.println("Xóa thất bại !!!");
-
-            statement.close();
-            connection.close();
-        } catch (SQLException e) {
-            System.out.println("Xóa thất bại !!!");
-            e.printStackTrace();
-        }
+        deleteRoom(clickedItem);
     }
 
     public void updateBtnOnClick(ActionEvent e) throws IOException {
-//        Parent update_page;
-//        update_page = FXMLLoader.load(getClass().getResource("updateRoom.fxml") );
-//
-//        // truyen data qua updateController de chay
-//        UpdateRoomController updateRoomController = new UpdateRoomController();
-//        updateRoomController.setData(clickedItem);
-//
-//        Scene update_page_scene = new Scene (update_page);
-//        Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-//        app_stage.setScene(update_page_scene);
-//        app_stage.show();
-
         FXMLLoader loader = new FXMLLoader(getClass().getResource("updateRoom.fxml"));
         Parent update_page = loader.load();
         UpdateRoomController updateController = loader.getController();
@@ -187,52 +123,27 @@ public class RoomController implements Initializable {
         app_stage.show();
     }
 
-    private void loadRoomData () {
-        ObservableList<RoomSchema> rooms = FXCollections.observableArrayList();
-        Connection connection =null;
-
-        try {
-            connection = DBUtil.getConnection();
-
-            // Create a statement
-            Statement statement = connection.createStatement();
-
-            // Execute the query and get the result set
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM PHONG");
-
-            // Loop through the result set and add the data to the tableview
-            fetchData(resultSet, rooms);
-
-            // Close the connection and statement
-            resultSet.close();
-            statement.close();
-            connection.close();
-
-        } catch (SQLException e) {
-            System.out.println("Connection to Oracle database failed");
-            e.printStackTrace();
-        }
-        roomtable.setItems(rooms);
-    }
-
     private void setRowClickEvent() {
         roomtable.setOnMouseClicked((MouseEvent event) -> {
             if (event.getClickCount() == 1) {
-                RoomSchema room = roomtable.getSelectionModel().getSelectedItem();
+                RoomSchema clickedRoom = roomtable.getSelectionModel().getSelectedItem();
                 String selectedRow = roomtable.getSelectionModel().getSelectedItem().getRoomId();
 
                 clickedItem = selectedRow;
-                System.out.println(clickedItem);
+                System.out.println(clickedRoom);
             }
         });
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        //Helper.initHelper.initImageIcon(bgImg, "K:\\HCMUS Hoc Ki\\HCMUS Nam 3\\HK2 nam 3\\Phan Tich Thiet Ke HTTT\\Project Nhom\\PTTK\\img\\howart.png");
-        Helper.initHelper.initImageIcon(bgImg, "\\img\\howart.png");
+        Helper.initHelper.initImageIcon(bgImg, "img/hogwarts1.png");
+        //Helper.switchScreenHelper.swicthScreenOnButton(updateBtn, "/controller/updateRoom.fxml");
+        Helper.switchScreenHelper.swicthScreenOnButton(insertBtn, "/controller/insertRoom.fxml");
+        Helper.switchScreenHelper.swicthScreenOnButton(backBtn, "/controller/Home.fxml");
+
         loadRoomData();
-        setTableColum();
+        //setTableColum();
         setRowClickEvent();
     }
 }

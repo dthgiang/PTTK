@@ -30,7 +30,7 @@
       </ImageView>
       <Pane layoutX="275.0" layoutY="66.0" prefHeight="82.0" prefWidth="626.0" style="-fx-background-color: #93BFCF;">
          <children>
-            <Button fx:id="insertBtn" layoutX="18.0" layoutY="31.0" mnemonicParsing="false" onAction="#insertBtnOnClick" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #6096B4; -fx-background-radius: 10;" text="Thêm" textFill="WHITE">
+            <Button fx:id="insertBtn" layoutX="18.0" layoutY="31.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #6096B4; -fx-background-radius: 10;" text="Thêm" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -72,7 +72,7 @@
             </Label>
          </children>
       </Pane>
-      <Button fx:id="backBtn" layoutX="100.0" layoutY="323.0" mnemonicParsing="false" onAction="#backBtnOnClick" prefHeight="26.0" prefWidth="69.0" style="-fx-background-color: #6096B4;" text="Home" textFill="WHITE">
+      <Button fx:id="backBtn" layoutX="100.0" layoutY="323.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="69.0" style="-fx-background-color: #6096B4;" text="Home" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

@@ -20,6 +20,9 @@ import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
 
+import static model.RoomSchema.allRoomType;
+import static model.RoomSchema.insertRoom;
+
 public class InsertRoomController implements Initializable {
     @FXML
     protected Button backBtn;
@@ -44,15 +47,8 @@ public class InsertRoomController implements Initializable {
 
     protected void setRoomTypeCBB() {
         ObservableList<String> roomType = FXCollections.observableArrayList();
-        Connection connection = null;
-
         try {
-            connection = DBUtil.getConnection();
-
-            String sqlQuery = "SELECT DISTINCT LOAIPHONG FROM PHONG";
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(sqlQuery);
-
+            ResultSet resultSet = allRoomType();
 
             while (resultSet.next()) {
                 String type = resultSet.getString("LOAIPHONG");
@@ -62,73 +58,21 @@ public class InsertRoomController implements Initializable {
             loaiphongCBB.setItems(roomType);
 
             resultSet.close();
-            statement.close();
-            connection.close();
+
         } catch (SQLException e) {
             System.out.println("Can not get item room type from database!");
-            e.printStackTrace();
         }
-    }
-
-    public void backBtnOnClick(ActionEvent e) throws IOException {
-        Parent roomCRUD_page;
-        roomCRUD_page = FXMLLoader.load(getClass().getResource("roomManage.fxml") );
-        Scene roomCRUD_page_scene = new Scene (roomCRUD_page);
-        Stage app_stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        app_stage.setScene(roomCRUD_page_scene);
-        app_stage.show();
     }
 
     public void insertBtnOnClick(ActionEvent e) throws SQLException {
-        Connection connection = DBUtil.getConnection();
-        if (!roomIDTxt.getText().matches("PHG.*")) {
-            System.out.println("Mã phòng đã tồn tại hoặc  không hợp lệ, Hãy nhập mã phòng theo định dạng như sau PHG'số'");
-            return;
-        }
-
-        try {
-            String sqlQuery = "INSERT INTO PHONG VALUES(?, ?, ?, ?, ?)";
-            PreparedStatement statement = connection.prepareStatement(sqlQuery);
-            statement.setString(1, roomIDTxt.getText());
-
-            switch (loaiphongCBB.getValue().toString()) {
-                case "Normal":
-                    statement.setInt(2, 500000);
-                    break;
-                case "GOLD":
-                    statement.setInt(2, 3000000);
-                    break;
-                case "Diamond":
-                    statement.setInt(2, 5000000);
-                    break;
-                default:
-                    statement.setInt(2, 1000000);
-            };
-
-            statement.setInt(3, soguongCBB.getValue());
-            statement.setString(4, ttvesinhCBB.getValue().toString());
-            statement.setString(5, loaiphongCBB.getValue().toString());
-
-            int resultSet = statement.executeUpdate();
-            if (resultSet == 1)
-                System.out.println("Thêm thành công");
-            else
-                System.out.println("Thêm thất bại");
-
-            statement.close();
-            connection.close();
-        } catch (RuntimeException e1) {
-            System.out.println("Hãy chọn đầy đủ các trường để thêm phòng !!!");
-        } catch (SQLException e2) {
-            System.out.println("Mã phòng đã tồn tại !!!");
-        }
-
+        insertRoom(roomIDTxt.getText(), loaiphongCBB.getValue(), soguongCBB.getValue(), ttvesinhCBB.getValue());
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        //Helper.initHelper.initImageIcon(bgImg, "K:\\HCMUS Hoc Ki\\HCMUS Nam 3\\HK2 nam 3\\Phan Tich Thiet Ke HTTT\\Project Nhom\\PTTK\\img\\howart.png");
-        Helper.initHelper.initImageIcon(bgImg, "\\img\\howart.png");
+        Helper.initHelper.initImageIcon(bgImg, "img/hogwarts1.png");
+        Helper.switchScreenHelper.swicthScreenOnButton(backBtn, "/controller/roomManage.fxml");
+
         soguongCBB.getItems().addAll(2, 3, 4, 5);
         ttvesinhCBB.getItems().addAll("Đã dọn", "Chưa dọn");
         setRoomTypeCBB();
