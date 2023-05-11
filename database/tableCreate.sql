@@ -45,7 +45,7 @@ create table DichVu
 	MaDichVu varchar(10)  primary key,
     TenDichVu nvarchar2(100),
     Gia number,
-    MoTa nvarchar2(100),
+    MoTa varchar2(200),
     TheLoai nvarchar2(100),
     Image varchar2(100)
 );
@@ -82,7 +82,7 @@ create table Tour
     TenTour nvarchar2(100),
     Gia number,
     TinhThanh nvarchar2(100),
-    MoTa nvarchar2(300),
+    MoTa varchar2(300),
     KhuVuc nvarchar2(100),
     MaCongTy varchar2(10),
     Image varchar2(100),

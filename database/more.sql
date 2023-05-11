@@ -20,6 +20,18 @@ grant select on DBA_PTTK.VW_MYROOM TO PTTK_RL_KHACHHANG;
 grant insert on DBA_PTTK.PHIEUSUDUNGDICHVU TO PTTK_RL_KHACHHANG;
 grant insert on DBA_PTTK.DANHSACHTHAMGIATOUR TO PTTK_RL_KHACHHANG;
 /
+
+
+CREATE INDEX idx_tourdes ON TOUR(MOTA) INDEXTYPE IS CTXSYS.CONTEXT;
+/
+EXECUTE CTX_DDL.SYNC_INDEX('idx_tourdes');
+/
+CREATE INDEX idx_servicedes ON DICHVU(MOTA) INDEXTYPE IS CTXSYS.CONTEXT;
+/
+EXECUTE CTX_DDL.SYNC_INDEX('idx_servicedes');
+/
+SELECT * FROM TOUR WHERE CONTAINS(mota, 'Biển') > 0;
+
 ------------------ Test area
 SELECT * FROM KHACHHANGTOUR;
 select * from DANHSACHTHAMGIATOUR;
@@ -39,8 +51,12 @@ String sql = "insert into " + DataBaseConnector.getOwner() + ".DANHSACHTHAMGIATO
 insert into DANHSACHTHAMGIATOUR (NguoiDangKy, Ten, Email, SDT, CMND, Tour, NgayBatDau, PhuongTien) values('KH2','Nguyen Van A', 'NVA@gmail.com', '0293293', '123123213', 'T01','05-03-2022', 'May Bay');
 
 insert into DBA_PTTK.PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) values(2, TO_DATE('05-04-2022 12:00', 'mm-dd-yyyy hh24-mi'), 999999, 'Đã sử dụng', 'DV04', 'DS001', 'KH10')
+SELECT *
+FROM all_ind_columns 
+WHERE table_name = 'TOUR';
 
 select *from DBA_PTTK.VW_MYROOM;
 select *from DBA_PTTK.VW_MYSERVICE;
 
 select * from LOAIPHONG
+

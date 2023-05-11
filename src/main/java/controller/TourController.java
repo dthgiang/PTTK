@@ -159,7 +159,7 @@ public  class TourController implements Initializable {
         Helper.initHelper.initImageIcon(searchIcon, "img/loupe.png");
         Tour temp = new Tour();
         areaFilter.setItems(FXCollections.observableArrayList(temp.getAllArea()));
-
+        areaFilter.setValue("Miền Cực Lạc");
         userLabel.setText("Hello " + Login.getUsername());
         tourList = tour.getAllTour();
         loadCard(tourList, page);
@@ -231,27 +231,24 @@ public  class TourController implements Initializable {
 
     public void applyButtonOnClick(ActionEvent event) throws IOException  {
         // search with filter
-        String price = priceFilter.getText();
+        String price = priceFilter.getText().isBlank() ? "99999999999" : priceFilter.getText();
         String area = areaFilter.getValue();
-        String length = lengthFilter.getText();
+        String length = lengthFilter.getText().isBlank() ? "9999" : lengthFilter.getText();
 
         String condition = "";
         priceFilter.setText("");
         lengthFilter.setText("");
 
-        if (price == null || area == null || length == null) {
-            Helper.alertHelper.showAlert("Please fill all filter");
+
+        condition = "Gia < " + price + " AND ThoiGian < " + length + " AND KhuVuc = '" + area + "'";
+        tourList = tour.sqlTourQuery(condition);
+        if (tourList.isEmpty()) {
+            Helper.alertHelper.showAlert("Sorry we can not find this tour");
+        } else {
+            loadCard(tourList, 0);
+            page = 3;
         }
-        else {
-            condition = "Gia < " + price + " AND ThoiGian < " + length + " AND KhuVuc = '" + area + "'";
-            tourList = tour.sqlTourQuery(condition);
-            if (tourList.isEmpty()) {
-                Helper.alertHelper.showAlert("Sorry we can not find this tour");
-            } else {
-                loadCard(tourList, 0);
-                page = 3;
-            }
-        }
+
 
     }
 
