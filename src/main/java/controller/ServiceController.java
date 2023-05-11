@@ -202,8 +202,7 @@ public  class ServiceController implements Initializable {
         }
         String searchName = searchField.getText();
         searchField.setText("");
-        String condition = "UPPER(TenDichVu) = '" + searchName.toUpperCase() + "' OR " + "MADICHVU = '" + searchName.toUpperCase() + "'";
-        serviceList = service.sqlServiceQuery(condition);
+        serviceList = service.fullTextSearch(searchName);
         if (serviceList.isEmpty()) {
             Helper.alertHelper.showAlert("Sorry we can not find this service");
         } else {
@@ -249,4 +248,13 @@ public  class ServiceController implements Initializable {
         loadCard(serviceList, page);
 
     }
+
+    public void mousePressOnClick(MouseEvent event) {
+        searchField.setText("");
+    }
+
+    public void searchInputOnAction(ActionEvent event) throws IOException{
+        searchButtonOnClick(event);
+    }
+
 }

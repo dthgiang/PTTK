@@ -118,18 +118,7 @@ public class Tour {
         try {
             Statement stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery("select * from DBA_PTTK.TOUR");
-            while (rs.next()) {
-                String maTour = rs.getString("MaTour");
-                String name = rs.getString("TenTour");
-                int price = rs.getInt("Gia");
-                String tinhThanh = rs.getString("TinhThanh");
-                String moTa = rs.getString("MoTa");
-                String khuVuc = rs.getString("khuVuc");
-                String maCongTy = rs.getString("MaCongTy");
-                String image = rs.getString("Image");
-                int time = rs.getInt("ThoiGian");
-                tourList.add(new Tour(maTour, name, price, tinhThanh, moTa, khuVuc, maCongTy, image, time));
-            }
+            tourList = assignRelsut(rs);
         }
         catch (SQLException e) {
             e.printStackTrace();
@@ -138,23 +127,45 @@ public class Tour {
         return tourList;
     }
 
+    public ArrayList<Tour> assignRelsut(ResultSet rs) throws SQLException {
+        ArrayList<Tour> tourList = new ArrayList<Tour>();
+
+        while (rs.next()) {
+            String maTour = rs.getString("MaTour");
+            String name = rs.getString("TenTour");
+            int price = rs.getInt("Gia");
+            String tinhThanh = rs.getString("TinhThanh");
+            String moTa = rs.getString("MoTa");
+            String khuVuc = rs.getString("khuVuc");
+            String maCongTy = rs.getString("MaCongTy");
+            String image = rs.getString("Image");
+            int time = rs.getInt("ThoiGian");
+            tourList.add(new Tour(maTour, name, price, tinhThanh, moTa, khuVuc, maCongTy, image, time));
+        }
+        return tourList;
+    }
     public ArrayList<Tour> sqlTourQuery(String condition) {
         ArrayList<Tour> tourList = new ArrayList<Tour>();
         try {
             Statement stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery("select * from DBA_PTTK.Tour where " + condition);
-            while (rs.next()) {
-                String maTour = rs.getString("MaTour");
-                String name = rs.getString("TenTour");
-                int price = rs.getInt("Gia");
-                String tinhThanh = rs.getString("TinhThanh");
-                String moTa = rs.getString("MoTa");
-                String khuVuc = rs.getString("khuVuc");
-                String maCongTy = rs.getString("MaCongTy");
-                String image = rs.getString("Image");
-                int time = rs.getInt("ThoiGian");
-                tourList.add(new Tour(maTour, name, price, tinhThanh, moTa, khuVuc, maCongTy, image, time));
-            }
+            tourList = assignRelsut(rs);
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return tourList;
+    }
+
+    public ArrayList<Tour> fullTextSearch(String condition) {
+        ArrayList<Tour> tourList = new ArrayList<Tour>();
+        try {
+            Statement stmt = connection.createStatement();
+            String sql = "SELECT * FROM "+ DataBaseConnector.getOwner() +".TOUR WHERE (CONTAINS(mota, '" + condition +"') > 0) OR UPPER(TENTOUR) = '"+ condition.toUpperCase() +"' OR UPPER(TINHTHANH) = '"+ condition.toUpperCase() +"'";
+            System.out.println(sql);
+            ResultSet rs = stmt.executeQuery(sql);
+            tourList = assignRelsut(rs);
         }
         catch (SQLException e) {
             e.printStackTrace();

@@ -41,7 +41,7 @@
             </Button>
             <AnchorPane layoutX="11.0" layoutY="35.0" prefHeight="35.0" prefWidth="580.0" style="-fx-background-color: #BDCDD6; -fx-background-radius: 15;">
                <children>
-                  <TextField fx:id="searchField" layoutX="42.0" layoutY="1.0" prefHeight="31.0" prefWidth="528.0" style="-fx-background-radius: 15; -fx-background-color: #BDCDD6;" text="Searching for tour ?" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="1.0">
+                  <TextField fx:id="searchField" layoutX="42.0" layoutY="1.0" onAction="#searchInputOnAction" onMousePressed="#mousePressOnClick" prefHeight="31.0" prefWidth="528.0" style="-fx-background-radius: 15; -fx-background-color: #BDCDD6;" text="Searching for tour ?" AnchorPane.leftAnchor="42.0" AnchorPane.topAnchor="1.0">
                      <font>
                         <Font name="Cambria" size="13.0" />
                      </font>

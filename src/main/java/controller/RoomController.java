@@ -139,7 +139,10 @@ public class RoomController implements Initializable {
     }
 
     public void deleteBtnOnClick(ActionEvent event) throws SQLException {
-        deleteRoom(clickedItem);
+        boolean del = Helper.alertHelper.yesNoAlert("Bạn chắc chắn muốn xóa không?");
+        if (del) {
+            deleteRoom(clickedItem);
+        }
     }
 
     public void updateBtnOnClick(ActionEvent e) throws IOException {

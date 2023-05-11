@@ -157,6 +157,21 @@ public class Service {
         return sList;
     }
 
+    public ArrayList<Service> fullTextSearch(String condition) {
+        ArrayList<Service> sList = new ArrayList<Service>();
+        try {
+            Statement stmt = connection.createStatement();
+            String sql = "SELECT * FROM "+ DataBaseConnector.getOwner() +".DICHVU WHERE (CONTAINS(mota, '" + condition +"') > 0) OR UPPER(TENDICHVU) = '"+ condition.toUpperCase() +"'";
+            ResultSet rs = stmt.executeQuery(sql);
+            return setServiceList(rs);
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return sList;
+    }
+
     public ArrayList<String> getAllType() {
         ArrayList<String> areaList = new ArrayList<String>();
         try {

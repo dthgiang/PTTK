@@ -217,8 +217,7 @@ public  class TourController implements Initializable {
         }
         String searchName = searchField.getText();
         searchField.setText("");
-        String condition = "TenTour = '" + searchName + "' OR " + "TinhThanh = '" + searchName + "'";
-        tourList = tour.sqlTourQuery(condition);
+        tourList = tour.fullTextSearch(searchName);
         if (tourList.isEmpty()) {
             Helper.alertHelper.showAlert("Sorry we can not find this tour");
         } else {
@@ -263,5 +262,13 @@ public  class TourController implements Initializable {
         page -= 3;
         loadCard(tourList, page);
 
+    }
+
+    public void mousePressOnClick(MouseEvent event) {
+        searchField.setText("");
+    }
+
+    public void searchInputOnAction(ActionEvent event) throws IOException{
+        searchButtonOnClick(event);
     }
 }
