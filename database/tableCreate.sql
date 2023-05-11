@@ -67,6 +67,9 @@ exec dropTable('LoaiPhong');
 create table LoaiPhong
 (
 	LoaiPhong nvarchar2(20) primary key, 
+    Ten nvarchar2(100),
+    Gia number,
+    Rating float,
     MoTa nvarchar2(100)
 );
 /
@@ -186,6 +189,8 @@ create table DanhSachDatPhong
 	ThoiGianLuuTru int,
 	MaPhong varchar2(10),
 	MaPhieuDatPhong varchar2(10),
+    MaKH varchar2(20),
+
 
 	Constraint PK_DSDatPhong
 	Primary key (MaDatPhong)
@@ -196,13 +201,14 @@ exec dropTable('PhieuSuDungDichVu');
 /
 create table PhieuSuDungDichVu 
 (
-	MaPhieuDichVu varchar2(10) not null,
+	MaPhieuDichVu  NUMBER(10) GENERATED ALWAYS as IDENTITY(START with 1 INCREMENT by 1),
 	ThoiGianSuDung int,
 	ThoiGianBatDau date,
 	Gia int,
 	TrangThai nvarchar2(20),
 	DichVu varchar2 (50),
 	MaPhongDat varchar2(10),
+    MaKH varchar2(20),
 
 	Constraint PK_PhieuSuDungDichVu
 	Primary key (MaPhieuDichVu)
@@ -296,12 +302,16 @@ Add constraint FK_DSDatPhong_Phong foreign key (MaPhong) references Phong (MaPho
 Alter table DanhSachDatPhong
 Add constraint FK_DSDatPhong_PhieuDatPhong foreign key (MaPhieuDatPhong) references PhieuDatPhong (MaPhieu);
 
+Alter table DanhSachDatPhong
+Add constraint FK_DSDatPhong_KhachHang foreign key (MaKH) references KhachHang (MaKH);
 --Phieu su dung dich vu
 Alter table PhieuSuDungDichVu
 Add constraint FK_PhieuSuDungDV_DichVu foreign key (DichVu) references DichVu (MaDichVu);
 
 Alter table PhieuSuDungDichVu
 Add constraint FK_PhieuSuDungDV_DSDatPhong foreign key (MaPhongDat) references DanhSachDatPhong (MaDatPhong);
+Alter table PhieuSuDungDichVu
+Add constraint FK_PhieuSuDungDV_KhachHang foreign key (MaKH) references KhachHang (MaKH);
 
 --Ho so thanh toan
 Alter table HoSoThanhToan

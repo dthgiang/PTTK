@@ -53,7 +53,7 @@ public class FormDP {
             Statement statement = connection.createStatement();
 
             // Execute the query and get the result set
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM phieudatphong");
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM DBA_PTTK.phieudatphong");
 
             // Loop through the result set and add the data to the tableview
             while (resultSet.next()) {

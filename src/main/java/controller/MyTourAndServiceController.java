@@ -1,6 +1,6 @@
 package controller;
 
-import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+//import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import helper.Helper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -39,11 +39,11 @@ public class MyTourAndServiceController implements Initializable {
     @FXML
     private TableView<Tour> tableServiceAndTour;
     @FXML
-    private TableColumn<Tour, String> descriptionColumn, nameColumn, typeColumn, timeColumn, priceColumn;
+    private TableColumn<Tour, String> descriptionColumn, nameColumn, typeColumn, timeColumn, priceColumn, statusColumn;
 
 
-    @FXML
-    private FontAwesomeIconView userIcon;
+    //@FXML
+   // private FontAwesomeIconView userIcon;
 
     @FXML
     private Label userLabel, oopLabel;
@@ -73,6 +73,7 @@ public class MyTourAndServiceController implements Initializable {
         descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("des"));
         timeColumn.setCellValueFactory(new PropertyValueFactory<>("startTime"));
         typeColumn.setCellValueFactory(new PropertyValueFactory<>("Type"));
+        statusColumn.setCellValueFactory(new PropertyValueFactory<>("Stt"));
 
         return setValueTable();
     }

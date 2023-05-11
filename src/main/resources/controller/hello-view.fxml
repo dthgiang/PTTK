@@ -30,8 +30,7 @@
             <TableColumn fx:id="columnName" prefWidth="144.0" text="Room Name" />
             <TableColumn fx:id="columnPrice" prefWidth="83.0" text="Price" />
             <TableColumn fx:id="columnDes" prefWidth="158.0" text="Description" />
-            <TableColumn fx:id="columnRating" prefWidth="112.0" text="Services Provide" />
-            <TableColumn fx:id="columnRating1" prefWidth="63.0" text="Rating" />
+            <TableColumn fx:id="columnRating" prefWidth="63.0" text="Rating" />
         </columns>
          <contextMenu>
             <ContextMenu>

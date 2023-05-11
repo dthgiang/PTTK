@@ -1,4 +1,5 @@
 package helper;
+import controller.BuyServiceController;
 import controller.BuyTourController;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.control.Button;
@@ -73,6 +74,26 @@ public class SwitchScreenHelper {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow(); // get the stage
         stage.setScene(scene); // set the scene on the stage
         stage.show(); // show the stage
+    }
+
+
+    public void raiseBuyService(ActionEvent event, String MaDichVu) throws IOException  {
+        // create a new stage
+        // Load the FXML file into a Parent node
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(Helper.screenName.buyServiceScreen));
+        Parent otherScreen = loader.load();
+
+        BuyServiceController controller = loader.getController(); // get the controller
+        controller.setValue(MaDichVu); // set the value
+        // Create a new stage
+        Stage newStage = new Stage();
+
+        // Set the scene to the FXML file
+        Scene newScene = new Scene(otherScreen);
+        newStage.setScene(newScene);
+
+        newStage.show();
+
     }
     public void swicthScreenOnButton(Button button, String screenPath)  {
 

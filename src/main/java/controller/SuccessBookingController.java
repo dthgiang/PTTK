@@ -3,6 +3,8 @@ package controller;
 
 
 import helper.Helper;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.scene.Scene;
 import java.io.IOException;
 import java.net.URL;
@@ -23,14 +25,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import model.FormDP;
+import model.Login;
 
 
 public class SuccessBookingController implements Initializable {
@@ -55,30 +55,11 @@ public class SuccessBookingController implements Initializable {
     @FXML
     private TableColumn<FormDP, String> columnNhanvienxuly;
 
+
+
     @FXML private void goSignOut(ActionEvent event) throws IOException {
+        Helper.switchScreenHelper.raiseOther(event, Helper.screenName.homeScreen);
 
-        Alert alert = new Alert(AlertType.CONFIRMATION);
-        alert.setTitle("Confirmation Dialog");
-        alert.setHeaderText(null);
-        alert.setContentText("Are you sure you want to signout?");
-        alert.showAndWait().ifPresent(type -> {
-
-            if(type == ButtonType.CANCEL) {
-                event.consume();
-            } else if (type == ButtonType.OK) {
-                Parent home_page_parent;
-                try {
-                    home_page_parent = FXMLLoader.load(getClass().getResource("Login.fxml") );
-                    Scene home_page_scene = new Scene (home_page_parent);
-                    Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                    app_stage.setScene(home_page_scene);
-                    app_stage.show();
-                } catch (IOException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-            }
-        });
     }
     @FXML private void goRoomManage(ActionEvent event) throws IOException {
         Helper.switchScreenHelper.raiseOther(event, Helper.screenName.roomManage);

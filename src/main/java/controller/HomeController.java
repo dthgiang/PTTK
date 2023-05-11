@@ -15,9 +15,9 @@ import model.Login;
 
 public class HomeController implements Initializable {
     @FXML
-    private Button BookRoom, ViewRoomDetail,listCustomerButton, roomManage;
+    private Button BookRoom, ViewRoomDetail,listCustomerButton, roomManage, agentManage;
     @FXML
-    private Button serviceButton, tourButton,  myTourAndServiceButton, cusBookRoom;
+    private Button serviceButton, tourButton,  myTourAndServiceButton, SuccessfulBooking;
 
     @FXML
     private Button SignOut;
@@ -36,16 +36,18 @@ public class HomeController implements Initializable {
         userWelcomeLabel.setText("Hello " + Login.getUsername());
 
         if (Login.getRole() == "Nhan Vien") {
-            cusBookRoom.setVisible(false);
             serviceButton.setVisible(false);
             myTourAndServiceButton.setVisible(false);
             tourButton.setVisible(false);
-        } else {
-            roomManage.setVisible(false);
-            BookRoom.setVisible(false);
-            listCustomerButton.setVisible(false);
             ViewRoomDetail.setVisible(false);
+            BookRoom.setVisible(false);
 
+
+        } else {
+            agentManage.setVisible(false);
+            roomManage.setVisible(false);
+            listCustomerButton.setVisible(false);
+            SuccessfulBooking.setVisible(false);
         }
 
 
@@ -57,7 +59,8 @@ public class HomeController implements Initializable {
         Helper.switchScreenHelper.swicthScreenOnButton(SignOut, "/controller/Login.fxml");
         Helper.switchScreenHelper.swicthScreenOnButton(roomManage, "/controller/roomManage.fxml");
         Helper.switchScreenHelper.swicthScreenOnButton(myTourAndServiceButton, "/controller/BoughtTourAndService.fxml");
-        Helper.switchScreenHelper.swicthScreenOnButton(cusBookRoom, "/controller/BookRoom.fxml");
+        Helper.switchScreenHelper.swicthScreenOnButton(SuccessfulBooking, "/controller/SuccessfulBookings.fxml");
+        Helper.switchScreenHelper.swicthScreenOnButton(agentManage, "/controller/ManagementAgent.fxml");
 
 
 

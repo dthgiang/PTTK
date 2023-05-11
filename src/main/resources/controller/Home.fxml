@@ -11,55 +11,60 @@
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
     <left>
         <AnchorPane prefHeight="737.0" prefWidth="416.0" BorderPane.alignment="CENTER">
-            <ImageView fx:id="bgImage" fitHeight="737.0" fitWidth="475.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="bgImage" fitHeight="737.0" fitWidth="415.0" layoutX="2.0" layoutY="-14.0" pickOnBounds="true" preserveRatio="true">
                 <Image url="@../../../../img/howart.png" />
             </ImageView>
-         <ImageView fx:id="avtImage" fitHeight="115.0" fitWidth="153.0" layoutX="153.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true" />
-            <Label fx:id="userWelcomeLabel" layoutX="153.0" layoutY="318.0" style="-fx-text-fill: #EEE9DA;" stylesheets="@object.css" text="Welcome Guest!" textFill="#e4070770">
+         <ImageView fx:id="avtImage" fitHeight="115.0" fitWidth="153.0" layoutX="147.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="userWelcomeLabel" layoutX="155.0" layoutY="657.0" style="-fx-text-fill: #4B768C;" stylesheets="@object.css" text="Welcome Guest!" textFill="#e4070770">
             <font>
                <Font name="Cambria Bold" size="15.0" />
             </font></Label>
-            <Button fx:id="ViewRoomDetail" layoutX="94.0" layoutY="436.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="228.0" stylesheets="@object.css" text="Room Detail" AnchorPane.rightAnchor="93.33333333333331" AnchorPane.topAnchor="433.0">
+            <Button fx:id="ViewRoomDetail" layoutX="96.80000000000001" layoutY="420.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="228.0" stylesheets="@object.css" text="Room Detail" AnchorPane.rightAnchor="92.19999999999999" AnchorPane.topAnchor="420.0">
                 <font>
                     <Font name="System Bold" size="21.0" />
                 </font>
             </Button>
-            <Button fx:id="BookRoom" layoutX="95.0" layoutY="373.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="228.0" stylesheets="@object.css" text="Book Room" AnchorPane.leftAnchor="95.0">
+            <Button fx:id="BookRoom" layoutX="93.0" layoutY="291.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="228.0" stylesheets="@object.css" text="Book Room" AnchorPane.leftAnchor="93.0">
                 <font>
                     <Font name="System Bold" size="21.0" />
                 </font>
             </Button>
-            <Button fx:id="SignOut" layoutX="128.0" layoutY="627.0" mnemonicParsing="false" prefWidth="160.0" style="-fx-background-color: #4B768D;" stylesheets="@object.css" text="Sign Out" textFill="#b91515">
+            <Button fx:id="SignOut" layoutX="131.0" layoutY="598.0" mnemonicParsing="false" prefWidth="160.0" style="-fx-background-color: #4B768D;" stylesheets="@object.css" text="Sign Out" textFill="#b91515">
                 <font>
                     <Font name="System Bold" size="21.0" />
                 </font>
             </Button>
-         <Button fx:id="tourButton" layoutX="95.0" layoutY="493.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="228.0" stylesheets="@object.css" text="Tour" AnchorPane.rightAnchor="92.33333333333331">
+         <Button fx:id="tourButton" layoutX="97.0" layoutY="476.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="228.0" stylesheets="@object.css" text="Tour" AnchorPane.rightAnchor="92.0">
             <font>
                <Font name="System Bold" size="21.0" />
             </font>
          </Button>
-         <Button fx:id="roomManage" layoutX="95.0" layoutY="559.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="228.0" stylesheets="@object.css" text="Room Management" AnchorPane.bottomAnchor="135.0">
+         <Button fx:id="roomManage" layoutX="93.0" layoutY="535.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="228.0" stylesheets="@object.css" text="Room Management" AnchorPane.bottomAnchor="142.0">
             <font>
                <Font name="System Bold" size="21.0" />
             </font>
          </Button>
-         <Button fx:id="serviceButton" layoutX="94.0" layoutY="436.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="228.0" stylesheets="@object.css" text="Service" AnchorPane.topAnchor="433.0">
+         <Button fx:id="serviceButton" layoutX="93.0" layoutY="357.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="228.0" stylesheets="@object.css" text="Service" AnchorPane.topAnchor="357.0">
             <font>
                <Font name="System Bold" size="21.0" />
             </font>
          </Button>
-         <Button fx:id="listCustomerButton" layoutX="94.0" layoutY="493.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="228.0" stylesheets="@object.css" text="List Customer">
+         <Button fx:id="listCustomerButton" layoutX="95.0" layoutY="476.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="228.0" stylesheets="@object.css" text="List Customer">
             <font>
                <Font name="System Bold" size="21.0" />
             </font>
          </Button>
-         <Button fx:id="cusBookRoom" layoutX="95.0" layoutY="373.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="228.0" stylesheets="@object.css" text="Book Room">
+         <Button fx:id="SuccessfulBooking" layoutX="94.0" layoutY="419.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="228.0" stylesheets="@object.css" text="Successful Booking">
             <font>
                <Font name="System Bold" size="21.0" />
             </font>
          </Button>
-         <Button fx:id="myTourAndServiceButton" layoutX="93.0" layoutY="559.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="228.0" stylesheets="@object.css" text="My Tour &amp; Service" AnchorPane.bottomAnchor="135.0">
+         <Button fx:id="myTourAndServiceButton" layoutX="97.0" layoutY="535.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="228.0" stylesheets="@object.css" text="My Tour &amp; Service" AnchorPane.bottomAnchor="142.0">
+            <font>
+               <Font name="System Bold" size="21.0" />
+            </font>
+         </Button>
+         <Button fx:id="agentManage" layoutX="95.0" layoutY="357.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="228.0" stylesheets="@object.css" text="Agent Management">
             <font>
                <Font name="System Bold" size="21.0" />
             </font>

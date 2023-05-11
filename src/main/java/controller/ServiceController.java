@@ -177,17 +177,17 @@ public  class ServiceController implements Initializable {
     public void buyButtonOnClick1(ActionEvent event) throws IOException  {
         Service serviceX = serviceList.get(page-3);
         String welcome = serviceX.getName() + " - " + serviceX.getProvince();
-        Helper.switchScreenHelper.raiseBuyScreen(event, Helper.screenName.buyServiceScreen,serviceX.getMaDichVu(), welcome);
+        Helper.switchScreenHelper.raiseBuyService(event,serviceX.getMaDichVu());
     }
     public void buyButtonOnClick2(ActionEvent event) throws IOException  {
         Service serviceX = serviceList.get(page-2);
         String welcome = serviceX.getName() + " - " + serviceX.getProvince();
-        Helper.switchScreenHelper.raiseBuyScreen(event,  Helper.screenName.buyServiceScreen, serviceX.getMaDichVu(), welcome);
+        Helper.switchScreenHelper.raiseBuyService(event, serviceX.getMaDichVu());
     }
     public void buyButtonOnClick3(ActionEvent event) throws IOException  {
         Service serviceX = serviceList.get(page-1);
         String welcome = serviceX.getName() + " - " + serviceX.getProvince();
-        Helper.switchScreenHelper.raiseBuyScreen(event,  Helper.screenName.buyServiceScreen, serviceX.getMaDichVu(), welcome);
+        Helper.switchScreenHelper.raiseBuyService(event, serviceX.getMaDichVu());
     }
 
     public void searchButtonOnClick(ActionEvent event) throws IOException  {

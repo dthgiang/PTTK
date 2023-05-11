@@ -3,10 +3,7 @@ package model;
 import databaseConnect.DataBaseConnector;
 import helper.Helper;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class Service {
@@ -16,8 +13,8 @@ public class Service {
     private String des, price, typeS;
     private String forRoom;
     private String startDate,endDate;
-    private  String area, province, owner,contact, image;
-    private Connection connection = DataBaseConnector.getConnection();
+    private  String area, province, owner,contact, image, status;
+    private static Connection connection = DataBaseConnector.getConnection();
 
     public final String type = "Dịch vụ";
     public Service()
@@ -34,11 +31,12 @@ public class Service {
         this.name = name;
     }
 
-    public Service(String name, int cost, String Des, String thoiGianBD) {
+    public Service(String name, int cost, String Des, String thoiGianBD, String stt) {
         this.name = name;
         this.cost = cost;
         this.des = Des;
         this.startDate = thoiGianBD;
+        this.status = stt;
 
     }
     public Service(String name, int cost, String Des, String startDate, String endDate, int time, String owner) {
@@ -52,9 +50,10 @@ public class Service {
 
     }
 
-    public Service(String MaDV, String tenDV, String gia, String moTa, String theLoai, String forR, String img) {
+    public Service(String MaDV, String tenDV, int pric,  String gia, String moTa, String theLoai, String forR, String img) {
         MaDichVu = MaDV;
         name = tenDV;
+        cost = pric;
         price = gia;
         des = moTa;
         typeS = theLoai;
@@ -91,6 +90,7 @@ public class Service {
     public Service getSerivce() {
         return this;
     }
+    public String getStatus() {return status;}
 
 
     public ArrayList<Service> setServiceList(ResultSet rs ) throws SQLException {
@@ -103,7 +103,7 @@ public class Service {
             String theLoai = rs.getString("TheLoai");
             String moTa = rs.getString("MoTa");
             String image = rs.getString("Image");
-            sList.add(new Service(maDV, name, Helper.convertTypeHelper.formatNumber(price), moTa,theLoai, forR, image));
+            sList.add(new Service(maDV, name, price, Helper.convertTypeHelper.formatNumber(price), moTa,theLoai, forR, image));
         }
         return sList;
     }
@@ -146,7 +146,8 @@ public class Service {
         ArrayList<Service> sList = new ArrayList<Service>();
         try {
             Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery("select * from DBA_PTTK.DICHVU where " + condition);
+            String sql = "select * from DBA_PTTK.DICHVU where " + condition;
+            ResultSet rs = stmt.executeQuery(sql);
             return setServiceList(rs);
         }
         catch (SQLException e) {
@@ -186,7 +187,8 @@ public class Service {
                 int price = rs.getInt("Gia");
                 String moTa = rs.getString("MoTa");
                 String thoiGianBD = rs.getString("THOIGIANBATDAU");
-                serviceList.add(new Service(name, price, moTa, thoiGianBD));
+                String stt = rs.getString("TRANGTHAI");
+                serviceList.add(new Service(name, price, moTa, thoiGianBD, stt));
             }
         }
         catch (SQLException e) {
@@ -195,4 +197,31 @@ public class Service {
 
         return serviceList;
     }
+
+    public static boolean insertPhieuSuDungDichVu(int thoiGianSD, String ThoiGianBatDau, int gia, String maDV, String maPhong, String maKH) {
+        String sql = "insert into " + DataBaseConnector.getOwner() + ".PHIEUSUDUNGDICHVU(ThoiGianSuDung, ThoiGianBatDau, Gia, TrangThai, DichVu, MaPhongDat, MaKH) values(?, TO_DATE(?, 'dd-MM-yyyy hh24-mi'), ?, ?, ?, ?, ?)";
+        try {
+            PreparedStatement statement = DataBaseConnector.getConnection().prepareStatement(sql);
+            statement.setInt(1, thoiGianSD);
+            statement.setString(2, ThoiGianBatDau);
+            statement.setInt(3, gia);
+            statement.setString(4, "Đang chờ xử lý");
+            statement.setString(5, maDV);
+            statement.setString(6, maPhong);
+            statement.setString(7, maKH);
+
+
+            int rowsInserted = statement.executeUpdate();
+            if (rowsInserted > 0) {
+                return true;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return  false;
+    }
+
+
+
 }

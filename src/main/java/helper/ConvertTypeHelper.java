@@ -16,7 +16,11 @@ public class ConvertTypeHelper {
             return  dateString;
 
         }
-        return "2002-01-20";
+        LocalDate currentDate = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        String formattedDate = currentDate.format(formatter);
+
+        return formattedDate;
     }
 
     public String formatNumber(int number) {
