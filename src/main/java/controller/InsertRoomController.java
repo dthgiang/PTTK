@@ -61,6 +61,7 @@ public class InsertRoomController implements Initializable {
 
         } catch (SQLException e) {
             System.out.println("Can not get item room type from database!");
+            Helper.alertHelper.showAlert("Đã xảy ra lỗi vui lòng thử lại sau!");
         }
     }
 

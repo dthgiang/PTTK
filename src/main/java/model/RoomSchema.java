@@ -1,6 +1,7 @@
 package model;
 
 import databaseConnect.DBUtil;
+import helper.Helper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
@@ -76,15 +77,21 @@ public class RoomSchema {
 
             int resultSet = statement.executeUpdate();
 
-            if (resultSet == 1)
+            if (resultSet == 1) {
                 System.out.println("Xóa phòng thành công !!!");
-            else
-                System.out.println("Xóa thất bại !!!");
+                Helper.alertHelper.showAlert("Xóa phòng thành công!!!");
+            }
 
+
+            else {
+                System.out.println("Xóa thất bại !!!");
+                Helper.alertHelper.showAlert("Xóa phòng thất bại!!!");
+            }
             statement.close();
             connection.close();
         } catch (SQLException e) {
             System.out.println("Xóa thất bại !!!");
+            Helper.alertHelper.showAlert("Xóa thất bại!!!");
             //e.printStackTrace();
         }
     }
@@ -100,6 +107,7 @@ public class RoomSchema {
             return resultSet;
         } catch (SQLException e) {
             System.out.println("Không thể kết nối tới database!!!");
+            Helper.alertHelper.showAlert("Không thể kết nối tới database!!!");
         }
         return resultSet;
     }
@@ -117,6 +125,27 @@ public class RoomSchema {
 
         } catch (SQLException e) {
             System.out.println("Không thể kết nối tới database!!!");
+            Helper.alertHelper.showAlert("Không thể kết nối tới database!!!");
+        }
+
+        return resultSet;
+    }
+
+    public static ResultSet sttSearchRoom(String roomType, String roomStatus) {
+        ResultSet resultSet = null;
+
+        try {
+            Connection connection =null;
+            connection = DBUtil.getConnection();
+            String sqlQuery = "SELECT * FROM PHONG WHERE LOAIPHONG = ? AND TRANGTHAIVESINH = ?";
+            PreparedStatement statement = connection.prepareStatement(sqlQuery);
+            statement.setString(1, roomType);
+            statement.setString(2, roomStatus);
+            resultSet = statement.executeQuery();
+
+        } catch (SQLException e) {
+            System.out.println("Không thể kết nối tới database!!!");
+            Helper.alertHelper.showAlert("Không thể kết nối tới database!!!");
         }
 
         return resultSet;
@@ -127,6 +156,7 @@ public class RoomSchema {
 
         if (!roomId.matches("PHG.\\d+")) {
             System.out.println("Mã phòng đã tồn tại hoặc  không hợp lệ, Hãy nhập mã phòng theo định dạng như sau PHG'số'");
+            Helper.alertHelper.showAlert("Mã phòng đã tồn tại hoặc  không hợp lệ, Hãy nhập mã phòng theo định dạng như sau PHG'số'");
             return;
         }
 
@@ -157,21 +187,21 @@ public class RoomSchema {
             int resultSet = statement.executeUpdate();
             if (resultSet == 1) {
                 System.out.println("Thêm thành công");
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Thông báo");
-                //alert.setHeaderText("Look, an Information Dialog");
-                alert.setContentText("Thêm thành công!!!");
-                alert.showAndWait();
+                Helper.alertHelper.showAlert("Thêm thành công!!!");
             }
-            else
+            else {
                 System.out.println("Thêm thất bại");
+                Helper.alertHelper.showAlert("Thêm thất bại!!!");
+            }
 
             statement.close();
             connection.close();
         } catch (RuntimeException e1) {
             System.out.println("Hãy chọn đầy đủ các trường để thêm phòng !!!");
+            Helper.alertHelper.showAlert("Hãy chọn đầy đủ các trường để thêm phòng!!!");
         } catch (SQLException e2) {
             System.out.println("Mã phòng đã tồn tại !!!");
+            Helper.alertHelper.showAlert("Mã phòng đã tồn tại!!!");
         }
     }
 
@@ -221,16 +251,20 @@ public class RoomSchema {
             };
 
             int updated = statement.executeUpdate();
-            if (updated == 1)
+            if (updated == 1) {
                 System.out.println("Cập nhật thành công");
-            else
+                Helper.alertHelper.showAlert("Cập nhật thành công!!!");
+            }
+            else {
                 System.out.println("Cập nhật thất bại");
+                Helper.alertHelper.showAlert("Cập nhật thất bại!!!");
+            }
 
             statement.close();
             connection.close();
         } catch (SQLException e2) {
             System.out.println("Không thể kết nói tới cơ sở dữ liệu!!!");
-            e2.printStackTrace();
+            Helper.alertHelper.showAlert("Không thể kết nối tới cơ sở dữ liệu!!!");
         }
     }
 
@@ -246,6 +280,7 @@ public class RoomSchema {
 
         } catch (SQLException e) {
             System.out.println("Can not get item room type from database!");
+            Helper.alertHelper.showAlert("Không thể lấy loại phòng từ database!!!");
         }
 
         return resultSet;

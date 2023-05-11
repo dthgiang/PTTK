@@ -59,6 +59,7 @@ public class UpdateRoomController extends InsertRoomController implements Initia
             ttvesinhCBB.setValue(curStatus);
         } catch (SQLException e) {
             System.out.println("Không thể kết nối tới CSDL!!!");
+            Helper.alertHelper.showAlert("Không thể kết nối tới cơ sở dữ liệu!!!");
         }
     }
 

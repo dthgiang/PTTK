@@ -65,6 +65,12 @@ public class RoomController implements Initializable {
     @FXML
     private ImageView bgImg;
 
+    @FXML
+    private ComboBox<String> loaiPhongCBB;
+
+    @FXML
+    private ComboBox<String> ttVeSinhCBB;
+
     public String clickedItem;
 
     private void setTableColum() {
@@ -89,14 +95,39 @@ public class RoomController implements Initializable {
         }
         } catch(SQLException e) {
             System.out.println("Cannot fetch Data!!!");
+            Helper.alertHelper.showAlert("Không thể lấy data từ CSDL!!!");
         }
 
         roomtable.setItems(rooms);
         setTableColum();
     }
 
+    public void setRoomTypeCBB() {
+        ObservableList<String> roomType = FXCollections.observableArrayList();
+        try {
+            ResultSet resultSet = allRoomType();
+
+            while (resultSet.next()) {
+                String type = resultSet.getString("LOAIPHONG");
+                roomType.add(type);
+            }
+
+            loaiPhongCBB.setItems(roomType);
+
+            resultSet.close();
+
+        } catch (SQLException e) {
+            System.out.println("Can not get item room type from database!");
+            Helper.alertHelper.showAlert("Đã xảy ra lỗi vui lòng thử lại sau!");
+        }
+    }
+
     public void searchBtnOnClick(ActionEvent event) throws IOException {
         fetchData(searchRoom(maphongTxtBox.getText()));
+    }
+
+    public void sttSearchBtnOnClick(ActionEvent event) throws IOException {
+        fetchData(sttSearchRoom(loaiPhongCBB.getValue(), ttVeSinhCBB.getValue()));
     }
 
     private void loadRoomData () {
@@ -144,6 +175,8 @@ public class RoomController implements Initializable {
 
         loadRoomData();
         //setTableColum();
+        setRoomTypeCBB();
+        ttVeSinhCBB.getItems().addAll("Đã dọn", "Chưa dọn");
         setRowClickEvent();
     }
 }
